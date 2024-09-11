@@ -1,0 +1,19 @@
+.login_Layout{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    background-attachment: fixed; 
+}
+.login_Layout_Form{
+    position: absolute;
+    background-color: white;
+    width: 359px;
+    height: 402px;
+    border-radius: 24px;
+    top: 190px;
+    bottom: 177px;
+    left: 571px;
+}

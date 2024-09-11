@@ -12,6 +12,8 @@
 1. npm install normalize.css
 2. npm install formik
 3. npm install react-datepicker
+4. npm install react-router-dom
+4. npm install yup
 
 # Usage
 
