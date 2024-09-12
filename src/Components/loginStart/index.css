@@ -1,0 +1,69 @@
+.login_start{
+    width: 100%;
+    height: 100%;
+    padding: 20px 0px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:12px;
+}
+.login_start h6{
+font-family: 'Inter';
+font-size: 32px;
+font-weight: 700;
+line-height: 33.73px;
+text-align: center;
+}
+.login_start p{
+    width: 60%;
+    font-family: 'Inter';
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 18.78px;
+    text-align: center;
+    color: #868C9A;
+}
+.login_start_dot{
+   padding: 10px 0px 40px 0px;
+}
+.login_start_content{
+    width: 80%;
+}
+.login_start_loginbutton{
+    border: none;
+    outline: none;
+    background: linear-gradient(90deg, #668D12 0%, #ACC43F 113.61%) !important;
+    width: 100%;
+    font-size: 86px;
+    font-family: 'Inter';
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 41.78px;
+    margin-bottom: 15px;
+}
+.login_start_contactbutton{
+    border: none;
+    outline: none;
+    background: linear-gradient(90deg, #668D12 0%, #ACC43F 113.61%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 100%;
+    font-size: 86px;
+    font-family: 'Inter';
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 41.78px;
+    margin-bottom: 15px;
+    border: 1px solid black;
+}
+.login_start_content p{
+    width: 100%;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.94px;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+}

@@ -3,8 +3,10 @@ import './index.css';
 import {Formik,Form} from 'formik';
 import FormikControl from '../../Components/formikComponent/formikControl';
 import * as Yup from 'yup';
+import { useNavigate } from 'react-router-dom';
 
 const LoginForm=()=>{
+    const navigate=useNavigate();
     const initialValues={
         email:'',
     }
@@ -13,7 +15,9 @@ const LoginForm=()=>{
                .required('Required !')
                .email('Provide Correct email !')
     })
-    const onSubmit=(values)=>(console.log(values));
+    const onSubmit=(values)=>{
+        return( navigate('/verify'))
+    }
 
     return(
     <Formik 
