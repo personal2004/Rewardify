@@ -24,10 +24,10 @@ const LoginForm=()=>{
         return(
             <Form  className='login_form'>
                     <img src={LoginLogo} alt='Loading...'/>
-                    <h4>Get started with REWARDIFY</h4>
+                    <h6>Get started with REWARDIFY</h6>
                     <p>Enter your mobile number or Shop ID to get started</p>
-                    <FormikControl control='input'name='email' label=''placeholder='Enter shop ID / Mobile Number'/>
-                    <div>
+                    <div className='login_form_input'><FormikControl control='input'name='email' label=''placeholder='Enter shop ID / Mobile Number'/>                    </div>
+                    <div className='login_submit_content'>
                         <button type='submit'>Send OTP</button>
                         <p>By clicking, you agree to our Terms & Conditions and Privacy Policy.</p>
                     </div>
