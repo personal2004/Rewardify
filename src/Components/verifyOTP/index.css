@@ -32,31 +32,43 @@
     letter-spacing: 1px;
     word-spacing: 5px;
 }
-.login_verify_content_input{
-    height: 90px;
-}
-/* .login_form_input{
-    margin-top: 20px;
-    height: 100px;
-    width: 90%;
-}
-.login_form_input input{
-    width: 96%;
-    padding: 12px 10px;
-    border-radius: 6px;
-    outline: none;
-    border: 1px solid #E0E0E0;
-} */
+
 .login_verify_content{
    width: 80%;
-
+   display: flex;
+   flex-direction: column;
+   justify-content: center; 
+   align-items: center;
 }
-.login_verify_content button{
+.login_verify_content_input{
+    width: 80%;
+    height: 140px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin: 20px 0px 0px 0px;
+}
+.login_verify_content_input input{
+    width: 60px;
+    height: 50px;
+    border-radius: 6px;
+    border: 1px solid #E0E0E0;
+    outline: none;
+    text-align: center;
+}
+.login_verify_content_button{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login_verify_content_button button{
+    width: 100%;
     border: none;
     outline: none;
     color: #868C9A;
     background-color: #E1E1E1;
-    width: 100%;
     font-size: 86px;
     font-family: 'Inter';
     font-size: 18px;
@@ -64,11 +76,13 @@
     line-height: 41.78px;
     margin-bottom: 15px;
 }
-.login_verify_content p{
-    width: 100%;
+.login_verify_resend{
+    width: 60%;
     font-family: 'Inter';
     font-size: 14px;
     font-weight: 500;
     line-height: 16.94px;
     color: #868C9A;
+    letter-spacing: 0px;
+    word-spacing: normal;
 }
