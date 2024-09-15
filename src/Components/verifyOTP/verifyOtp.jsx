@@ -4,8 +4,12 @@ import { LoginLogo} from '../../img/images';
 import { Formik,Form } from 'formik';
 import FormikControl from '../formikComponent/formikControl';
 import * as Yup from 'yup';
+import { useLocation } from 'react-router-dom';
 
 const VerifyOtp=()=>{
+  const location=useLocation()
+  // const navigate=useNavigate();
+  const generatedOtp = location.state?.otp;
    const initialValues={
         otp1: '',
         otp2: '',
@@ -18,10 +22,16 @@ const VerifyOtp=()=>{
         otp3: Yup.string().required('Required').matches(/^\d$/, 'Must be a digit'),
         otp4: Yup.string().required('Required').matches(/^\d$/, 'Must be a digit'),
       })
-      const onSubmit=values => {
-        alert(JSON.stringify(values, null, 2));
-      }
-    // const navigate=useNavigate();
+
+      const onSubmit=(values) => {
+        const enteredOtp = `${values.otp1}${values.otp2}${values.otp3}${values.otp4}`;
+        if (enteredOtp === generatedOtp) {
+            alert('OTP verified successfully!');
+        } else {
+            alert('Invalid OTP. Please try again.');
+        }     
+       }
+
     return(
         <div className='login_verify'>
             <img src={LoginLogo} alt='icon'/>
@@ -29,20 +39,20 @@ const VerifyOtp=()=>{
             <p>Enter OTP number below</p>
             <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
               {(formik)=>(
-                 <>       
-                <div className='login_verify_content'>
-                            <Form className='login_verify_content_input'>
+                <Form className='login_verify_content'>
+       
+                <div className='login_verify_content_input'>
                             <FormikControl control='input' name='otp1' maxLength='1'type="text"/>
                             <FormikControl control='input' name='otp2' maxLength='1'type="text"/>
                             <FormikControl control='input' name='otp3' maxLength='1'type="text"/>
                             <FormikControl control='input' name='otp4' maxLength='1'type="text"/>
-                            </Form>
                 </div>
                 <div className='login_verify_content_button'>
-                    <button>Verify and Continue</button>
+                    <button type='submit'>Verify and Continue</button>
                     <div className='login_verify_resend'>Didn’t receive OTP?  Resend in 0:55</div>
                 </div>
-                </>
+                </Form>
+
                 )}
             </Formik>
         </div>
