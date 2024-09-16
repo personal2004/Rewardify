@@ -1,4 +1,4 @@
-.login_start{
+.stores_choose{
     width: 100%;
     height: 100%;
     padding: 20px 0px;
@@ -7,30 +7,39 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap:12px;
+    gap:10px;
 }
-.login_start h6{
-font-family: 'Inter';
-font-size: 32px;
-font-weight: 700;
-line-height: 33.73px;
-text-align: center;
-}
-.login_start p{
-    width: 60%;
+.stores_choose img{
+    width: 215px;
+    height: 167.27px;
+}   
+.stores_choose_content{
+    margin: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+ }
+ 
+.stores_choose h6{
+    width: 70%;
     font-family: 'Inter';
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 18.78px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38.73px;
     text-align: center;
+}
+.stores_choose p{
     color: #868C9A;
+    width: 75%;
+    font-family: 'Inter';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.78px;
+    text-align: center;
 }
-.login_start_dot{
-   padding: 10px 0px 40px 0px;
-}
-.login_start_content{
-    width: 80%;
-}
+
 .login_start_loginbutton{
     color: white;
     border: none;
@@ -60,13 +69,4 @@ text-align: center;
     border: 1px solid;
     border-image-source: linear-gradient(90deg, #668D12 0%, #ACC43F 113.61%);
     border-image-slice: 1;
-}
-.login_start_content p{
-    width: 100%;
-    font-family: 'Inter';
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 16.94px;
-    letter-spacing: 1px;
-    word-spacing: 5px;
 }

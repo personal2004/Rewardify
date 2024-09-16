@@ -1,6 +1,6 @@
 import './index.css';
 import { LoginLogo} from '../../img/images';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Formik,Form } from 'formik';
 import FormikControl from '../formikComponent/formikControl';
 import * as Yup from 'yup';
@@ -8,7 +8,7 @@ import { useLocation } from 'react-router-dom';
 
 const VerifyOtp=()=>{
   const location=useLocation()
-  // const navigate=useNavigate();
+  const navigate=useNavigate();
   const generatedOtp = location.state?.otp;
    const initialValues={
         otp1: '',
@@ -22,11 +22,14 @@ const VerifyOtp=()=>{
         otp3: Yup.string().required('Required').matches(/^\d$/, 'Must be a digit'),
         otp4: Yup.string().required('Required').matches(/^\d$/, 'Must be a digit'),
       })
-
+ console.log(generatedOtp)
       const onSubmit=(values) => {
         const enteredOtp = `${values.otp1}${values.otp2}${values.otp3}${values.otp4}`;
         if (enteredOtp === generatedOtp) {
             alert('OTP verified successfully!');
+            localStorage.setItem('isVerified', 'true');
+            navigate('/stores')
+
         } else {
             alert('Invalid OTP. Please try again.');
         }     
