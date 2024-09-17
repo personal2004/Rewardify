@@ -7,6 +7,7 @@ import VerifyOtp from './Components/verifyOTP/verifyOtp';
 import { Navigate } from 'react-router-dom';
 import Stores from './Components/stores/stores';
 import StoresStartLayout from './Layout/storeStartLayout/storeStartLayout';
+import ContactForm from './Components/contactForm/contactForm';
 
 function App() {
   const isVerified = () => {
@@ -25,7 +26,9 @@ function App() {
             <Route path='verify' element={<VerifyOtp/>}/>
             <Route path='stores' element={<ProtectedRoute element={<Stores/>}/>}/>
          </Route>
-         <Route path='storestart' element={<StoresStartLayout/>}/>
+         <Route path='storestart' element={<StoresStartLayout/>}>
+           <Route index element={<ContactForm/>}/>
+         </Route>
       </Routes>
     </Router>
     </div>

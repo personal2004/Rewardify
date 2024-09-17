@@ -1,0 +1,30 @@
+.stores_start_layout{
+    height: auto;
+}
+.stores_start_layout h1{
+    padding: 28px 0px;
+    padding-left: 103px;
+    background: linear-gradient(90deg, #668D12 0%, #ACC43F 113.61%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+}
+.stores_start_layout img{
+    height: 377px; 
+    width:100vw;
+}
+.stores_start_Layout_Form{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.stores_start_form{
+    width:488px;
+    margin: 50px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
