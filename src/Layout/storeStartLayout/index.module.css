@@ -41,14 +41,14 @@
     padding: 10px;
     margin-bottom: 50px;
 }
-.header{
+.stores_details_header{
     font-family:'Inter';
     font-size: 32px;
     font-weight: 700;
     line-height: 38.73px;
     text-align: center;
 }
-.para{
+.stores_details_para{
     text-align: center;
     width: 60%;
     font-family: 'Inter';
@@ -58,7 +58,7 @@
     text-align: center;
     color:#868C9A;
 }
-.button{
+.stores_details_button{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,7 +76,7 @@
     border-radius: 8px;
 
 }
-.button button{
+.stores_details_button button{
     align-self: center;
     color: white;
     border: none;
@@ -86,7 +86,7 @@
     font-size: 18px;
     font-weight: 600;
 }
-.button img{
+.stores_details_button img{
   width: 20px;
   height:fit-content;
 }

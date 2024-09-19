@@ -1,8 +1,8 @@
 import styles from './index.module.css';
-import { LoginLogo} from '../../img/images';
+import { LoginLogo} from '../../../img/images';
 import { useNavigate } from 'react-router-dom';
 import { Formik,Form } from 'formik';
-import FormikControl from '../formikComponent/formikControl';
+import FormikControl from '../../formikComponent/formikControl';
 import * as Yup from 'yup';
 import { useLocation } from 'react-router-dom';
 

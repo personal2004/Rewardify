@@ -1,13 +1,13 @@
 import './App.css';
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
-import LoginForm from './Components/loginform/loginform';
 import LoginLayout from './Layout/loginLayout/loginLayout';
-import LoginStart from './Components/logincards/loginStart/loginStart';
-import VerifyOtp from './Components/verifyOTP/verifyOtp';
 import { Navigate } from 'react-router-dom';
-import Stores from './Components/stores/stores';
 import StoresStartLayout from './Layout/storeStartLayout/storeStartLayout';
 import ContactForm from './Components/contactForm/contactForm';
+import LoginForm from './Components/logincards/loginform/loginform';
+import VerifyOtp from './Components/logincards/verifyOTP/verifyOtp';
+import Stores from './Components/logincards/stores/stores';
+import LoginStart from './Components/logincards/loginStart/loginStart';
 
 function App() {
   const isVerified = () => {
@@ -21,8 +21,8 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<LoginLayout/>}>
-            <Route index element={<LoginStart />} />
-            <Route path='login' element={<LoginForm />} />
+            <Route index element={<LoginStart/>} />
+            <Route path='login' element={<LoginForm/>} />
             <Route path='verify' element={<VerifyOtp/>}/>
             <Route path='stores' element={<ProtectedRoute element={<Stores/>}/>}/>
          </Route>

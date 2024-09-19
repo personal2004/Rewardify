@@ -1,11 +1,11 @@
-import {LoginLogo} from '../../img/images';
+import {LoginLogo} from '../../../img/images';
 import styles from './index.module.css';
 import {Formik,Form} from 'formik';
-import FormikControl from '../../Components/formikComponent/formikControl';
+import FormikControl from '../../../Components/formikComponent/formikControl';
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
-import sendOtp from '../../function/sendOtp';
-import {GENERATE_OTP,BASE_URL} from '../../constant/api';
+import sendOtp from '../../../function/sendOtp';
+import {GENERATE_OTP,BASE_URL} from '../../../constant/api';
 import axios from 'axios';
 
 const handleGenerateOtp = async (contactNo) => {

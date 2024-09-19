@@ -1,12 +1,12 @@
-import './index.css';
+import styles from './index.module.css';
 import { LoginBackground } from '../../img/images';
 import { Outlet } from 'react-router-dom';
 
 const LoginLayout = () => {
     return (
-        <div className='login_page'>
-        <img className='login_Layout' src={LoginBackground} alt='Loading'/>
-        <div className="login_Layout_Form">
+        <div className={styles.login_page}>
+        <img className={styles.login_Layout} src={LoginBackground} alt='Loading'/>
+        <div className={styles.login_Layout_Form}>
             <Outlet/>
         </div>
         </div>
