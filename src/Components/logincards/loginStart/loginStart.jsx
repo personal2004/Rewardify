@@ -1,5 +1,5 @@
 import './index.css';
-import { LoginLogo,  dot3with1black} from '../../img/images';
+import { LoginLogo,  dot3with1black} from '../../../img/images';
 import { useNavigate } from 'react-router-dom';
 
 const LoginStart=()=>{

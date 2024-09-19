@@ -2,9 +2,9 @@ import { ErrorMessage, Field } from "formik";
 import TextError from "./texterror";
 
 const Input=(props)=>{
-    const{label,name,...rest}=props;
+    const{label,name,className,...rest}=props;
     return(
-        <div className="form-control">
+        <div className={className}>
           <label htmlFor={name}>{label}</label>
           <Field id={name} name={name} {...rest}/>
           <ErrorMessage name={name} component={TextError}/>

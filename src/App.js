@@ -2,7 +2,7 @@ import './App.css';
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 import LoginForm from './Components/loginform/loginform';
 import LoginLayout from './Layout/loginLayout/loginLayout';
-import LoginStart from './Components/loginStart/loginStart';
+import LoginStart from './Components/logincards/loginStart/loginStart';
 import VerifyOtp from './Components/verifyOTP/verifyOtp';
 import { Navigate } from 'react-router-dom';
 import Stores from './Components/stores/stores';

@@ -40,19 +40,19 @@
    align-items: center;
 }
 .login_verify_content_input{
-    width: 80%;
-    height: 140px;
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    margin: 20px 0px 0px 0px;
+    width: 80% ;
+    height: 140px ;
+    display: flex ;
+    gap: 4%;
+    align-content: center ;
+    margin: 20px 0px 0px 0px ;
 }
-.login_verify_content_input input{
-    width: 60%;
-    height: 34%;
-    border-radius: 6px;
+.form_control input{
+    width: 90% ;
+    height: 34% ;
+    border-radius: 6px ;
     border: 2px solid #E0E0E0;
-    outline: none;
+    outline: none ;
     text-align: center;
 }
 .login_verify_content_button{
@@ -76,7 +76,7 @@
     margin-bottom: 15px;
 }
 .login_verify_resend{
-    width: 78%;
+    width: 60%;
     font-family: 'Inter';
     font-size: 14px;
     font-weight: 500;

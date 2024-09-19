@@ -1,4 +1,4 @@
-import './index.css';
+import styles from './index.module.css';
 import { LoginLogo} from '../../img/images';
 import { useNavigate } from 'react-router-dom';
 import { Formik,Form } from 'formik';
@@ -36,23 +36,23 @@ const VerifyOtp=()=>{
        }
 
     return(
-        <div className='login_verify'>
+        <div className={styles.login_verify}>
             <img src={LoginLogo} alt='icon'/>
             <h6>Verify your details</h6>
             <p>Enter OTP number below</p>
             <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
               {(formik)=>(
-                <Form className='login_verify_content'>
+                <Form className={styles.login_verify_content}>
        
-                <div className='login_verify_content_input'>
-                            <FormikControl control='input' name='otp1' maxLength='1'type="text"/>
-                            <FormikControl control='input' name='otp2' maxLength='1'type="text"/>
-                            <FormikControl control='input' name='otp3' maxLength='1'type="text"/>
-                            <FormikControl control='input' name='otp4' maxLength='1'type="text"/>
+                <div className={styles.login_verify_content_input}>
+                            <FormikControl className={styles.form_control} control='input' name='otp1' maxLength='1'type="text"/>
+                            <FormikControl className={styles.form_control} control='input' name='otp2' maxLength='1'type="text"/>
+                            <FormikControl className={styles.form_control} control='input' name='otp3' maxLength='1'type="text"/>
+                            <FormikControl className={styles.form_control} control='input' name='otp4' maxLength='1'type="text"/>
                 </div>
-                <div className='login_verify_content_button'>
+                <div className={styles.login_verify_content_button}>
                     <button type='submit'>Verify and Continue</button>
-                    <div className='login_verify_resend'>Didn’t receive OTP?  Resend in 0:55</div>
+                    <div className={styles.login_verify_resend}>Didn’t receive OTP?  Resend in 0:55</div>
                 </div>
                 </Form>
 

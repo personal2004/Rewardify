@@ -1,8 +1,14 @@
 import FormikControl from '../formikComponent/formikControl';
-import './index.css';
+import styles from './index.module.css';
 import { Form,Formik } from 'formik';
+import { useState } from 'react';
+import Modal from '../modal/modal';
+import { handshake } from '../../img/images';
 import * as Yup from 'yup';
 const ContactForm=()=>{
+
+  const [showModal, setShowModal] = useState(false);
+
   const initialvalues={
      ownername:'',
      shopname:'',
@@ -15,26 +21,35 @@ const ContactForm=()=>{
     location:Yup.string().required('Required !'),
     phonenumber:Yup.string().required('Required !')
   })
-  const onsubmit=()=>{
-
+  const onsubmit=(values,{resetForm})=>{
+    setShowModal(true);
+    resetForm();
+  }
+  const onClose=(e)=>{
+    setShowModal(false)
   }
     return(
         < >
-            <h3 className='Contact_Form_header'>Contact Form</h3>
-            <p className='Contact_Form_para'>Fill the contact form, One of our executives will reach out to you Shortly</p>
+            <h3 className={styles.Contact_Form_header}>Contact Form</h3>
+            <p className={styles.Contact_Form_para}>Fill the contact form, One of our executives will reach out to you Shortly</p>
             <Formik initialValues={initialvalues} validationSchema={validationSchema} onSubmit={onsubmit}>
               {(formik)=>{
                 return(
-                  <Form className="Contact_Form" >
-                  <FormikControl control='input' label='Owner Name' placeholder='Enter Your Full Name' name='ownername'/>
-                  <FormikControl control='input' label='Shop Name' placeholder='Enter the Shop Name' name='shopname'/>
-                  <FormikControl control='input' label='Location' placeholder='Enter your Location(eg: Indiranagar, Bangalore)' name='location'/>
-                  <FormikControl control='input' label='Phone number' placeholder='Enter your Phone Number' name='phonenumber'/>
-                  <button className='Contact_Form_button_submit'>Submit</button>
+                  <Form className={styles.Contact_Form} >
+                  <FormikControl className={styles.form_control} control='input' label='Owner Name' placeholder='Enter Your Full Name' name='ownername'/>
+                  <FormikControl className={styles.form_control} control='input' label='Shop Name' placeholder='Enter the Shop Name' name='shopname'/>
+                  <FormikControl className={styles.form_control} control='input' label='Location' placeholder='Enter your Location(eg: Indiranagar, Bangalore)' name='location'/>
+                  <FormikControl className={styles.form_control} control='input' label='Phone number' placeholder='Enter your Phone Number' name='phonenumber'/>
+                  <button className={styles.Contact_Form_button_submit}>Submit</button>
                   </Form>
                 )
               }}
             </Formik>
+            <Modal show={showModal} onClose={onClose} buttonStyle={styles.modalbutton_style} button_text='Continue'>
+              <div className={styles.imageContainer}><img src={handshake} alt="Handshake" style={{width:'70px',height:'50px'}}/></div>         
+              <div className={styles.popup_header}>Thanks For Submitting the Contact Form</div>
+              <div className={styles.popup_para}>We will get back to you Shortly</div>
+            </Modal>
         </>
     );
 }

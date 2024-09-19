@@ -30,17 +30,18 @@
     letter-spacing: 1px;
     word-spacing: 5px;
 }
-.login_form_input{
+.form_control{
     margin-top: 20px;
-    height: 100px;
-    width: 90%;
+    height: 100px ;
+    width: 90% ;
 }
-.login_form_input input{
-    width: 96%;
-    padding: 12px 10px;
-    border-radius: 6px;
-    outline: none;
-    border: 1px solid #E0E0E0;
+.form_control input{
+    height: fit-content ;
+    width: 90% ;
+    padding: 15px 20px ;
+    border-radius: 6px ;
+    outline: none ;
+    border: 1px solid #E0E0E0 ;
 }
 .login_submit_content{
    width: 80%;
@@ -64,4 +65,15 @@
     font-size: 14px;
     font-weight: 500;
     line-height: 16.94px;
+}
+
+@media (max-width:400px) {
+    .form_control input{
+        height: fit-content ;
+        width: 80% ;
+        padding: 15px 20px ;
+        border-radius: 6px ;
+        outline: none ;
+        border: 1px solid #E0E0E0 ;
+    }
 }
