@@ -17,9 +17,12 @@
 }
 
 .login_Layout_Form{
+    margin: 20px;
     position: absolute;
     border-radius: 24px;
     background-color: white;
     max-width: 430px;
     max-height: 542px;
 } 
+
+/* I need to check media query of verify form */

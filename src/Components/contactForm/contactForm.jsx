@@ -1,7 +1,7 @@
 import FormikControl from '../formikComponent/formikControl';
 import './index.css';
 import { Form,Formik } from 'formik';
-import *as Yup from 'yup';
+import * as Yup from 'yup';
 const ContactForm=()=>{
   const initialvalues={
      ownername:'',
@@ -25,11 +25,12 @@ const ContactForm=()=>{
             <Formik initialValues={initialvalues} validationSchema={validationSchema} onSubmit={onsubmit}>
               {(formik)=>{
                 return(
-                  <Form className="Contact_Form">
+                  <Form className="Contact_Form" >
                   <FormikControl control='input' label='Owner Name' placeholder='Enter Your Full Name' name='ownername'/>
                   <FormikControl control='input' label='Shop Name' placeholder='Enter the Shop Name' name='shopname'/>
                   <FormikControl control='input' label='Location' placeholder='Enter your Location(eg: Indiranagar, Bangalore)' name='location'/>
                   <FormikControl control='input' label='Phone number' placeholder='Enter your Phone Number' name='phonenumber'/>
+                  <button className='Contact_Form_button_submit'>Submit</button>
                   </Form>
                 )
               }}
