@@ -6,8 +6,14 @@
     padding: 28px 0px;
     padding-left: 103px;
     background: linear-gradient(90deg, #668D12 0%, #ACC43F 113.61%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;  
+}
+
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+    .stores_start_layout h1 {
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 }
 .stores_start_layout img{
     height: 377px; 
@@ -28,6 +34,25 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.Contact_Form_header{
+font-family:'Inter';
+font-size: 32px;
+font-weight: 700;
+line-height: 38.73px;
+text-align: center;
+padding-bottom: 5px;
+}
+.Contact_Form_para{
+text-align: center;
+width: 60%;
+font-family: 'Inter';
+font-size: 18px;
+font-weight: 400;
+line-height: 21.78px;
+text-align: center;
+color:#868C9A;
+margin-bottom: 50px;
 }
 .stores_details_card_layout{
     width: 25%;

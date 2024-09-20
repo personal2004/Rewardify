@@ -1,0 +1,35 @@
+.store_create_layout{
+    width: 100%;
+    height: auto;
+}
+.store_create_layout h1{
+    padding: 28px 0px;
+    padding-left: 103px;
+    background: linear-gradient(90deg, #668D12 0%, #ACC43F 113.61%);
+}
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+    .store_create_layout h1 {
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.store_create_Container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+}
+.store_create_Layout_Form_Container{
+    width: 30%;
+    margin: 50px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+}

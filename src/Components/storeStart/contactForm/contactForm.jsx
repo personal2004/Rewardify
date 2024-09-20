@@ -1,13 +1,15 @@
-import FormikControl from '../formikComponent/formikControl';
+import FormikControl from '../../formikComponent/formikControl';
 import styles from './index.module.css';
 import { Form,Formik } from 'formik';
 import { useState } from 'react';
-import Modal from '../modal/modal';
-import { handshake } from '../../img/images';
+import Modal from '../../modal/modal';
+import { handshake } from '../../../img/images';
 import * as Yup from 'yup';
+import { useNavigate } from 'react-router-dom';
 const ContactForm=()=>{
 
   const [showModal, setShowModal] = useState(false);
+  const navigate=useNavigate();
 
   const initialvalues={
      ownername:'',
@@ -27,11 +29,10 @@ const ContactForm=()=>{
   }
   const onClose=(e)=>{
     setShowModal(false)
+    navigate('/storestart/contactids')
   }
     return(
         < >
-            <h3 className={styles.Contact_Form_header}>Contact Form</h3>
-            <p className={styles.Contact_Form_para}>Fill the contact form, One of our executives will reach out to you Shortly</p>
             <Formik initialValues={initialvalues} validationSchema={validationSchema} onSubmit={onsubmit}>
               {(formik)=>{
                 return(
