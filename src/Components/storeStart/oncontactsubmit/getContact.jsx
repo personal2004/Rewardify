@@ -13,11 +13,11 @@ const GetContactids=()=>{
                 <div className={styles.contact_card_header}>Contact Us</div>
                 <div className={styles.contact_card_para}>For any enquiries contact us</div>
                 <div className={styles.contact_card_button}>
-                        <img src={icons.phoneoutline} alt='->'/>
+                        <div className={styles.button_icon}>{icons.phoneoutline}</div>
                         <button>Contact via Call</button>
                 </div>
                 <div className={styles.contact_card_button}>
-                        <img src={icons.whatsapp} alt='->'/>
+                        <div className={styles.button_icon}>{icons.whatsapp}</div> 
                         <button>Contact Via WhatsApp</button>
                 </div>
         </div>

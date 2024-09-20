@@ -10,6 +10,10 @@ import LoginStart from './Components/logincards/loginStart/loginStart';
 import StoreCreateLayout from './Layout/storeCreateLayout/storeCreateLayout';
 import ContactForm from './Components/storeStart/contactForm/contactForm';
 import GetContactids from './Components/storeStart/oncontactsubmit/getContact';
+import StoreInfo from './Components/storeCreate/storeinfo/storeinfo';
+import StoreDoc from './Components/storeCreate/storedoc/storedoc';
+import StoreAgree from './Components/storeCreate/storeagree/storeagree';
+
 
 function App() {
   const isVerified = () => {
@@ -24,17 +28,18 @@ function App() {
       <Routes>
         <Route path="/" element={<LoginLayout/>}>
             <Route index element={<LoginStart/>} />
-            <Route path='login' element={<LoginForm/>} />
+            <Route path='login' exact element={<LoginForm/>} />
             <Route path='verify' element={<VerifyOtp/>}/>
             <Route path='stores' element={<ProtectedRoute element={<Stores/>}/>}/>
          </Route>
-         <Route path='storestart' element={<StoresStartLayout/>}>
+         <Route path='storestart' exact element={<StoresStartLayout/>}>
            <Route index element={<ContactForm/>}/>
            <Route path='contactids' element={<GetContactids/>}/>
          </Route>
-         <Route path='storeCreation' element={<StoreCreateLayout/>}>
-           {/* <Route index element={<ContactForm/>}/>
-           <Route path='contactids' element={<GetContactids/>}/> */}
+         <Route path='storeCreation'exact element={<StoreCreateLayout/>}>
+           <Route index exact element={<StoreInfo/>}/>
+           <Route path='storedocs' exact element={<StoreDoc/>}/>
+           <Route path='storeAgeement' exact element={<StoreAgree/>}/>
          </Route>
       </Routes>
     </Router>

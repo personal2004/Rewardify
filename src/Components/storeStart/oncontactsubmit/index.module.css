@@ -52,13 +52,6 @@
     border-image-slice: 1;
     background: linear-gradient(90deg, #668D12 0%, #ACC43F 113.61%);
 }
-@supports (-webkit-background-clip: text) or (background-clip: text) {
-    .contact_card_button {
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-}
 .contact_card_button button{
     align-self: center;
     border: none;
@@ -68,7 +61,16 @@
     font-size: 18px;
     font-weight: 600;
 }
-.contact_card_button img{
+.button_icon{
   width: 20px;
   height:fit-content;
+  color:  #668D12;
+}
+
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+    .contact_card_button {
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 }
