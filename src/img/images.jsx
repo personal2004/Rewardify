@@ -5,7 +5,8 @@ import storeCardLogo from '../Assets/storesCardLogo.png';
 import storeStartLogo from '../Assets/storeStartpage.png';
 import rightIndicateArrow from '../Assets/chevron_right.png';
 import handshake from '../Assets/handshake.png';
-
+import scanindicateimg from '../Assets/scanshowimg.png';
+import camera from '../Assets/camera.png'
 export {
   LoginLogo,
   LoginBackground,
@@ -14,4 +15,6 @@ export {
   storeStartLogo,
   rightIndicateArrow,
   handshake,
+  scanindicateimg,
+  camera,
 }

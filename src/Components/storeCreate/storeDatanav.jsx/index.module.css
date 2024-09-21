@@ -1,10 +1,11 @@
 .store_create_form_navigator{
     margin-top: 5%;
     width: 45%;
+    height: 340px;
     display: grid;
     grid-template-columns: auto auto;
     column-gap: 2%;
-    row-gap: 10%;
+    row-gap: 5%;
     grid-template-rows: auto auto auto;
 }
 .store_create_form_navigator h6,.store_create_form_navigator p{

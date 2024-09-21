@@ -3,9 +3,9 @@ import { Field, ErrorMessage } from 'formik'
 import TextError from './texterror'
 
 function Checkbox (props) {
-  const { label, name, options, ...rest } = props
+  const { label, name,className,options, ...rest } = props
   return (
-    <div className='form-control'>
+    <div className={className}>
       <label>{label}</label>
       <Field name={name} >
         {({ field }) => {
