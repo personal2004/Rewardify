@@ -25,6 +25,8 @@ export const storeCreateValues={
     storeaddress:'',
     storenum:'',
     workingdays:[],
+    openingTime: '', 
+    closingTime: '',
     storeOwnerPan:'',
     GSTIN:'',
     GSTINStatus:[],
@@ -45,6 +47,12 @@ export const storeCreatevalidationSchema=Yup.object({
     storeaddress:Yup.string().required('Required !'),
     storenum:Yup.string().required('Required !'),
     workingdays:Yup.array().required('Required !'),
+    openingTime: Yup.string()
+        .required('Opening time is required')
+        .matches(/^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/, 'Invalid time format'), 
+    closingTime: Yup.string()
+        .required('Closing time is required')
+        .matches(/^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/, 'Invalid time format'),
     storeOwnerPan:Yup.string().required('Required !'),
     GSTIN:Yup.string().required('Required !'),
     GSTINStatus:Yup.array().required('Required !'),

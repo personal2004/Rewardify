@@ -1,0 +1,57 @@
+.storeTime_Form{
+    width: 100%;
+    padding: 20px;
+    border-radius: 12px ;
+    border: 1px solid #E0E0E0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.storeTime_header{
+    font-family: 'Inter';
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 29.05px;
+    text-align: left;
+}
+
+.storeTime_Form h5{
+    font-family: 'Inter';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14.52px;
+    text-align: left;
+    color: #868C9A;
+}
+.time_picker{
+margin-top: 20px;
+margin-left: 0px;
+  display: flex;
+  flex-direction: row;
+  width: 76%;
+  justify-content: space-between;
+}
+.time_picker_item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #BEBEBE;
+    border-radius: 16px;
+    width: 46%;
+    color: #BEBEBE;
+}
+select{
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    padding: 5px;
+    font-size: 16px;
+    color: #BEBEBE;
+}
+  
+  

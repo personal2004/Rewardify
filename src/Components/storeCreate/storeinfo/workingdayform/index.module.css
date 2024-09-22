@@ -31,12 +31,12 @@ color:#868C9A;
 .checkbox_control{
     display: grid;
     grid-template-columns: auto auto ;
-    /* grid-template-rows: auto auto auto auto; */
-    grid-template-rows: repeat(3, auto) repeat(4, auto);
-    /* flex-direction: column;
-    align-items: flex-start; */
-}
+    row-gap: 3px;
 
+}
+.checkbox_control label:nth-child(1){
+    display: none;
+}
 .checkbox_option input{
     margin-right: 10px;
     align-items: center;

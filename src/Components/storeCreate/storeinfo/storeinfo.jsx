@@ -5,6 +5,7 @@ import StoreScanCard from '../storescancard/storeScancard';
 import Ownerinfo from './ownerinfo/ownerinfo';
 import StoreInfoForm from './storeinfoform/storeinfoForm';
 import WorkdayForm from './workingdayform/workingdayForm';
+import StoreTime from './storetime/storeTime';
 
 const StoreInfo=()=>{
 
@@ -18,17 +19,7 @@ const StoreInfo=()=>{
                     <Ownerinfo/>
                     <StoreInfoForm/>
                     <WorkdayForm/>
-                    {/* <Form className={styles.workingdaysinfo_Form} >
-                        <div className={styles.workingdays_header} >
-                        <h3 className={styles.docinfocard_header} >Working Days</h3>
-                         <h4>Select All</h4>
-                        </div>
-                        <FormikControl className={styles.checkbox_control} optiondivname={styles.checkbox_option} control='checkbox' options={WorkdaysCheckOption} name='workingdays'/>
-                    </Form> */}
-                    <Form className={styles.workingdaysinfo_Form} >
-                        <h3 className={styles.docinfocard_header} >Working Time</h3>
-                         <h5>Select the Opening & Closing Time</h5>
-                    </Form>
+                    <StoreTime/>
                     <StoreScanCard/>
                   </div>
                 )

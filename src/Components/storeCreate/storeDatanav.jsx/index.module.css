@@ -47,4 +47,18 @@
     height: 100%;
 }
 
+@media (max-width:1287px) {
+    .store_create_form_navigator{
+        grid-template-columns: 30px auto;
+
+    }
+}
+@media (max-width:1098px) {
+    .store_create_form_navigator{
+        width: 100%;
+        height: auto;
+        display: flex;
+        row-gap: normal;
+    }  
+}
         
