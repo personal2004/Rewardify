@@ -23,7 +23,7 @@ const StoreScanCard=()=>{
                <p>take a Picture from the Camera to upload the QR Code</p>
              </div>
         </div>
-        <Modal show={showModal} onClose={onClose} buttonStyle={styles.modalbutton_style}>
+        <Modal show={showModal} onClose={onClose} buttonStyle={styles.modalbutton_style} button_text='Submit'>
               <div className={styles.imageContainer}><img src={camera} alt="Handshake" style={{width:'70px',height:'50px'}}/></div>         
               
         </Modal>

@@ -16,7 +16,7 @@ const StoreDoc=()=>{
                           <h3 className={styles.docstorecard_header} >Enter PAN & GSTIN details</h3>
                           <FormikControl className={styles.form_control} control='input' placeholder='Store/Owner PAN' name='storeOwnerPan'/>
                           <FormikControl className={styles.form_control} control='input' placeholder='GSTIN' name='GSTIN'/>
-                          <FormikControl className={styles.checkbox_control} control='checkbox' name='GSTINStatus'options={storeCreateCheckoption}/>
+                          <FormikControl className={styles.checkbox_control} optiondivname={styles.checkbox_option} control='checkbox' name='GSTINStatus'options={storeCreateCheckoption}/>
                     </Form>
                     <Form className={styles.bankDetail_Form} >
                           <h3 className={styles.docstorecard_header} >Bank Details</h3>

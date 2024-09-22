@@ -3,7 +3,7 @@ import { Field, ErrorMessage } from 'formik'
 import TextError from './texterror'
 
 function Checkbox (props) {
-  const { label, name,className,options, ...rest } = props
+  const { label, name,className,optiondivname,options, ...rest } = props
   return (
     <div className={className}>
       <label>{label}</label>
@@ -11,17 +11,19 @@ function Checkbox (props) {
         {({ field }) => {
           return options.map(option => {
             return (
-              <React.Fragment key={option.key}>
-                <input
-                  type='checkbox'
-                  id={option.value}
-                  {...field}
-                  {...rest}
-                  value={option.value}
-                  checked={field.value.includes(option.value)}
-                />
-                <label htmlFor={option.value}>{option.key}</label>
-              </React.Fragment>
+              <div className={optiondivname} key={option.key}>
+                <div>
+                  <input
+                    type='checkbox'
+                    id={option.value}
+                    {...field}
+                    {...rest}
+                    value={option.value}
+                    checked={field.value.includes(option.value)}
+                  />
+                  <label htmlFor={option.value}>{option.key}</label>
+                </div>
+              </div>
             )
           })
         }}

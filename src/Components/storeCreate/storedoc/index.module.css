@@ -37,14 +37,16 @@
     opacity: 0px;
     border: 1px solid #E0E0E0
 }
-.checkbox_control{
-    display: flex;
+
+.checkbox_option input{
+    margin-right: 10px;
     align-items: center;
+}
+.checkbox_option label{
     font-family: 'Inter';
     gap: 10px;
     font-size: 12px;
     font-weight: 400;
-    line-height: 14.52px;
     text-align: left;
     color: #868C9A;
 }
