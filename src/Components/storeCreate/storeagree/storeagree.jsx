@@ -28,7 +28,7 @@ const StoreAgree=()=>{
                        Facilisis nisl facilisis erat id convallis arcu. Accumsan adipiscing scelerisque egestas dignissim quam accumsan. Pretiu orttitor. Arcu feugiat proin purus platea. Adipiscing donec risus molestie vitae malesuada. Elit in massa tempor vivamus nisi. Vel aliquet proin et lobortis morbi dui. lobortis morbi dui sodales neque. Facilisis nisl facilisis erat id convallis arcu. Accumsan adipiscing scelerisque egestas dignissim quam accumsan. Accumsan adipiscing scelerisque egestas dignissim quam accumsan.
                     </p>
                 </div>
-                <div className={styles.store_num}><input type='checkbox' name='checkbox'/><label htmlFor='checkbox'>I have read all the terms & conditions and agree to them.</label></div>
+                <div className={styles.store_num}><input type='checkbox' name='checkbox' onClick={handleCheckboxChange} /><label htmlFor='checkbox'>I have read all the terms & conditions and agree to them.</label></div>
 
             </div>
         </>

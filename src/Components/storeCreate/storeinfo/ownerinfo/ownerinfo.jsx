@@ -15,7 +15,7 @@ const Ownerinfo=()=>{
                     <FormikControl className={styles.phonenu_control} control='input' placeholder='Mobile Number' name='ownerphonenu' />
                     <span className={styles.phone_verify_button}>Verify</span>
                     </div>
-                    <h3 className={styles.dottedline}/>
+                    <hr className={styles.dotted_Line}/>
                     <FormikControl className={styles.checkbox_control} optiondivname={styles.checkbox_option} control='checkbox' 
                     name='whatsappnumber' options={WhatsappCheckOption}
                     label={<span>By providing your <strong>Whatsapp Number</strong> to get updates on payments, order confirmation etc</span>}  />

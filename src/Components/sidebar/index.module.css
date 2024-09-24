@@ -1,0 +1,20 @@
+a{ 
+    color:#868C9A;
+    text-decoration: none;
+    font-family:'Inter';
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.36px;
+    text-align: left;    
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 15px;
+    padding-left: 35px;
+    gap:20px;
+}
+.active{
+    background-color: #F2F8DF;
+    border-right: 7px solid #7D9F20;
+
+}

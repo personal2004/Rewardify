@@ -1,5 +1,5 @@
 import styles from './index.module.css';
-import { Form,Formik } from 'formik';
+import {Formik } from 'formik';
 import{ storeCreateValues,storeCreatevalidationSchema} from '../../../constant/formcons';
 import StoreScanCard from '../storescancard/storeScancard';
 import Ownerinfo from './ownerinfo/ownerinfo';

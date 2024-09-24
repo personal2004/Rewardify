@@ -8,6 +8,8 @@
 3. Created Form Control component
 4. Created Login Page with email and Otp verification and after otp verification rediect to show stores available for loged in user and also option to create new store for the login user.
 5. Created storeStart page from where we can redirect to store creation page and this page also have contact form and on submission we got to see company phone and whatsapp link.
+6. Created storeCreation page to get data from vendor regarding shop owner,shop and to check whether the owner agree with the portal aggrement.
+
 
 # Installation
 

@@ -70,9 +70,9 @@
     text-align: left;
     color: #868C9A;
 }
-.dottedline{
-  margin-top: 20px;
-   border-bottom: 1px dotted #BEBEBE;
+.dotted_Line{
+   margin-top: 20px;
+   border-top: 1px dotted #BEBEBE;
 }
 .checkbox_control{
     display: flex;
