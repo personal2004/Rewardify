@@ -14,6 +14,7 @@ import StoreInfo from './Components/storeCreate/storeinfo/storeinfo';
 import StoreDoc from './Components/storeCreate/storedoc/storedoc';
 import StoreAgree from './Components/storeCreate/storeagree/storeagree';
 import HomeLayout from './Layout/homelayout/homeLayout';
+import DashBoardLayout from './Layout/dashboardlayout/dashboardLayout';
 
 function App() {
   const isVerified = () => {
@@ -42,7 +43,7 @@ function App() {
            <Route path='storeAgeement' exact element={<StoreAgree/>}/>
          </Route>
          <Route path='home' exact element={<HomeLayout/>}>
-          <Route index exact/>
+          <Route index exact element={<DashBoardLayout/>}/>
           <Route path='orders' exact/>
           <Route path='products' exact/>
           <Route path='profile'exact/>

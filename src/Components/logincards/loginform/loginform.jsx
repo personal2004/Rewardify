@@ -11,7 +11,7 @@ import axios from 'axios';
 const handleGenerateOtp = async (contactNo) => {
     try {
       const response = await axios.post(`${BASE_URL}+${GENERATE_OTP}`, {
-        dialCode: parseInt(91, 10),
+        dialCode: 91,
         contactNo: contactNo
       });
       console.log(response.data.message);
