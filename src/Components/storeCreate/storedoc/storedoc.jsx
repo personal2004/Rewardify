@@ -1,7 +1,7 @@
 import styles from './index.module.css';
 import { Formik,Form } from 'formik';
 import FormikControl from '../../formikComponent/formikControl';
-import {storeCreateValues,storeCreatevalidationSchema,storeCreateCheckoption} from '../../../constant/formcons';
+import {storeCreateValues,storeCreatevalidationSchema,storeCreateCheckoption} from '../../../utils/formcons';
 import StoreScanCard from '../storescancard/storeScancard';
 const StoreDoc=()=>{
 

@@ -20,8 +20,8 @@
 5. npm install yup
 6. npm install axios
 7. npm install react-icons
+8. npm install bootstrap@5.3.3
 
- 
 
 # Usage
 

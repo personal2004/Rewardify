@@ -5,34 +5,53 @@ import { Formik,Form } from 'formik';
 import FormikControl from '../../formikComponent/formikControl';
 import * as Yup from 'yup';
 import { useLocation } from 'react-router-dom';
+import api from '../../../utils/apiinstance';
+import {VERIFY_OTP} from '../../../utils/api';
+import getDeviceDetail from '../../../utils/function/devicedetail';
 
 const VerifyOtp=()=>{
   const location=useLocation()
   const navigate=useNavigate();
-  const generatedOtp = location.state?.otp;
+  const dialCode = location.state?.dialCode;
+  const phnumber=location.state?.contactNo;
+  const deviceDetails = getDeviceDetail();
+
    const initialValues={
-        otp1: '',
+        otp1:'',
         otp2: '',
         otp3: '',
         otp4: '',
       }
+      
     const validationSchema=Yup.object({
         otp1: Yup.string().required('Required').matches(/^\d$/, 'Must be a digit'),
         otp2: Yup.string().required('Required').matches(/^\d$/, 'Must be a digit'),
         otp3: Yup.string().required('Required').matches(/^\d$/, 'Must be a digit'),
         otp4: Yup.string().required('Required').matches(/^\d$/, 'Must be a digit'),
       })
- console.log(generatedOtp)
-      const onSubmit=(values) => {
-        const enteredOtp = `${values.otp1}${values.otp2}${values.otp3}${values.otp4}`;
-        if (enteredOtp === generatedOtp) {
-            alert('OTP verified successfully!');
-            localStorage.setItem('isVerified', 'true');
-            navigate('/stores')
+       
+      const handleVerifyOtp = async (enteredOtp) => {
+        try {
+          const response = await api.post(VERIFY_OTP, {
+            dialCode: dialCode,
+            contactNo: phnumber,
+            type:1,
+            otp:enteredOtp,
+          }, {      headers: {
+            'device':  JSON.stringify(deviceDetails),
+          },});    
+             localStorage.setItem('authToken', response?.data.token);
+             localStorage.setItem('refreshToken',response?.data.refreshToken);
 
-        } else {
-            alert('Invalid OTP. Please try again.');
-        }     
+        }catch (error) {
+            console.error('Error generating OTP:', error);
+         }   
+      };
+
+      const onSubmit=(values) => {
+        const enteredOtp = parseInt(`${values.otp1}${values.otp2}${values.otp3}${values.otp4}`,10);
+        handleVerifyOtp(enteredOtp)
+        navigate('/stores')    
        }
 
     return(
@@ -43,7 +62,6 @@ const VerifyOtp=()=>{
             <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
               {(formik)=>(
                 <Form className={styles.login_verify_content}>
-       
                 <div className={styles.login_verify_content_input}>
                             <FormikControl className={styles.form_control} control='input' name='otp1' maxLength='1'type="text"/>
                             <FormikControl className={styles.form_control} control='input' name='otp2' maxLength='1'type="text"/>
@@ -55,7 +73,6 @@ const VerifyOtp=()=>{
                     <div className={styles.login_verify_resend}>Didn’t receive OTP?  Resend in 0:55</div>
                 </div>
                 </Form>
-
                 )}
             </Formik>
         </div>

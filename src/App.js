@@ -1,7 +1,6 @@
 import './App.css';
-import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
+import { BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 import LoginLayout from './Layout/loginlayout/loginLayout';
-import { Navigate } from 'react-router-dom';
 import StoresStartLayout from './Layout/storeStartLayout/storeStartLayout';
 import LoginForm from './Components/logincards/loginform/loginform';
 import VerifyOtp from './Components/logincards/verifyOTP/verifyOtp';
@@ -17,12 +16,14 @@ import HomeLayout from './Layout/homelayout/homeLayout';
 import DashBoardLayout from './Layout/dashboardlayout/dashboardLayout';
 
 function App() {
-  const isVerified = () => {
-    return localStorage.getItem('isVerified') === 'true';
-  };
-  const ProtectedRoute = ({ element }) => {
-    return isVerified() ? element : <Navigate to="/stores" />;
-  };
+
+  // const isVerified = () => {
+  //   return localStorage.getItem('isVerified') === 'true';
+  // };
+  // const ProtectedRoute = ({ element }) => {
+  //   return isVerified() ? element : <Navigate to="/stores" />;
+  // };
+  
   return (
     <div className="App">
     <Router>
@@ -31,7 +32,8 @@ function App() {
             <Route index exact  element={<LoginStart/>} />
             <Route path='login' exact element={<LoginForm/>} />
             <Route path='verify' element={<VerifyOtp/>}/>
-            <Route path='stores' element={<ProtectedRoute element={<Stores/>}/>}/>
+            {/* <Route path='stores' element={<ProtectedRoute element={<Stores/>}/>}/> */}
+            <Route path='stores' element={<Stores/>}/>
          </Route>
          <Route path='storestart' exact element={<StoresStartLayout/>}>
            <Route index exact element={<ContactForm/>}/>

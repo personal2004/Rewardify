@@ -1,6 +1,6 @@
 import { Form,Formik } from "formik";
 import styles from './index.module.css';
-import { storeCreateValues,storeCreatevalidationSchema } from "../../../../constant/formcons";
+import { storeCreateValues,storeCreatevalidationSchema } from "../../../../utils/formcons";
 import FormikControl from "../../../formikComponent/formikControl";
 const StoreInfoForm=()=>{
     return(

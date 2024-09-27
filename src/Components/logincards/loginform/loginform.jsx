@@ -4,21 +4,8 @@ import {Formik,Form} from 'formik';
 import FormikControl from '../../../Components/formikComponent/formikControl';
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
-import sendOtp from '../../../function/sendOtp';
-import {GENERATE_OTP,BASE_URL} from '../../../constant/api';
-import axios from 'axios';
-
-const handleGenerateOtp = async (contactNo) => {
-    try {
-      const response = await axios.post(`${BASE_URL}+${GENERATE_OTP}`, {
-        dialCode: 91,
-        contactNo: contactNo
-      });
-      console.log(response.data.message);
-    } catch (error) {
-      console.error('Error generating OTP:', error);
-    }
-  };
+import {GENERATE_OTP,BASE_URL} from '../../../utils/api';
+import api from '../../../utils/apiinstance';
 
 const LoginForm=()=>{
     const navigate=useNavigate();
@@ -26,19 +13,33 @@ const LoginForm=()=>{
     const initialPhoneValue={
         phnumber:'',
     }
+    
     const validationSchema=Yup.object({
         phnumber:Yup.string()
                .required('Required !')
 
     })
- 
-   const onSubmit=async(values,onSubmitPropps)=>{
-        onSubmitPropps.setSubmitting(false)
-        onSubmitPropps.resetForm()
-        handleGenerateOtp(values.phnumber)
-        const otp=await sendOtp();
-        navigate('/verify', { state: { otp } });       
-       }
+
+    const handleGenerateOtp = async (contactNo) => {
+      try {
+        const response = await api.post(`${GENERATE_OTP}`, {
+          dialCode: 91,
+          contactNo: contactNo,
+        });
+      } catch (error) {
+         console.error('Error generating OTP:', error);
+      }
+    };
+
+    const onSubmit=async(values,onSubmitPropps)=>{
+      onSubmitPropps.setSubmitting(false)
+      onSubmitPropps.resetForm()
+      handleGenerateOtp(values.phnumber)
+      navigate('/verify', { state: {
+        dialCode: 91,
+        contactNo: values.phnumber
+      }});       
+     }
 
     return(
     <Formik 

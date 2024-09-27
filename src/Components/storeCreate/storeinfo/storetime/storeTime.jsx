@@ -1,9 +1,11 @@
+import React from 'react';
 import styles from './index.module.css';
 import { Form,Formik } from 'formik';
-import { storeCreateValues,storeCreatevalidationSchema } from '../../../../constant/formcons';
+import { storeCreateValues,storeCreatevalidationSchema } from '../../../../utils/formcons';
+import TimePicker from '../TimePicker';
 const StoreTime=()=>{
 
-      
+
     return(
         <Formik initialValues={storeCreateValues} validationSchema={storeCreatevalidationSchema} >
         {(formik)=>{
@@ -11,7 +13,17 @@ const StoreTime=()=>{
                 <Form className={styles.storeTime_Form} >
                 <h3 className={styles.storeTimecard_header} >Working Time</h3>
                 <h5>Select the Opening & Closing Time</h5>
-                <div className={styles.time_picker}>
+                <TimePicker/>
+                {/* <div className="form-group">
+      <label htmlFor="time">Time</label>
+      <div className="input-group date" id="timePicker">
+        <input type="text" className="form-control" />
+        <span className="input-group-addon">
+          <i className="fa fa-clock-o" aria-hidden="true"></i>
+        </span>
+      </div>
+    </div> */}
+                {/* <div className={styles.time_picker}>
                     <div class={styles.time_picker_item}>
                     <span class="icon">🕒</span>
                     <select class="hour-select">
@@ -61,9 +73,9 @@ const StoreTime=()=>{
                         <option value="45">45</option>
                     </select>
                     <span class="icon">PM</span>
-                    </div>
-                </div>
-                
+                    </div
+                </div> 
+                >*/}
                 </Form>)
                 }}
         </Formik>
@@ -71,3 +83,4 @@ const StoreTime=()=>{
 }
 
 export default StoreTime;
+

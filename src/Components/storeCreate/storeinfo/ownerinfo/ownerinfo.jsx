@@ -1,7 +1,7 @@
 import { Formik,Form } from "formik";
 import styles from './index.module.css' 
 import FormikControl from "../../../formikComponent/formikControl";
-import { storeCreateValues,storeCreatevalidationSchema,WhatsappCheckOption } from "../../../../constant/formcons";
+import { storeCreateValues,storeCreatevalidationSchema,WhatsappCheckOption } from "../../../../utils/formcons";
 const Ownerinfo=()=>{
     return(
         <Formik initialValues={storeCreateValues} validationSchema={storeCreatevalidationSchema} >
