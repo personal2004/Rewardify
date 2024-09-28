@@ -6,6 +6,8 @@ import Modal from '../../modal/modal';
 import { handshake } from '../../../img/images';
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
+import api from '../../../utils/apiinstance';
+import { POST_CONTACT_FORM } from '../../../utils/api';
 const ContactForm=()=>{
 
   const [showModal, setShowModal] = useState(false);
@@ -15,7 +17,7 @@ const ContactForm=()=>{
      ownername:'',
      shopname:'',
      location:'',
-     phonenumber:''
+     phonenumber:'',
   }
   const validationSchema=Yup.object({
     ownername:Yup.string().required('Required !'),
@@ -23,9 +25,23 @@ const ContactForm=()=>{
     location:Yup.string().required('Required !'),
     phonenumber:Yup.string().required('Required !')
   })
-  const onsubmit=(values,{resetForm})=>{
-    setShowModal(true);
-    resetForm();
+  const onsubmit=async(values,{resetForm})=>{
+    try{
+      const response=await api.post(POST_CONTACT_FORM, {
+        contactNo:Number(values.phonenumber),
+        dialCode: 91,
+        location:values.location,
+        ownerName:values.ownername,
+        shopName:values.shopname
+      });
+      if(response?.data.message){
+        setShowModal(true);
+        resetForm();
+      }
+  }catch(error){
+    console.error('Error Submitting Contactform:', error);
+
+  }
   }
   const onClose=(e)=>{
     setShowModal(false)

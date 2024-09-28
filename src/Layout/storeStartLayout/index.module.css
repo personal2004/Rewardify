@@ -116,7 +116,7 @@ margin-bottom: 50px;
   height:fit-content;
 }
 
-@media (max-width:800px){
+@media (max-width:1200px){
     .stores_start_form{
         width: 100%;
     }

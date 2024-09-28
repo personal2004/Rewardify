@@ -4,7 +4,7 @@ import {Formik,Form} from 'formik';
 import FormikControl from '../../../Components/formikComponent/formikControl';
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
-import {GENERATE_OTP,BASE_URL} from '../../../utils/api';
+import {GENERATE_OTP} from '../../../utils/api';
 import api from '../../../utils/apiinstance';
 
 const LoginForm=()=>{
