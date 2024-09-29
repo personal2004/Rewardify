@@ -4,7 +4,7 @@ import {Formik,Form} from 'formik';
 import FormikControl from '../../../Components/formikComponent/formikControl';
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
-import {GENERATE_OTP} from '../../../utils/api';
+import {GENERATE_OTP_LOGIN} from '../../../utils/api';
 import api from '../../../utils/apiinstance';
 
 const LoginForm=()=>{
@@ -22,7 +22,7 @@ const LoginForm=()=>{
 
     const handleGenerateOtp = async (contactNo) => {
       try {
-        const response = await api.post(`${GENERATE_OTP}`, {
+        const response = await api.post(`${GENERATE_OTP_LOGIN}`, {
           dialCode: 91,
           contactNo: contactNo,
         });

@@ -21,6 +21,7 @@
 6. npm install axios
 7. npm install react-icons
 8. npm install bootstrap@5.3.3
+9. npm i @syncfusion/ej2-react-calendars
 
 
 # Usage

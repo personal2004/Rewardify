@@ -34,6 +34,9 @@
     margin-bottom: 5px;
     text-align: justify;
 }
+.store_num{
+    display: flex;
+}
 .store_num label{
     width: 100%;
     margin-left: 10px;

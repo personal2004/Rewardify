@@ -6,8 +6,8 @@ import FormikControl from '../../formikComponent/formikControl';
 import * as Yup from 'yup';
 import { useLocation } from 'react-router-dom';
 import api from '../../../utils/apiinstance';
-import {VERIFY_OTP} from '../../../utils/api';
-import getDeviceDetail from '../../../utils/function/devicedetail';
+import {VERIFY_OTP_LOGIN} from '../../../utils/api';
+import{ getDeviceDetail }from '../../../utils/functions';
 
 const VerifyOtp=()=>{
   const location=useLocation()
@@ -32,7 +32,7 @@ const VerifyOtp=()=>{
        
       const handleVerifyOtp = async (enteredOtp) => {
         try {
-          const response = await api.post(VERIFY_OTP, {
+          const response = await api.post(VERIFY_OTP_LOGIN, {
             dialCode: dialCode,
             contactNo: phnumber,
             type:1,

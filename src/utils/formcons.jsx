@@ -16,11 +16,19 @@ export const WorkdaysCheckOption=[
     {key:'Saturday',value:'Saturday'},
     {key:'Sunday',value:'Sunday'}
 ]
-export const storeCreateValues={
+export const storeinfoValues={
     ownerName:'',
     ownerEmail:'',
     ownerphonenu:'',
     whatsappnumber:[],
+}
+export const storeInfovalidationSchema=Yup.object({
+    ownerName:Yup.string().required('Required !'),
+    ownerEmail:Yup.string().required('Required !'),
+    ownerphonenu:Yup.string().required('Required !'),
+    whatsappnumber:Yup.array().required('Required !'),
+});
+export const storeCreateValues={
     storeName:'',
     storeaddress:'',
     storenum:'',
@@ -37,12 +45,7 @@ export const storeCreateValues={
     radiooption:'',
     birthdate:null,
 };
-
 export const storeCreatevalidationSchema=Yup.object({
-    ownerName:Yup.string().required('Required !'),
-    ownerEmail:Yup.string().required('Required !'),
-    ownerphonenu:Yup.string().required('Required !'),
-    whatsappnumber:Yup.array().required('Required !'),
     storeName:Yup.string().required('Required !'),
     storeaddress:Yup.string().required('Required !'),
     storenum:Yup.string().required('Required !'),

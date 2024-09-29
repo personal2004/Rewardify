@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './index.module.css';
 import { Form,Formik } from 'formik';
 import { storeCreateValues,storeCreatevalidationSchema } from '../../../../utils/formcons';
-import TimePicker from '../TimePicker';
+import TimePicker from '../../../timePicker/TimePicker';
 const StoreTime=()=>{
 
 
