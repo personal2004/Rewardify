@@ -30,6 +30,7 @@
     height: 100%;
 }
 .HomeLayout_Main{
+    background-color: #F9F9F9;
     overflow-y: scroll;
     flex-grow: 1;
 }

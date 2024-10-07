@@ -11,19 +11,14 @@ const Ownerinfo=()=>{
      const sendOtpToMoblile=async(number)=>{
       try{
         const response=await api.post(NUMBER_OTP_GENERATE,{
-           dialcode:91,
-           contactNo:'9600441932'
+           dialCode:91,
+           contactNo:number,
         });
         console.log(response?.data.message)
       }catch(error){
         console.log(`Error Sending OTP To Mobile ${error}`)
       }
     }
-
-     useEffect(()=>{
-      sendOtpToMoblile(storeinfoValues.ownerphonenu)
-      
-     },[verifyOtp])
     return(
         <Formik initialValues={storeinfoValues} validationSchema={storeInfovalidationSchema} >
         {(formik)=>{
@@ -34,15 +29,20 @@ const Ownerinfo=()=>{
                     <FormikControl className={styles.form_control} control='input' placeholder='Email Address' name='ownerEmail'/>
                     <div className={styles.input_with_button}>
                     <FormikControl className={styles.phonenu_control} control='input' placeholder='Mobile Number' name='ownerphonenu' />
-                    <span className={styles.phone_verify_button} onClick={()=>setverifyOtp(!verifyOtp)}>Verify</span>
+                    <span className={styles.phone_verify_button} 
+                    onClick={()=>{
+                      setverifyOtp(!verifyOtp)
+                      sendOtpToMoblile(formik.values.ownerphonenu)
+                    }
+                    } >Verify</span>
                     {verifyOtp &&  
                     <> 
                           <p>Verification code has send to your mobile number</p>      
                           <div className={styles.phone_verify_content_input}>
-                            <FormikControl className={styles.form_control} control='input' name='otp1' maxLength='1'type="text"/>
-                            <FormikControl className={styles.form_control} control='input' name='otp2' maxLength='1'type="text"/>
-                            <FormikControl className={styles.form_control} control='input' name='otp3' maxLength='1'type="text"/>
-                            <FormikControl className={styles.form_control} control='input' name='otp4' maxLength='1'type="text"/>
+                            <FormikControl className={styles.otp_control} control='input' name='otp1' maxLength='1'type="text"/>
+                            <FormikControl className={styles.otp_control} control='input' name='otp2' maxLength='1'type="text"/>
+                            <FormikControl className={styles.otp_control} control='input' name='otp3' maxLength='1'type="text"/>
+                            <FormikControl className={styles.otp_control} control='input' name='otp4' maxLength='1'type="text"/>
                           </div>
                           <h6>Didn’t receive OTP?  Resend in 0:55</h6>
                     </>

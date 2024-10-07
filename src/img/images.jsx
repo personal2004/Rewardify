@@ -11,7 +11,14 @@ import coin from '../Assets/coin.png';
 import handrupees from '../Assets/handrupee.jpg';
 import bellnotify from '../Assets/bellnotification.png';
 import profileicon from '../Assets/profilepic.jpg';
-
+import makepayment from '../Assets/makepayment.png';
+import settlement from '../Assets/settlement.png';
+import transhistory from '../Assets/transhistory.png';
+import refundtran from '../Assets/refundtransaction.png';
+import reports from '../Assets/reports.png';
+import referandearn from '../Assets/referandearn.png'
+import reqtorewardify from '../Assets/reqtorewardify.png';
+import giftcards from '../Assets/giftcards.png';
 export {
   LoginLogo,
   LoginBackground,
@@ -25,5 +32,13 @@ export {
   coin,
   handrupees,
   profileicon,
-  bellnotify
+  bellnotify,
+  makepayment,
+  settlement,
+  transhistory,
+  refundtran,
+  reports,
+  referandearn,
+  reqtorewardify,
+  giftcards,
 }

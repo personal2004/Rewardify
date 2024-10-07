@@ -71,13 +71,6 @@
     margin-top: 12px;
     margin-bottom: 0%;
   }
-  .phone_verify_content_input{
-    padding: 3px 10px;
-    display: flex;
-    gap:2px;
-    margin-top: 0px;
-    margin-bottom:0%;
-  }
   .input_with_button h6{
     justify-self: center;
     align-self: center;
@@ -88,6 +81,21 @@
     line-height: 21px;
     letter-spacing:1px;
     color: #868C9A;
+  }
+  .phone_verify_content_input{
+    padding: 3px 10px;
+    display: flex;
+    gap:10px;
+    margin-top: 0px;
+    margin-bottom:0%;
+  }
+  .otp_control input{
+    width: 50%;
+    height: 40%;
+    padding: 12px 16px 12px 16px;
+    outline: none;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
   }
 .checkbox_control{
     display: flex;

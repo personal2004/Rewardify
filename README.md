@@ -10,7 +10,6 @@
 5. Created storeStart page from where we can redirect to store creation page and this page also have contact form and on submission we got to see company phone and whatsapp link.
 6. Created storeCreation page to get data from vendor regarding shop owner,shop and to check whether the owner agree with the portal aggrement.
 
-
 # Installation
 
 1. npm install normalize.css
@@ -20,9 +19,9 @@
 5. npm install yup
 6. npm install axios
 7. npm install react-icons
-8. npm install bootstrap@5.3.3
-9. npm i @syncfusion/ej2-react-calendars
-
+8. npm i @syncfusion/ej2-react-calendars
+9. npm install react-bootstrap bootstrap
+10. npm install @reduxjs/toolkit react-redux
 
 # Usage
 

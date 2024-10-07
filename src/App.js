@@ -14,8 +14,34 @@ import StoreDoc from './Components/storeCreate/storedoc/storedoc';
 import StoreAgree from './Components/storeCreate/storeagree/storeagree';
 import HomeLayout from './Layout/homelayout/homeLayout';
 import DashBoardLayout from './Layout/dashboardlayout/dashboardLayout';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import api from './utils/apiinstance';
+import { GET_USER_PROFILE } from './utils/api';
+import { useSelector,useDispatch } from 'react-redux';
+import { setUser } from './utils/userSlice';
+import { useEffect,useState } from 'react';
 
 function App() {
+  const user = useSelector((state) => state.user.user);
+  const [isProfileLoaded, setIsProfileLoaded] = useState(false);
+
+ const dispatch=useDispatch();
+  const getprofile=async()=>{
+    try {
+        const response = await api.get(GET_USER_PROFILE);
+        dispatch(setUser(response?.data));
+        setIsProfileLoaded(true);
+
+      }catch (error) {
+         console.error('Error generating OTP:', error);
+      }      
+    }
+  useEffect(()=>{
+    if( localStorage.getItem('authToken') && !isProfileLoaded){
+        getprofile()
+    }
+    console.log(user?.name);
+   },[])
 
   // const isVerified = () => {
   //   return localStorage.getItem('isVerified') === 'true';

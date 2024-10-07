@@ -1,0 +1,27 @@
+.customCarousel{
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 500px;
+    height: 170px;
+    background-color: #FFFFFF;
+}
+.customCarousel button{
+    background-color: black !important;
+}
+.customCarousel span{
+    font-size: larger;
+    border-radius: 40%;
+    background-color: rgb(25, 24, 24);
+}
+.carouselItem {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
+}
+
+.carouselItem img {
+    max-width: 100px; 
+    height: auto;
+}

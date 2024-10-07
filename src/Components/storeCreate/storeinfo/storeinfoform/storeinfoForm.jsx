@@ -21,10 +21,10 @@ const StoreInfoForm=()=>{
                     <> 
                           <p>Verification code has send to your mobile number</p>      
                           <div className={styles.phone_verify_content_input}>
-                            <FormikControl className={styles.form_control} control='input' name='otp1' maxLength='1'type="text"/>
-                            <FormikControl className={styles.form_control} control='input' name='otp2' maxLength='1'type="text"/>
-                            <FormikControl className={styles.form_control} control='input' name='otp3' maxLength='1'type="text"/>
-                            <FormikControl className={styles.form_control} control='input' name='otp4' maxLength='1'type="text"/>
+                            <FormikControl className={styles.otp_control} control='input' name='otp1' maxLength='1'type="text"/>
+                            <FormikControl className={styles.otp_control} control='input' name='otp2' maxLength='1'type="text"/>
+                            <FormikControl className={styles.otp_control} control='input' name='otp3' maxLength='1'type="text"/>
+                            <FormikControl className={styles.otp_control} control='input' name='otp4' maxLength='1'type="text"/>
                           </div>
                           <h6>Didn’t receive OTP?  Resend in 0:55</h6>
                     </>

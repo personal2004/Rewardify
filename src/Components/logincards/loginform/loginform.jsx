@@ -9,17 +9,13 @@ import api from '../../../utils/apiinstance';
 
 const LoginForm=()=>{
     const navigate=useNavigate();
-
     const initialPhoneValue={
         phnumber:'',
     }
-    
     const validationSchema=Yup.object({
         phnumber:Yup.string()
                .required('Required !')
-
     })
-
     const handleGenerateOtp = async (contactNo) => {
       try {
         const response = await api.post(`${GENERATE_OTP_LOGIN}`, {

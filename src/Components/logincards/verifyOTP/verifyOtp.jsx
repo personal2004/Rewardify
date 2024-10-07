@@ -7,14 +7,12 @@ import * as Yup from 'yup';
 import { useLocation } from 'react-router-dom';
 import api from '../../../utils/apiinstance';
 import {VERIFY_OTP_LOGIN} from '../../../utils/api';
-import{ getDeviceDetail }from '../../../utils/functions';
 
 const VerifyOtp=()=>{
   const location=useLocation()
   const navigate=useNavigate();
   const dialCode = location.state?.dialCode;
   const phnumber=location.state?.contactNo;
-  const deviceDetails = getDeviceDetail();
 
    const initialValues={
         otp1:'',
@@ -37,11 +35,9 @@ const VerifyOtp=()=>{
             contactNo: phnumber,
             type:1,
             otp:enteredOtp,
-          }, {      headers: {
-            'device':  JSON.stringify(deviceDetails),
-          },});    
-             localStorage.setItem('authToken', response?.data.token);
-             localStorage.setItem('refreshToken',response?.data.refreshToken);
+          });    
+          localStorage.setItem('authToken', response?.data.token);
+          localStorage.setItem('refreshToken',response?.data.refreshToken);
 
         }catch (error) {
             console.error('Error generating OTP:', error);
