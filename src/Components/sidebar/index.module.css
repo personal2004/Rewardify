@@ -1,3 +1,26 @@
+.store_profile{
+    display: flex;
+    flex-direction: column;
+    padding: 28px 20px;
+}
+.store_profile h4{
+font-family: 'Inter';
+font-size: 16px;
+font-weight: 600;
+line-height: 19.36px;
+padding-left: 20px;
+}
+.store_profile p{
+font-family: 'Inter';
+font-size: 14px;
+font-weight: 400;
+line-height: 16.94px;
+color:#868C9A;
+white-space: nowrap;
+overflow: hidden;  
+text-overflow: ellipsis;
+padding-left: 20px;
+}
 a{ 
     color:#868C9A !important;
     text-decoration: none !important;

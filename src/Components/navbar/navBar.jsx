@@ -5,9 +5,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 const NavBar=React.memo(({navbarVisible,togglesideBar})=>{
-
-    const user = useSelector((state) => state.user.user);
-   console.log(user?.name)
+   const user = useSelector((state) => state.user.user);
     return(
         <>  
           <div className={styles.nav_header}>

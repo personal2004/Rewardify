@@ -1,0 +1,41 @@
+import { Formik,Form } from "formik";
+import styles from './index.module.css' 
+import FormikControl from "../../formikComponent/formikControl";
+import * as Yup from 'yup';
+import { useSelector } from "react-redux";
+
+const ProfileDetail=()=>{
+    const profile=useSelector((state)=>state.user.user)
+    const profileDetailValues={
+        ownerName:profile?.name ,
+        ownerEmail:profile?.email,
+        ownerphonenu:profile?.contactNo,
+    }
+    const storeInfovalidationSchema=Yup.object({
+        ownerName:Yup.string().required('Required !'),
+        ownerEmail:Yup.string().required('Required !'),
+        ownerphonenu:Yup.string().required('Required !'),
+    });
+    return(
+        <Formik initialValues={profileDetailValues} validationSchema={storeInfovalidationSchema} >
+        {(formik)=>{
+          return(
+            <Form className={styles.profile_Form} >
+                    <h3 className={styles.profile_header} >Profile Details</h3>
+                    <p className={styles.profile_para}>Here you can view and edit your details.</p>
+                    <FormikControl className={styles.form_control} control='input' placeholder='Owner’s Name' name='ownerName'/>
+                    <div className={styles.input_with_button}>
+                        <FormikControl className={styles.form_control} control='input' placeholder='Email Address' name='ownerEmail'/>
+                        <span className={styles.email_change_button}  >Change</span>
+                    </div>
+                    <FormikControl className={styles.form_control} control='input' placeholder='Mobile Number' name='ownerphonenu' />
+                    <button>Save Changes</button>
+                    <note className={styles.note}>*Note: After changing the details, the REWARDIFY admin team will need to verify and approve the change. 
+                        Once approved, the updated Changes will be reflected here.</note>
+            </Form>)
+              }}
+            </Formik>
+    )
+}
+
+export default ProfileDetail

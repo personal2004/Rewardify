@@ -17,21 +17,22 @@ import DashBoardLayout from './Layout/dashboardlayout/dashboardLayout';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import api from './utils/apiinstance';
 import { GET_USER_PROFILE } from './utils/api';
-import { useSelector,useDispatch } from 'react-redux';
+import {useDispatch } from 'react-redux';
 import { setUser } from './utils/userSlice';
-import { useEffect,useState } from 'react';
-
+import { useEffect,useState} from 'react';
+import ProfileLayout from './Layout/profilelayout/profileLayout';
+import ProfileDetail from './Components/profile/profileDetail/profileDetail';
+import ProfileShopDetail from './Components/profile/shopDetail/shopDetail';
 function App() {
-  const user = useSelector((state) => state.user.user);
-  const [isProfileLoaded, setIsProfileLoaded] = useState(false);
 
+  const [isProfileLoaded, setIsProfileLoaded] = useState(false);
  const dispatch=useDispatch();
+
   const getprofile=async()=>{
     try {
         const response = await api.get(GET_USER_PROFILE);
         dispatch(setUser(response?.data));
         setIsProfileLoaded(true);
-
       }catch (error) {
          console.error('Error generating OTP:', error);
       }      
@@ -40,7 +41,6 @@ function App() {
     if( localStorage.getItem('authToken') && !isProfileLoaded){
         getprofile()
     }
-    console.log(user?.name);
    },[])
 
   // const isVerified = () => {
@@ -74,7 +74,10 @@ function App() {
           <Route index exact element={<DashBoardLayout/>}/>
           <Route path='orders' exact/>
           <Route path='products' exact/>
-          <Route path='profile'exact/>
+          <Route path='profile'exact element={<ProfileLayout/>}>
+           <Route index exact element={<ProfileDetail/>}/>
+            <Route path='shopdetail' exact element={<ProfileShopDetail/>}/>
+          </Route>
          </Route>
       </Routes>
     </Router>

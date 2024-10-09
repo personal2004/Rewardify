@@ -36,12 +36,12 @@ const HomeLayout=()=>{
         <div className={styles.HomeLayout}>
             <div className={styles.HomeLayout_Navbar}><NavBar navbarVisible={isMenuBarVisible} togglesideBar={toggleSideBar}/></div>
             <div className={styles.HomeLayout_Container}>
-              {isSidebarVisible && <div className={styles.HomeLayout_Sidebar} onClick={toggleSideBar}>
-                <SideBar/>
-              </div>}
-              <div className={styles.HomeLayout_Main}>
-                <Outlet/>
-              </div>
+                {isSidebarVisible && <div className={styles.HomeLayout_Sidebar} onClick={toggleSideBar}>
+                  <SideBar/>
+                </div>}
+                <div className={styles.HomeLayout_Main}>
+                  <Outlet/>
+                </div>
             </div>
         </div>
     )
