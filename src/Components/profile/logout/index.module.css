@@ -1,0 +1,48 @@
+.modalbutton_style{
+    margin-top: 20px;
+    color: white;
+    border: none;
+    outline: none;
+    background: linear-gradient(90deg, #668D12 0%, #ACC43F 113.61%) !important;
+    width: 100%;
+    font-size: 86px;
+    font-family: 'Inter';
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 41.78px;
+    border-radius: 8px;
+}
+.popup_header{
+    font-family: 'Inter';
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38.73px;
+    text-align: center;
+}
+.popup_para{
+    padding-top: 9px;
+    font-family:'Inter';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.78px;
+    text-align: center;
+    word-spacing: 1px;
+    text-align: center;
+    color: #868C9A;
+}
+
+.imageContainer {
+    width: 91px;
+    padding-left: 10px;
+    height: 90px;
+    border-radius: 100%;
+    background: #E0E9C2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: absolute;
+    top: -59px; 
+    left: 50%;
+    transform: translateX(-50%);
+  }

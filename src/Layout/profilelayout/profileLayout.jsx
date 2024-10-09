@@ -11,7 +11,7 @@ const ProfileLayout=()=>{
                      <NavLink  to='/home/profile/shopdetail' end className={({ isActive }) => isActive ? style.active : ''}><span>{icons.shop}</span>Shop Details</NavLink>
                      <NavLink  to='/home' end className={({ isActive })=> isActive? style.active : '' }><span>{icons.wallet}</span>My Wallet</NavLink>
                      <NavLink  to='/home'end className={({ isActive })=> isActive? style.active : '' }><span>{icons.notifi}</span>About REWARDIFY</NavLink>
-                     <NavLink  to='/home' end className={({ isActive })=> isActive? style.active : '' }><span>{icons.logout}</span>Logout</NavLink>
+                     <NavLink  to='/home/profile/logout' end className={({ isActive })=> isActive? style.active : '' }><span>{icons.logout}</span>Logout</NavLink>
                 </div>
                 <div className={style.ProfileMain}><Outlet/></div>
             </div>

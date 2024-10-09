@@ -19,6 +19,7 @@ import reports from '../Assets/reports.png';
 import referandearn from '../Assets/referandearn.png'
 import reqtorewardify from '../Assets/reqtorewardify.png';
 import giftcards from '../Assets/giftcards.png';
+import logout from '../Assets/logout .png'
 export {
   LoginLogo,
   LoginBackground,
@@ -41,4 +42,5 @@ export {
   referandearn,
   reqtorewardify,
   giftcards,
+  logout
 }

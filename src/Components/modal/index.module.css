@@ -12,10 +12,10 @@
 
   .modal {
     background: white;
-    padding: 40px;
+    padding: 35px;
     padding-bottom: 10px;
     border-radius: 8px;
-    width: 50%;
+    width: 60%;
     max-width: 338px;
     text-align: center;
     position: relative;
@@ -24,5 +24,15 @@
   .modalContent {
     margin-bottom: 20px;
   }
-  
+
+  .modalContent h6{
+    padding-top:20px ;
+    padding-left: 30px;
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+    cursor: pointer;
+  }
   

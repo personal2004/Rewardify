@@ -1,7 +1,10 @@
 import React from 'react';
 import styles from './index.module.css';
-const Modal = ({ show, onClose, children,button_text,buttonStyle }) => {
+import { useLocation } from 'react-router-dom';
+const Modal = ({ show, onClose, children,button_text,buttonStyle,onCancel }) => {
 
+  const location=useLocation();
+  const showCancel=location.pathname==='/home/profile/logout'
   if (!show) return null;
 
   return (
@@ -10,6 +13,8 @@ const Modal = ({ show, onClose, children,button_text,buttonStyle }) => {
         <div className={styles.modalContent}>
           {children}
           <button onClick={onClose} className={buttonStyle}>{button_text}</button>
+          { showCancel && 
+             <h6 onClick={onCancel}>Cancel</h6>}
         </div>
       </div>
     </div>

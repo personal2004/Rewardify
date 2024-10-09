@@ -23,6 +23,7 @@ import { useEffect,useState} from 'react';
 import ProfileLayout from './Layout/profilelayout/profileLayout';
 import ProfileDetail from './Components/profile/profileDetail/profileDetail';
 import ProfileShopDetail from './Components/profile/shopDetail/shopDetail';
+import LogOut from './Components/profile/logout/logOut';
 function App() {
 
   const [isProfileLoaded, setIsProfileLoaded] = useState(false);
@@ -75,8 +76,9 @@ function App() {
           <Route path='orders' exact/>
           <Route path='products' exact/>
           <Route path='profile'exact element={<ProfileLayout/>}>
-           <Route index exact element={<ProfileDetail/>}/>
+            <Route index exact element={<ProfileDetail/>}/>
             <Route path='shopdetail' exact element={<ProfileShopDetail/>}/>
+            <Route path='logout' exact element={<LogOut/>}/>
           </Route>
          </Route>
       </Routes>
