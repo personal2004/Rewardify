@@ -11,8 +11,8 @@ const ProfileShopDetail=()=>{
             <StoreTime/>
             <EditStoreImage/>
             <button>Save Changes</button>
-            <note className={style.note}>*Note: After changing the details, the REWARDIFY admin team will need to verify and approve the change. 
-                Once approved, the updated Changes will be reflected here.</note>
+            <p className={style.note}>*Note: After changing the details, the REWARDIFY admin team will need to verify and approve the change. 
+                Once approved, the updated Changes will be reflected here.</p>
         </div>
     )
 }

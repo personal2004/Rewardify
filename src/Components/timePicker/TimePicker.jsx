@@ -17,7 +17,7 @@ useEffect(()=>{
       setOpenTime(new Date(time?.store?.openingTime))
       setCloseTime(new Date(time?.store?.closingTime))
       }
-},[time])
+},[time,location.pathname])
   return (
     <div className={styles.TimePicker_container}>
 

@@ -16,7 +16,7 @@ const WorkdayForm=()=>{
          storeCreateValues.workingdays=days?.store?.schedule;
         }
     },
-    [days])
+    [days,location.pathname])
 
      const WorkdaysCheckOption=[
         {key:'Monday',value:1},

@@ -3,6 +3,7 @@
  height: 100%;
  padding:20px ;
  background-color:#FFFFFF;
+ overflow: scroll;
 }
 .ProfileLayout header{
 font-family: 'Inter';
@@ -47,5 +48,9 @@ opacity: 0.3;
  padding-left: 60px;
  display: flex;
  flex-direction: column;
+ width: 100%;
 
+}
+.ProfileLayout::-webkit-scrollbar{
+    display: none;
 }

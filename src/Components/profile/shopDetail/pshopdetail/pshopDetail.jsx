@@ -17,10 +17,8 @@ const ProShopDetailCard=()=>{
             storeCreateValues.storeaddress = `${address.line1}, ${address.line2}, ${address.city}, ${address.state}, ${address.pincode}, ${address.country}`;
         }       
         storeCreateValues.storenum=shop?.store?.contactNo;
-
-        console.log(shop?.store?.name)
         }
-    },[])
+    },[location.pathname,shop])
     return(
         <div>
         <h4 className={styles.pocard_header}>Shop Details</h4>

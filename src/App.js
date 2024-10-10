@@ -24,23 +24,30 @@ import ProfileLayout from './Layout/profilelayout/profileLayout';
 import ProfileDetail from './Components/profile/profileDetail/profileDetail';
 import ProfileShopDetail from './Components/profile/shopDetail/shopDetail';
 import LogOut from './Components/profile/logout/logOut';
+import Wallet from './Components/profile/wallet/wallet';
+
 function App() {
 
-  const [isProfileLoaded, setIsProfileLoaded] = useState(false);
+  // const [isProfileLoaded, setIsProfileLoaded] = useState(false);
  const dispatch=useDispatch();
 
   const getprofile=async()=>{
     try {
+      console.log('Before Entering api')
         const response = await api.get(GET_USER_PROFILE);
         dispatch(setUser(response?.data));
-        setIsProfileLoaded(true);
+        // setIsProfileLoaded(true);
+        console.log('After Entering api')
+
       }catch (error) {
          console.error('Error generating OTP:', error);
       }      
     }
   useEffect(()=>{
-    if( localStorage.getItem('authToken') && !isProfileLoaded){
+    // console.log('calling 1')
+    if( localStorage.getItem('authToken')){
         getprofile()
+        // console.log('calling if ')
     }
    },[])
 
@@ -78,6 +85,7 @@ function App() {
           <Route path='profile'exact element={<ProfileLayout/>}>
             <Route index exact element={<ProfileDetail/>}/>
             <Route path='shopdetail' exact element={<ProfileShopDetail/>}/>
+            <Route path='wallet' exact element={<Wallet/>}/>
             <Route path='logout' exact element={<LogOut/>}/>
           </Route>
          </Route>

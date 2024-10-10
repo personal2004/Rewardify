@@ -19,7 +19,11 @@ import reports from '../Assets/reports.png';
 import referandearn from '../Assets/referandearn.png'
 import reqtorewardify from '../Assets/reqtorewardify.png';
 import giftcards from '../Assets/giftcards.png';
-import logout from '../Assets/logout .png'
+import logout from '../Assets/logout .png';
+import paytm from '../Assets/PayTm.png';
+import googlepay from '../Assets/GooglePay.png';
+import phonepay from '../Assets/PhonePe.png';
+
 export {
   LoginLogo,
   LoginBackground,
@@ -42,5 +46,8 @@ export {
   referandearn,
   reqtorewardify,
   giftcards,
-  logout
+  logout,
+  paytm,
+  googlepay,
+  phonepay,
 }
