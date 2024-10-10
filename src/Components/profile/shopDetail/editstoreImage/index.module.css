@@ -1,0 +1,38 @@
+.EditStoreImage_Container{
+    width: 100%;
+    padding: 20px;
+    border-radius: 12px ;
+    border: 1px solid #E0E0E0;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+    gap: 2px;
+}
+.EditStoreImage_Container h4{
+font-family: 'Inter';
+font-size: 18px;
+font-weight: 700;
+line-height: 21.78px;
+text-align: left;
+}
+.EditStoreImage_Container p{
+font-family: 'Inter';
+font-size: 15px;
+font-weight: 400;
+line-height: 14.52px;
+text-align: left;
+color: #868C9A;
+}
+.EditStoreImage{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.EditStoreImage h5{
+    font-family: 'Inter';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: center;
+    color: #868C9A;
+}

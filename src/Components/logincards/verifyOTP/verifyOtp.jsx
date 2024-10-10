@@ -7,13 +7,14 @@ import * as Yup from 'yup';
 import { useLocation } from 'react-router-dom';
 import api from '../../../utils/apiinstance';
 import {VERIFY_OTP_LOGIN} from '../../../utils/api';
+// import { useSelector } from 'react-redux';
 
 const VerifyOtp=()=>{
   const location=useLocation()
   const navigate=useNavigate();
   const dialCode = location.state?.dialCode;
   const phnumber=location.state?.contactNo;
-
+  // const store=useSelector((state)=>state.user.user);
    const initialValues={
         otp1:'',
         otp2: '',
@@ -47,7 +48,8 @@ const VerifyOtp=()=>{
       const onSubmit=(values) => {
         const enteredOtp = parseInt(`${values.otp1}${values.otp2}${values.otp3}${values.otp4}`,10);
         handleVerifyOtp(enteredOtp)
-        navigate('/stores')    
+
+        navigate('/home')    
        }
 
     return(

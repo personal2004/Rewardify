@@ -48,3 +48,8 @@ color:#868C9A;
     text-align: left;
     color: #868C9A;
 }
+
+input[type='checkbox'] {
+    accent-color:rgb(125,159,32);
+    
+}

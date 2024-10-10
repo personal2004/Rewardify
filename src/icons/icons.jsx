@@ -1,6 +1,6 @@
 import { MdOutlinePhone,MdOutlineDashboard,MdAddShoppingCart,MdOutlinePersonOutline } from "react-icons/md";
 import { BsWhatsapp,BsShopWindow } from "react-icons/bs";
-import { FaArrowLeftLong } from "react-icons/fa6";
+import { FaArrowLeftLong,FaArrowRightLong } from "react-icons/fa6";
 import { PiTruckFill, PiBankLight } from "react-icons/pi";
 import { MdOutlineMenu } from "react-icons/md";
 import { IoLogOutOutline } from "react-icons/io5";
@@ -11,6 +11,7 @@ const icons={
   phoneoutline:<MdOutlinePhone/>,
   whatsapp:<BsWhatsapp/>,
   leftpointarrow:<FaArrowLeftLong/>,
+  rightpointarrow:<FaArrowRightLong/>,
   menubar:<MdOutlineMenu/>,
   dashboard:<MdOutlineDashboard/>,
   order:<PiTruckFill/>,

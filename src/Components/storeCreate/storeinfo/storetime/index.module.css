@@ -16,7 +16,13 @@
     line-height: 29.05px;
     text-align: left;
 }
-
+.storeTime_Form h3{
+    font-family: 'Inter';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.78px;
+    text-align: left;
+}
 .storeTime_Form h5{
     font-family: 'Inter';
     font-size: 14px;

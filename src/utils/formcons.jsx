@@ -7,15 +7,7 @@ export const WhatsappCheckOption=[
     {key:'My whatsapp number is same as above',value:'My whatsapp number is same as above'},
     {key:'I have a different whatsapp number',value:'I have a different whatsapp number'},
 ]
-export const WorkdaysCheckOption=[
-    {key:'Monday',value:'Monday'},
-    {key:'Tuesday',value:'Tuesday'},
-    {key:'Wednesday',value:'Wednesday'},
-    {key:'Thursday',value:'Thursday'},
-    {key:'Friday',value:'Friday'},
-    {key:'Saturday',value:'Saturday'},
-    {key:'Sunday',value:'Sunday'}
-]
+
 export const storeinfoValues={
     ownerName:'',
     ownerEmail:'',
