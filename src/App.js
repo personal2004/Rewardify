@@ -25,6 +25,7 @@ import ProfileDetail from './Components/profile/profileDetail/profileDetail';
 import ProfileShopDetail from './Components/profile/shopDetail/shopDetail';
 import LogOut from './Components/profile/logout/logOut';
 import Wallet from './Components/profile/wallet/wallet';
+import ProfileAbout from './Components/profile/aboutrewar/aboutrewardify';
 
 function App() {
 
@@ -86,6 +87,7 @@ function App() {
             <Route index exact element={<ProfileDetail/>}/>
             <Route path='shopdetail' exact element={<ProfileShopDetail/>}/>
             <Route path='wallet' exact element={<Wallet/>}/>
+            <Route path='aboutrewardify' exact element={<ProfileAbout/>}/>
             <Route path='logout' exact element={<LogOut/>}/>
           </Route>
          </Route>

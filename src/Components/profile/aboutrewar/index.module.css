@@ -1,0 +1,53 @@
+.aboutRewar{
+    width: 70%;
+    padding: 40px 35px 40px 20px;
+    box-shadow: 0px 0px 2px rgb(79, 78, 78);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.aboutRewar_header h4{
+    font-family:'Inter';
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24.2px;
+    text-align: left;   
+}
+.aboutRewar_header p{
+    font-family: 'Inter';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: left;
+    color: #868C9A;
+}
+.aboutRewar_Block p{
+    font-family: 'Inter';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: justify;
+    letter-spacing: 1px;
+    color: #BEBEBE;
+}
+
+.aboutRewar_Block{
+    width: 100%;
+    padding: 15px;
+    padding-bottom: 5px;
+    border-radius: 12px ;
+    border: 1px solid #E0E0E0;
+    display: flex;
+    justify-content: space-between;
+}
+.aboutRewar_Block span{
+    cursor: pointer;
+}
+.aboutRewar_Block h4{
+    font-family:'Inter';
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 24.2px;
+    text-align: left;  
+}

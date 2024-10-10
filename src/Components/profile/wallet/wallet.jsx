@@ -10,14 +10,7 @@ const Wallet=()=>{
     const wallet=useSelector((state)=>state.user.user);
     const [activeIndex, setActiveIndex] = useState(null);
     const ids=['','',wallet?.store?.upi[0]]
-    // const location=useLocation()
-    // useEffect(()=>{
-    //     console.log(wallet?.store?.upi[0])
-    //     if(location.pathname==='home/profile/wallet'){
-    //       upicons.push(`(UPI ID:${wallet?.store?.upi[0]})`);
 
-    //     }
-    // },[wallet])
     return(
        <div className={style.wallet}>
         <div>
@@ -54,8 +47,8 @@ const Wallet=()=>{
                     <Formik initialValues={storeCreateValues} validationSchema={storeCreatevalidationSchema} >
                         {(formik)=>{
                             return(
-                                <Form>
-                                    <input className={style.form_control}  placeholder='Enter UPI ID' onChange={(e)=>ids[index]=e.target.v}/>
+                                <Form className={style.setupiform}>
+                                    <input   placeholder='Enter UPI ID' />
                                     <div className={style.form_button}>
                                         <button onClick={()=>setActiveIndex(-1)}>Cancel</button>
                                         <button onClick={()=>setActiveIndex(-1)}>Link UPI</button>

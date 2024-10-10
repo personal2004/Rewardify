@@ -38,7 +38,16 @@ color: #868C9A;
     gap: 2px;
     width: 100%;
 }
- input{
+.form_control input{
+    width: 95% ;
+    height: 50px;
+    padding: 15px 16px;
+    gap: 8px;
+    border-radius: 8px;
+    opacity: 0px;
+    border: 1px solid #E0E0E0
+}
+.setupiform input{
     width: 95% ;
     height: 50px;
     padding: 15px 16px;
