@@ -26,7 +26,7 @@ color: #868C9A;
 .EditStoreImage{
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 80px;
 }
 .EditStoreImage h5{
     font-family: 'Inter';
@@ -35,4 +35,25 @@ color: #868C9A;
     line-height: 19.36px;
     text-align: center;
     color: #868C9A;
+}
+
+@media (max-width:1200px) {
+    .EditStoreImage{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+@media(max-width:550px){
+    .EditStoreImage{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .EditStoreImage img{
+        width: 50px;
+    }
 }

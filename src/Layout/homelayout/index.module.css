@@ -43,7 +43,7 @@
     /* opacity:0;  */
     display: none;
 }
-@media (max-width:770px) {
+@media (max-width:870px) {
     .HomeLayout_Sidebar{
         flex-basis: 230px;
         background-color:#FFFFFF;

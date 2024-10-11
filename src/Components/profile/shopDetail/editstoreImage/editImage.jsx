@@ -40,7 +40,7 @@ const EditStoreImage=()=>{
             <h4>Edit Store Image </h4>
             <p>You can edit the Store Image</p>
             <div className={style.EditStoreImage}>
-                <img src={uploadedImage || currentImage} alt="Uploaded Preview" style={{ width: '250px', height: '150px' }} />
+                <img src={uploadedImage || currentImage} alt="Uploaded Preview" loading='lazy' style={{ width: '150px', height: '150px' }} />
               { !changeimg && 
               <div onClick={()=>setchangeimg(true)}>
                 <h5 >Change Image  </h5>

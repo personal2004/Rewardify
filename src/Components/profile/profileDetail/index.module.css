@@ -83,3 +83,49 @@ padding: 0;
     letter-spacing: 1px;
     word-spacing: 2px;
 }
+
+
+@media (max-width: 1428px) {
+    .profile_Form {
+        width: 100%;
+    }
+    .email_change_button {
+        display: none;
+    }
+}
+
+@media (max-width: 550px) {
+    .profile_Form {
+        width: 100%;
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .profile_header {
+        font-size: 18px;
+    }
+
+    .profile_para {
+        font-size: 14px;
+    }
+
+    .form_control input {
+        padding: 8px 10px;
+    }
+
+    .email_change_button {
+        font-size: 12px;
+        top: 10px;
+        right: 5px;
+    }
+
+    .profile_Form button {
+        font-size: 14px;
+        line-height: 30px;
+    }
+
+    .note {
+        font-size: 12px;
+        line-height: 13px;
+    }
+}

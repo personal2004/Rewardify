@@ -41,7 +41,6 @@ opacity: 0.3;
 }
 .ProfileNavBar a.active{
     opacity: 1;
-
 }
 
 .ProfileMain{
@@ -53,4 +52,29 @@ opacity: 0.3;
 }
 .ProfileLayout::-webkit-scrollbar{
     display: none;
+}
+
+@media (max-width:1145px) {
+    .ProfileContain{
+        display: flex;
+        flex-direction: column;
+    }
+    .ProfileMain{
+        padding-left: 0px;
+
+    }
+    .ProfileNavBar{
+        /* background-color: aqua; */
+        white-space: nowrap;
+       display: flex;
+       flex-direction: row;
+       justify-content: center;
+       align-items: center;
+       flex-wrap: wrap;
+       height: fit-content;
+       padding-right: 20px;
+       box-shadow: none;
+       margin-bottom: 30px;
+       margin-top: 10px;
+    }
 }

@@ -31,7 +31,6 @@
     letter-spacing: 1px;
     color: #BEBEBE;
 }
-
 .aboutRewar_Block{
     width: 100%;
     padding: 15px;
@@ -50,4 +49,10 @@
     font-weight: 700;
     line-height: 24.2px;
     text-align: left;  
+}
+
+@media (max-width:1428px) {
+    .aboutRewar{
+        width: 100%;
+    }
 }

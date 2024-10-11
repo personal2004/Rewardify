@@ -128,7 +128,20 @@ text-align: left;
     text-align: left;
 
 }
-button:nth-child(1){
+.form_button button:nth-child(1){
     background-color: white;
 }
 
+@media (max-width:1428px) {
+    .wallet{        
+        width: 100%;
+        }
+}
+@media (max-width:430px) {
+    .banklink{
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
+        align-items:flex-start;
+    }    
+}

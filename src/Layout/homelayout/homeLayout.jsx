@@ -10,7 +10,7 @@ const HomeLayout=()=>{
   const [isMenuBarVisible, setMenuBarVisible] = useState(false);
 
   const toggleSideBar=useCallback(()=>{
-      if(window.innerWidth <=770){
+      if(window.innerWidth <=870){
         setMenuBarVisible(!isMenuBarVisible);
         setSidebarVisible(!isSidebarVisible);
       }
@@ -18,11 +18,11 @@ const HomeLayout=()=>{
 
   useEffect(() => {
     const handleResize = () => {
-        if (window.innerWidth > 770) {
+        if (window.innerWidth > 870) {
             setSidebarVisible(true);
             setMenuBarVisible(false);
         }
-        if (window.innerWidth < 770) {
+        if (window.innerWidth < 870) {
           setSidebarVisible(false);
           setMenuBarVisible(true);
       }

@@ -53,3 +53,16 @@ input[type='checkbox'] {
     accent-color:rgb(125,159,32);
     
 }
+@media(max-width:450px){
+    .workingdays_header{
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around;
+    }
+    .checkbox_control{
+        display: grid;
+        grid-template-columns: auto  ;
+        row-gap: 3px;
+    
+    }
+}

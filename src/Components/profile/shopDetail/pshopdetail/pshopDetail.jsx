@@ -20,7 +20,7 @@ const ProShopDetailCard=()=>{
         }
     },[location.pathname,shop])
     return(
-        <div>
+        <div className={styles.ProShopDetailCard}>
         <h4 className={styles.pocard_header}>Shop Details</h4>
         <p className={styles.po_para}>Here you can view and edit your details.</p>
         <Formik initialValues={storeCreateValues} validationSchema={storeCreatevalidationSchema} >

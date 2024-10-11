@@ -9,7 +9,26 @@ const Wallet=()=>{
 
     const wallet=useSelector((state)=>state.user.user);
     const [activeIndex, setActiveIndex] = useState(null);
+    const [inputValues, setInputValues] = useState({});
+
     const ids=['','',wallet?.store?.upi[0]]
+    const [items, setItems] = useState([
+        { id: 0, value: null },
+        { id: 1, value: null },
+        { id: 2, value: wallet?.store?.upi[0] },
+    ]);
+
+    const handleChange = (id, newValue) => {
+        setInputValues(prevValues => ({ ...prevValues, [id]: newValue }));
+    };
+
+    const handleSubmit = () => {
+        const updatedItems = items.map(item =>
+            item.id === activeIndex ? { ...item, value: inputValues[activeIndex] } : item
+        );
+        setItems(updatedItems);
+        setActiveIndex(-1);
+    };
 
     return(
        <div className={style.wallet}>
@@ -36,22 +55,33 @@ const Wallet=()=>{
                 <>
                 <div key={index} className={style.banklink}>
                     <div className={style.upiid_container}>
-                        <img src={data.img} alt=''/>
-                        {ids[index]!=='' &&<p>UPI ID:{ids[index]}</p>}                
+                        <img src={data.img} alt='' style={{width:'80px',height:'35px'}}/>
+                        {items[index].value &&<p>UPI ID:{items[index].value}</p>}                
                     </div>
-                    {ids[index]===''?<button className={style.link_button} onClick={() => setActiveIndex(index)}>Link UPI</button>:
-                    <button className={style.linked_button} onClick={() => setActiveIndex(index)}>UPI Linked</button>}
+                    {items[index].value?<button className={style.linked_button} onClick={() => setActiveIndex(index)}>UPI Linked</button>:
+                    <button className={style.link_button} onClick={() => setActiveIndex(index)}>Link UPI </button>}
                  </div>
+                 
                  {activeIndex === index && <div>
                  <h6 >Add UPI</h6>
                     <Formik initialValues={storeCreateValues} validationSchema={storeCreatevalidationSchema} >
                         {(formik)=>{
                             return(
                                 <Form className={style.setupiform}>
-                                    <input   placeholder='Enter UPI ID' />
+                                    {items.map(item => (
+                                     <div key={item.id}>
+                                        {item.id===index && 
+                                            <input
+                                                placeholder='Enter UPI ID'
+                                                type="text"
+                                                value={item.value}
+                                                onChange={e => handleChange(item.id, e.target.value)}
+                                            />}
+                                        </div>
+                                    ))}
                                     <div className={style.form_button}>
                                         <button onClick={()=>setActiveIndex(-1)}>Cancel</button>
-                                        <button onClick={()=>setActiveIndex(-1)}>Link UPI</button>
+                                        <button onClick={handleSubmit}>Link UPI</button>
                                     </div>
                                 </Form>
                             )
@@ -61,7 +91,8 @@ const Wallet=()=>{
                  }
                 </>
                 )
-             })}         
+             })} 
+        
         </div>
         </div>
     )
