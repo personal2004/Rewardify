@@ -1,0 +1,32 @@
+.SearchBar{
+    padding: 10px;
+    width: 359px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border: 2px solid #ECECEC;
+    border-radius: 5px;
+}
+.SearchBar span{
+    align-self: center;
+    justify-self: center;
+    color: #33363F80;
+}
+.SearchBar input{
+    border: none;
+    outline: none;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
+    letter-spacing: -0.1;
+    text-align: left;
+    color: #33363F80;
+
+}
+
+@media (max-width:442px) {
+    .SearchBar{
+        width:239px;
+    }
+}

@@ -19,36 +19,33 @@ import api from './utils/apiinstance';
 import { GET_USER_PROFILE } from './utils/api';
 import {useDispatch } from 'react-redux';
 import { setUser } from './utils/userSlice';
-import { useEffect,useState} from 'react';
+import { useEffect} from 'react';
 import ProfileLayout from './Layout/profilelayout/profileLayout';
 import ProfileDetail from './Components/profile/profileDetail/profileDetail';
 import ProfileShopDetail from './Components/profile/shopDetail/shopDetail';
 import LogOut from './Components/profile/logout/logOut';
 import Wallet from './Components/profile/wallet/wallet';
 import ProfileAbout from './Components/profile/aboutrewar/aboutrewardify';
-
+import ProductLayout from './Layout/productLayout/productLayout';
+import ProductListing from './Components/products/productlisting/productlisting';
 function App() {
 
-  // const [isProfileLoaded, setIsProfileLoaded] = useState(false);
  const dispatch=useDispatch();
 
   const getprofile=async()=>{
     try {
-      console.log('Before Entering api')
         const response = await api.get(GET_USER_PROFILE);
         dispatch(setUser(response?.data));
-        // setIsProfileLoaded(true);
-        console.log('After Entering api')
 
       }catch (error) {
          console.error('Error generating OTP:', error);
       }      
     }
+
   useEffect(()=>{
-    // console.log('calling 1')
+    console.log('useEffect called');
     if( localStorage.getItem('authToken')){
         getprofile()
-        // console.log('calling if ')
     }
    },[])
 
@@ -82,7 +79,10 @@ function App() {
          <Route path='home' exact element={<HomeLayout/>}>
           <Route index exact element={<DashBoardLayout/>}/>
           <Route path='orders' exact/>
-          <Route path='products' exact/>
+          <Route path='products' exact element={<ProductLayout/>}>
+           <Route index exact element={<ProductListing/>}/>
+
+          </Route>
           <Route path='profile'exact element={<ProfileLayout/>}>
             <Route index exact element={<ProfileDetail/>}/>
             <Route path='shopdetail' exact element={<ProfileShopDetail/>}/>

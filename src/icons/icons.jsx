@@ -6,6 +6,8 @@ import { MdOutlineMenu,MdOutlineKeyboardArrowUp  } from "react-icons/md";
 import { IoLogOutOutline } from "react-icons/io5";
 import { ImNotification } from "react-icons/im";
 import { RiArrowDownSLine} from "react-icons/ri";
+import { FiSearch } from "react-icons/fi";
+import { FaPlus } from "react-icons/fa6";
 
 const icons={
   phoneoutline:<MdOutlinePhone/>,
@@ -23,6 +25,8 @@ const icons={
   logout:<IoLogOutOutline/>,
   dropdownarrow:<RiArrowDownSLine/>,
   deopuparrow:<MdOutlineKeyboardArrowUp/>,
+  searchicon:<FiSearch/>,
+  plussymbol:<FaPlus/>,
 }
 
 export default icons
