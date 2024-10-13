@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 const Modal = ({ show, onClose, children,button_text,buttonStyle,onCancel }) => {
 
   const location=useLocation();
-  const showCancel=location.pathname==='/home/profile/logout'
+  const showCancel=location.pathname==='/home/profile/logout' || location.pathname==='/home/products'
   if (!show) return null;
 
   return (

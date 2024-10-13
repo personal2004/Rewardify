@@ -1,0 +1,110 @@
+.ProductDetailsCard{
+    margin-top:10px;
+    width: 100%;
+    padding: 25px;
+    padding-bottom: 15px;
+    border-radius: 1px ;
+    border: 1px solid #E0E0E0;
+}
+.ProductDetailsCard h3{
+    font-family: 'Inter';
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+    text-align: left;  
+}
+.ProductDetailsContent{
+    width: 100%;
+    padding: 25px;
+    padding-top:10px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto;
+}
+.DiscountContainer{
+    width: 97%;
+    justify-content: space-between;
+    display: flex;
+}
+.DiscountContainer .form_control{
+    width: 75% ;
+}
+.form_control{
+    width: 100% ;
+}
+.form_select{
+    width: 90%;
+}
+.form_control input{
+    height: fit-content ;
+    width: 90% ;
+    padding: 15px 20px ;
+    border-radius: 6px ;
+    outline: none ;
+    border: 1px solid #E0E0E0 ;
+}
+
+.DiscountContainer .form_select{
+    width: 100%;
+}
+select {
+    padding: 15px 20px ;
+    border-radius: 6px ;
+    outline: none ;
+    border: 1px solid #E0E0E0 ;
+    appearance: auto;
+    padding-right: 4px;
+    padding-left: 6px;
+}
+option{
+    font-family: 'Inter';
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 24.2px;
+    text-align: left;
+    color: #000;
+}
+
+@media (max-width:1200px) {
+    .ProductDetailsContent{
+        width: 100%;
+        padding: 5px;
+        padding-top:10px;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: auto ;
+    }
+}
+
+@media (max-width:613px) {
+    .ProductDetailsCard{
+        margin-top:10px;
+        width: 100%;
+        padding: 15px;
+        padding-bottom: 5px;
+    }
+    .form_control input{
+        width: 100% ;
+        font-family: 'Inter';
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 24.2px;
+        text-align: left;
+        color: #000;
+     }
+    .DiscountContainer{
+        width: 100%;
+    }
+    .form_select{
+        width: 100%;
+    }
+    option{
+        font-family: 'Inter';
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 24.2px;
+        text-align: left;
+        color: #000;
+    }
+}

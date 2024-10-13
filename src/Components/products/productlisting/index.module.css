@@ -4,3 +4,114 @@
     flex-direction: column;
     gap: 20px;
 }
+.products{
+    width: 100%;
+    padding: 25px;
+    padding-bottom: 15px;
+    border-radius: 1px ;
+    border: 1px solid #E0E0E0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+.products h4{
+    font-family: 'Inter';
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+    text-align: left;
+}
+.products span{
+    font-size:35px;
+    font-weight: 900;
+    position: absolute;
+    top: 0%;
+    bottom:14px ;
+    right: 10px;
+}
+.ProductListing_contents,.ProductDetails{
+    width: 100%;
+    gap: 15px;
+    display: flex;
+}
+.ProductListing_contents h6{
+    flex-basis: 200px;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.94px;
+    text-align: left;
+    color: #868C9A;
+}
+.ProductDetails h5{
+    flex-basis: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16.94px;
+    text-align: left;
+}
+.avail_button{
+    width: 40px;
+    height: 24px;
+    border-radius: 19px;
+    background: linear-gradient(90deg, #668D12 0%, #ACC43F 113.61%); 
+    padding: 3px;
+}
+.avail_status_yes{
+    margin-left: 50%;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    border-radius: 100%;
+}
+select option{
+    font-size: 13px;
+    font-weight:600;
+}
+.custom-select-option:hover {
+    background-color: green;
+    color: white;
+}
+@media (max-width:535px) {
+    .products span{
+        font-size:35px;
+        font-weight: 900;
+        position: absolute;
+        top: 0%;
+        bottom:14px ;
+        right: -650px;
+    }
+    .products{
+        overflow: scroll;
+    }
+    .products::-webkit-scrollbar{
+        display: none;
+    }
+    .ProductListing_contents,.ProductDetails{
+        width: 100%;
+        gap: 15px;
+        display: flex;
+    }
+    .ProductDetails h5,.ProductListing_contents h6{
+         flex-shrink:0;
+    }
+}
+
+@media (max-width:357px) {
+    .Fruits{
+        width: 100%;
+        padding-left:15px;
+    }
+    .Fruits span{
+        font-size:35px;
+        font-weight: 900;
+        position: absolute;
+        bottom:14px ;
+        right: 3px;
+    } 
+}

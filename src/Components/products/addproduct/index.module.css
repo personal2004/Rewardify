@@ -1,0 +1,17 @@
+.AddProduct{
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+}
+.Product_purchase{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+@media (max-width:650px) {
+    .Product_purchase{
+        display: flex;
+        flex-direction: column;
+        gap:40px;
+    }
+}

@@ -28,10 +28,12 @@ import Wallet from './Components/profile/wallet/wallet';
 import ProfileAbout from './Components/profile/aboutrewar/aboutrewardify';
 import ProductLayout from './Layout/productLayout/productLayout';
 import ProductListing from './Components/products/productlisting/productlisting';
+import AddProduct from './Components/products/addproduct/addproduct';
+import { Navigate } from 'react-router-dom';
+import NotFound from './Layout/notauthorizedLayout/notFound';
 function App() {
 
  const dispatch=useDispatch();
-
   const getprofile=async()=>{
     try {
         const response = await api.get(GET_USER_PROFILE);
@@ -43,18 +45,18 @@ function App() {
     }
 
   useEffect(()=>{
-    console.log('useEffect called');
-    if( localStorage.getItem('authToken')){
+    if( localStorage.getItem('authToken')!==''){
         getprofile()
     }
    },[])
 
-  // const isVerified = () => {
-  //   return localStorage.getItem('isVerified') === 'true';
-  // };
-  // const ProtectedRoute = ({ element }) => {
-  //   return isVerified() ? element : <Navigate to="/stores" />;
-  // };
+  const isVerified = () => {
+    return localStorage.getItem('authToken') !=='';
+  };
+
+  const ProtectedRoute = ({ element }) => {
+     return isVerified() ? element : <Navigate to="/" />;
+  };
   
   return (
     <div className="App">
@@ -76,21 +78,22 @@ function App() {
            <Route path='storedocs' exact element={<StoreDoc/>}/>
            <Route path='storeAgeement' exact element={<StoreAgree/>}/>
          </Route>
-         <Route path='home' exact element={<HomeLayout/>}>
-          <Route index exact element={<DashBoardLayout/>}/>
-          <Route path='orders' exact/>
-          <Route path='products' exact element={<ProductLayout/>}>
-           <Route index exact element={<ProductListing/>}/>
-
-          </Route>
-          <Route path='profile'exact element={<ProfileLayout/>}>
-            <Route index exact element={<ProfileDetail/>}/>
-            <Route path='shopdetail' exact element={<ProfileShopDetail/>}/>
-            <Route path='wallet' exact element={<Wallet/>}/>
-            <Route path='aboutrewardify' exact element={<ProfileAbout/>}/>
-            <Route path='logout' exact element={<LogOut/>}/>
-          </Route>
+         <Route path='home' exact element={<ProtectedRoute element={<HomeLayout/>}/>}>
+            <Route index exact element={<DashBoardLayout/>}/>
+            <Route path='orders' exact/>
+            <Route path='products' exact element={<ProductLayout/>}>
+              <Route index exact element={<ProductListing/>}/>
+              <Route path='addproduct' element={<AddProduct/>}/>
+            </Route>
+            <Route path='profile'exact element={<ProfileLayout/>}>
+              <Route index exact element={<ProfileDetail/>}/>
+              <Route path='shopdetail' exact element={<ProfileShopDetail/>}/>
+              <Route path='wallet' exact element={<Wallet/>}/>
+              <Route path='aboutrewardify' exact element={<ProfileAbout/>}/>
+              <Route path='logout' exact element={<LogOut/>}/>
+            </Route>
          </Route>
+         <Route path='*' element={<NotFound/>}/>
       </Routes>
     </Router>
     </div>

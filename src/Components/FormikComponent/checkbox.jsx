@@ -12,7 +12,6 @@ function Checkbox (props) {
           return options.map(option => {
             return (
               <div className={optiondivname} key={option.key}>
-                <div>
                   <input
                     type='checkbox'
                     id={option.value}
@@ -22,7 +21,6 @@ function Checkbox (props) {
                     checked={field.value.includes(option.value)}
                   />
                   <label htmlFor={option.value}>{option.key}</label>
-                </div>
               </div>
             )
           })

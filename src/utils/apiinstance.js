@@ -1,13 +1,5 @@
 import axios from "axios";
 import { BASE_URL } from "./api";
-import { useNavigate } from 'react-router-dom';
-
- const useAuthNavigate = () => {
-    const navigate = useNavigate();
-    return (path) => {
-        navigate(path);
-    };
-};
 
 const api =axios.create(
     { 
@@ -60,8 +52,7 @@ api.interceptors.response.use(
             return api(originalRequest);
           } catch (e) {
               console.error('Refresh token failed', e);
-              const navigate = useAuthNavigate();
-              navigate('/');
+              localStorage.setItem('authToken','');
               return Promise.reject(e);
           }
       }

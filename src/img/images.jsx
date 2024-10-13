@@ -23,7 +23,8 @@ import logout from '../Assets/logout .png';
 import paytm from '../Assets/PayTm.png';
 import googlepay from '../Assets/GooglePay.png';
 import phonepay from '../Assets/PhonePe.png';
-
+import dummyimg from '../Assets/dummyimg.png'
+import deleteimg from '../Assets/delete.png'
 export {
   LoginLogo,
   LoginBackground,
@@ -50,4 +51,6 @@ export {
   paytm,
   googlepay,
   phonepay,
+  dummyimg,
+  deleteimg,
 }

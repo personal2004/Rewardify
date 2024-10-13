@@ -1,0 +1,59 @@
+.DeliveryDetailsCard{
+    width: 48%;
+    padding: 25px;
+    padding-bottom: 15px;
+    border-radius: 1px ;
+    border: 1px solid #E0E0E0;
+}
+.DeliveryDetails_header{
+    font-family: 'Inter';
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+    text-align: left;  
+}
+.DeliveryDetailsInfoContent{
+    margin-top: 18px;
+    padding-top: 15px;
+    border: 1px solid #E0E0E0;
+    width: 95%;
+    padding: 25px;
+    padding-bottom: 0%;
+    display: flex;
+    flex-direction: column;
+}
+.DeliveryDetailsInfoContent h3{
+font-family: 'Inter';
+font-size: 20px;
+font-weight: 600;
+text-align: left;
+}
+.DeliveryDetailsInfoContent p{
+font-family: 'Inter';
+font-size: 16px;
+font-weight: 400;
+text-align: left;
+color: #868C9A;
+}
+.checkbox_control{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: 'Inter';   
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 14.52px;
+    text-align: left;
+    color: #868C9A;
+    padding-bottom: 20px;
+}
+.checkbox_option{
+    display: flex;
+    gap: 10px;
+}
+
+@media (max-width:650px) {
+    .DeliveryDetailsCard{
+      width: 100%;
+    }
+}

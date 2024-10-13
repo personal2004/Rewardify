@@ -17,10 +17,10 @@ const LogOut=()=>{
       <>
         <ProfileAbout/>
         <Modal show={true} onClose={onClose} onCancel={onCancel} buttonStyle={styles.modalbutton_style} button_text='Logout'>
-        <div className={styles.imageContainer}><img src={logout} alt="Handshake" style={{width:'70px',height:'50px'}}/></div>         
-        <div className={styles.popup_header}>Please Confirm</div>
-        <div className={styles.popup_para}>Do you really want to Logout from REWARDIFY?</div>
-      </Modal>
+          <div className={styles.imageContainer}><img src={logout} alt="Handshake" style={{width:'70px',height:'50px'}}/></div>         
+          <div className={styles.popup_header}>Please Confirm</div>
+          <div className={styles.popup_para}>Do you really want to Logout from REWARDIFY?</div>
+        </Modal>
       </>
     )
 }

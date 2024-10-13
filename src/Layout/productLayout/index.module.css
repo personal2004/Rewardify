@@ -42,6 +42,19 @@
     line-height: 21.78px;
     text-align: left;
 }
+.move_back{
+    display: flex;
+    gap: 5px;
+    margin-left: 2px;
+    align-items: center;
+    width: fit-content;
+    font-family: 'Inter';
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21.78px;
+    text-align: left;
+    align-self: flex-start;
+}
 
 @media (max-width:1040px) {
     .ProductLayout_header{
