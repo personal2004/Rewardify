@@ -31,6 +31,7 @@ import ProductListing from './Components/products/productlisting/productlisting'
 import AddProduct from './Components/products/addproduct/addproduct';
 import { Navigate } from 'react-router-dom';
 import NotFound from './Layout/notauthorizedLayout/notFound';
+import OrderLayout from './Layout/ordersLayout/orderLayout';
 function App() {
 
  const dispatch=useDispatch();
@@ -80,7 +81,8 @@ function App() {
          </Route>
          <Route path='home' exact element={<ProtectedRoute element={<HomeLayout/>}/>}>
             <Route index exact element={<DashBoardLayout/>}/>
-            <Route path='orders' exact/>
+            <Route path='orders' exact element={<OrderLayout/>}>
+            </Route>
             <Route path='products' exact element={<ProductLayout/>}>
               <Route index exact element={<ProductListing/>}/>
               <Route path='addproduct' element={<AddProduct/>}/>

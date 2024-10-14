@@ -1,25 +1,16 @@
-.customCarousel{
-    width: 500px;
-    height: 170px;
-    background-color: #FFFFFF;
-}
-.customCarousel button{
-    background-color: black !important;
-}
-.customCarousel span{
-    font-size: larger;
-    border-radius: 40%;
-    background-color: rgb(25, 24, 24);
-}
-.carouselItem {
-    padding-top: 20px;
+.DashBoardLayout{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px; 
+    width: 100%;
+    height: 100%;
+    gap: 30px;
 }
-
-.carouselItem img {
-    max-width: 100px; 
-    height: auto;
+.DashBoardLayout_payment_box{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: 100%;
+    width: 40%;
+}
+.DashBoardLayout_Order{
+    width: 50%;
 }
