@@ -3,7 +3,7 @@ import { BsWhatsapp,BsShopWindow } from "react-icons/bs";
 import { FaArrowLeftLong,FaArrowRightLong } from "react-icons/fa6";
 import { PiTruckFill, PiBankLight } from "react-icons/pi";
 import { MdOutlineMenu,MdOutlineKeyboardArrowUp  } from "react-icons/md";
-import { IoLogOutOutline } from "react-icons/io5";
+import { IoLogOutOutline,IoLocationSharp } from "react-icons/io5";
 import { ImNotification } from "react-icons/im";
 import { RiArrowDownSLine} from "react-icons/ri";
 import { FiSearch } from "react-icons/fi";
@@ -27,6 +27,7 @@ const icons={
   deopuparrow:<MdOutlineKeyboardArrowUp/>,
   searchicon:<FiSearch/>,
   plussymbol:<FaPlus/>,
+  locationpoint:<IoLocationSharp/>,
 }
 
 export default icons

@@ -39,7 +39,7 @@ const VerifyOtp=()=>{
           });    
           localStorage.setItem('authToken', response?.data.token);
           localStorage.setItem('refreshToken',response?.data.refreshToken);
-
+          navigate('/home')    
         }catch (error) {
             console.error('Error generating OTP:', error);
          }   
@@ -48,8 +48,6 @@ const VerifyOtp=()=>{
       const onSubmit=(values) => {
         const enteredOtp = parseInt(`${values.otp1}${values.otp2}${values.otp3}${values.otp4}`,10);
         handleVerifyOtp(enteredOtp)
-
-        navigate('/home')    
        }
 
     return(

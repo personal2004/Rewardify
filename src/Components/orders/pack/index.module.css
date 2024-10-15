@@ -1,0 +1,89 @@
+.PackOrders{
+    width: 100%;
+    border: 1px solid #E0E0E0;
+    padding:15px;
+    white-space: nowrap;
+}
+.order_id{
+font-family: 'Inter';
+font-size: 14px;
+font-weight: 500;
+line-height: 16.94px;
+text-align: left;
+background: linear-gradient(90deg, #668D12 0%, #ACC43F 113.61%);
+border-image-source: linear-gradient(90deg, #668D12 0%, #ACC43F 113.61%);
+border-image-slice: 1;
+}
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+.order_id {
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+}
+.PackOrders h4{
+font-family: 'Inter';
+font-size: 14px;
+font-weight:500;
+line-height: 16.94px;
+text-align: left;
+}
+.contacts{
+    display: flex;
+    gap:20px;
+
+}
+.row_items h2{
+font-family: 'Inter';
+font-size: 14px;
+font-weight: 400;
+line-height: 16.94px;
+text-align: left;
+}
+.pointer{
+    border-radius: 100%;
+    padding: 10px;
+    background: #45C676;
+}
+.row_items{
+    display: flex;
+    flex-shrink: 0;
+    justify-content: space-between;
+}
+.pack_status{
+    display: flex;
+    gap: 9px;
+}
+.order_status_container{
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.contact_number{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.icon{
+    border-radius: 100%;
+    padding: 8px;
+    background-color:#F2F8DF;
+    margin-bottom: 10px;
+}
+.row_order_items,.order_user{
+    border-bottom: 1px solid #E0E0E0;
+    margin-bottom: 13px;
+    padding-bottom: 5px;
+
+}
+.PackOrders h3{
+font-family: 'Inter';
+font-size: 16px;
+font-weight:700;
+line-height: 19.36px;
+text-align: left;
+}
+
+
+

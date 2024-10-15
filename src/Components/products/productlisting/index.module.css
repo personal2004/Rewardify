@@ -78,14 +78,14 @@ select option{
     color: white;
 }
 @media (max-width:535px) {
-    .products span{
+    /* .products span{
         font-size:35px;
         font-weight: 900;
         position: absolute;
         top: 0%;
         bottom:14px ;
         right: -650px;
-    }
+    } */
     .products{
         overflow: scroll;
     }
@@ -102,16 +102,3 @@ select option{
     }
 }
 
-@media (max-width:357px) {
-    .Fruits{
-        width: 100%;
-        padding-left:15px;
-    }
-    .Fruits span{
-        font-size:35px;
-        font-weight: 900;
-        position: absolute;
-        bottom:14px ;
-        right: 3px;
-    } 
-}

@@ -13,4 +13,33 @@
 }
 .DashBoardLayout_Order{
     width: 50%;
+    background-color: white;
+    padding: 20px;
+    overflow: scroll;
+}
+.order_show{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+.DashBoardLayout_Order::-webkit-scrollbar{
+    display: none;
+}
+@media (max-width:700px) {
+    .DashBoardLayout{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        gap: 30px;
+        overflow: scroll;
+    }
+    .DashBoardLayout_payment_box{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .DashBoardLayout_Order{
+        width: 100%;
+    }
 }

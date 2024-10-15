@@ -32,6 +32,12 @@ import AddProduct from './Components/products/addproduct/addproduct';
 import { Navigate } from 'react-router-dom';
 import NotFound from './Layout/notauthorizedLayout/notFound';
 import OrderLayout from './Layout/ordersLayout/orderLayout';
+import ConfirmOrders from './Components/orders/confirm/confirmorder';
+import PrepareOrders from './Components/orders/prepare/prepareOrder';
+import PackOrder from './Components/orders/pack/pack';
+import CompleteOrder from './Components/orders/complete/complete';
+import Settlement from './Components/payment/settlement/settlement';
+
 function App() {
 
  const dispatch=useDispatch();
@@ -67,7 +73,6 @@ function App() {
             <Route index exact  element={<LoginStart/>} />
             <Route path='login' exact element={<LoginForm/>} />
             <Route path='verify' element={<VerifyOtp/>}/>
-            {/* <Route path='stores' element={<ProtectedRoute element={<Stores/>}/>}/> */}
             <Route path='stores' element={<Stores/>}/>
          </Route>
          <Route path='storestart' exact element={<StoresStartLayout/>}>
@@ -80,8 +85,17 @@ function App() {
            <Route path='storeAgeement' exact element={<StoreAgree/>}/>
          </Route>
          <Route path='home' exact element={<ProtectedRoute element={<HomeLayout/>}/>}>
-            <Route index exact element={<DashBoardLayout/>}/>
+            <Route path='/home' exact element={<DashBoardLayout/>}>
+                <Route path='prepare'/>
+                <Route path='pack' />
+                <Route path='complete'/>
+                <Route path='settlement' element={<Settlement/>}/>
+            </Route>
             <Route path='orders' exact element={<OrderLayout/>}>
+               <Route index exact element={<ConfirmOrders/>}/>
+               <Route path='prepare' element={<PrepareOrders/>}/>
+               <Route path='pack' element={<PackOrder/>}/>
+               <Route path='complete' element={<CompleteOrder/>}/>
             </Route>
             <Route path='products' exact element={<ProductLayout/>}>
               <Route index exact element={<ProductListing/>}/>
