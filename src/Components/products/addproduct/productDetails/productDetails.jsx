@@ -2,22 +2,10 @@ import style from './index.module.css';
 import FormikControl from '../../../formikComponent/formikControl';
 import { Formik,Form } from 'formik';
 import * as Yup from 'yup';
+import { forwardRef, useImperativeHandle } from 'react';
 
-const ProductDetails=({proDetails={
-    name:'',
-    productCategory:{ name:'Select related Category'},
-}})=>{
-    const productDetails={
-        category:proDetails?.productCategory?.name,
-        ProductName:proDetails?.name,
-        ProductMRP:'',
-        Discounttype:'',
-        DiscountValue:'',
-        ProductPrice:'',
-        UOM:'',
-        ProductSize:'',
-        AvailableQuantity:'',
-    }
+const ProductDetails=forwardRef(({productDetails},ref)=>{
+   
     const productDetailsSchema=Yup.object({
         category:Yup.string().required('Required !'),
         ProductName:Yup.string().required('Required !'),
@@ -29,19 +17,32 @@ const ProductDetails=({proDetails={
         ProductSize:Yup.string().required('Required !'),
         AvailableQuantity:Yup.string().required('Required !')
     });
-    const options = [
-        { key: proDetails?.productCategory?.name, value: '0' },
-        { key: 'Option 2', value: '2' },
-        { key: 'Option 3', value: '3' }
-    ];
     const option = [
-        { key: 'Discount type', value: '0' },
-        { key: 'Option 2', value: '2' },
-        { key: 'Option 3', value: '3' }
+        { key: 'Discount type', value: '' },
+        { key: 'Special Discount', value: '1' },
+        { key: '10% Discount', value: '2' }
     ];
+    const options = [
+        { key:  'Select related Category', value: '' },
+        { key: "Medicines", value: "Medicines" },
+        { key: 'Cosmetics', value: '1' }
+    ];
+    const unitOptions = [
+        { key: 'UOM (unit of measurement)', value: '' },
+        { key: 'One Unit', value: '1' },
+        { key: 'One Pack', value: '2' },
+        { key: 'Gram', value: '3' },
+        { key: 'Kilogram', value: '4' },
+        { key: 'Millilitre', value: '5' },
+        { key: 'Litre', value: '6' },
+      ];
+
     return(
-    <Formik initialValues={productDetails} validationSchema={productDetailsSchema} >
-        {(formik)=>{
+    <Formik initialValues={productDetails} 
+    validationSchema={productDetailsSchema}
+    innerRef={ref}
+    >
+        {()=>{
           return(
             < div className={style.ProductDetailsCard}>
             <h3 className={style.profile_header} >Product Details</h3>
@@ -54,7 +55,8 @@ const ProductDetails=({proDetails={
                         <FormikControl className={style.form_control} control='input' placeholder='DiscountnValue' name='DiscountValue' />      
                     </div>
                     <FormikControl className={style.form_control} control='input' placeholder='Product Price' name='ProductPrice'/>
-                    <FormikControl className={style.form_control} control='input' placeholder='UOM(unit of measurement)' name='UOM'/>
+                    <FormikControl className={style.form_select}  control='select' options={unitOptions} placeholder='UOM (unit of measurement)' name='UOM'/>
+
                     <FormikControl className={style.form_control} control='input' placeholder='Product Size( Enter the size of each Product)' name='ProductSize' />
                     <FormikControl className={style.form_control} control='input' placeholder='Available Quantity' name='AvailableQuantity' />          
             </Form>
@@ -63,6 +65,6 @@ const ProductDetails=({proDetails={
     </Formik>
 
     )
-}
+})
 
 export default ProductDetails;

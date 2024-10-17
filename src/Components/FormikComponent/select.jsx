@@ -6,16 +6,14 @@ const Select=(props)=>{
     return(
         <div>
           <label htmlFor={name}>{label}</label>
-          <Field as='select' id={name} name={name} {...rest}>
+          <Field as='select' id={name} name={name}placeholder={placeholder} {...rest}>
            {
-            options.map((option)=>{
+            options.map((option,index)=>{
                 return(
                     <>
-                    <option value="" disabled>{placeholder}</option>
-                    <option key={option.value} value={option.value}>
+                    <option key={option.value} value={option.value} hidden={index === 0}>
                        {option.key}
                     </option>
-
                     </>
                    
                 )

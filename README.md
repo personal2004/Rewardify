@@ -32,6 +32,8 @@
 8. npm i @syncfusion/ej2-react-calendars
 9. npm install react-bootstrap bootstrap
 10. npm install @reduxjs/toolkit react-redux
+11. npm install uuid
+
 
 # Usage
 

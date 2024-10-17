@@ -62,8 +62,22 @@
     background: linear-gradient(90deg, #668D12 0%, #ACC43F 113.61%); 
     padding: 3px;
 }
+.notavail_button{
+    width: 40px;
+    height: 24px;
+    border-radius: 19px;
+    background: red; 
+    padding: 3px;
+}
 .avail_status_yes{
     margin-left: 50%;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    border-radius: 100%;
+}
+.notavail_status_yes{
+    margin-right: 50%;
     width: 50%;
     height: 100%;
     background-color: white;

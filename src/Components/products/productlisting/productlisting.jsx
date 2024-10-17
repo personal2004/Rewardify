@@ -1,6 +1,6 @@
 import api from '../../../utils/apiinstance';
 import { useEffect,useState} from 'react';
-import {GET_LIST_PRODUCT} from '../../../utils/api';
+import {GET_LIST_PRODUCT,GET_LIST_STORE_PRODUCT} from '../../../utils/api';
 import icons from '../../../icons/icons';
 import style from './index.module.css';
 import {useNavigate } from 'react-router-dom';
@@ -13,7 +13,7 @@ import { useSelector } from 'react-redux';
 const ProductListing=()=>{
 
   const [showlist,setshowlist]=useState('');
-  const [selectedValues, setSelectedValues] = useState({});
+  const [selectedValue, setSelectedValues] = useState('');
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [showModal, setShowModal] = useState(null);
   const navigate=useNavigate();
@@ -32,18 +32,15 @@ const ProductListing=()=>{
 
   const getproducts=async()=>{
     try {
-        const response = await api.post(GET_LIST_PRODUCT,{
-          limit: 20, 
-          pageNo: 1 ,
-      });
-      dispatch(setProduct(response?.data?.data));
+        const response = await api.post(GET_LIST_STORE_PRODUCT);
+         dispatch(setProduct(response?.data?.data));
       }catch (error) {
          console.error('Error generating OTP:', error);
       }      
     }
 
   const productcategory=productlist.reduce((acc,product)=>{
-        const category=product.productCategory.name;
+        const category=product.productCategoryName;
         if(!acc[category]){
             acc[category]=[]
         }
@@ -53,15 +50,12 @@ const ProductListing=()=>{
   
   const handleChange = (event,product) => {
     const value = event.target.value;
-    setSelectedValues(prev => ({
-      ...prev,
-      [product.name]: value
-  }));
-  setSelectedProduct(product);
-
+    setSelectedValues(value);
+    setSelectedProduct(product);
     switch (value) {
         case '1':
             navigate('/home/products/addproduct', { state: { data: product } }); 
+            console.log(product)
             break;
         case '2':
             setShowModal('addStock')
@@ -84,8 +78,8 @@ const ProductListing=()=>{
    },[])
     return(
        <>
-        {showModal==='addStock' && <AddStock  show={showModal} onClose={onClose} onCancel={onCancel} product={selectedProduct} />}
-        {showModal==='minusStock' && <MinusStock  show={showModal} onClose={onClose} onCancel={onCancel} product={selectedProduct} />}
+        {showModal==='addStock' && <AddStock  show={showModal} onClose={onClose} onCancel={onCancel} product={selectedProduct} getproduct={getproducts} />}
+        {showModal==='minusStock' && <MinusStock  show={showModal} onClose={onClose} onCancel={onCancel} product={selectedProduct} getproduct={getproducts}/>}
         {showModal==='deleteProduct' && <DeleteStock  show={showModal} onClose={onClose} onCancel={onCancel}/>}
         <div className={style.ProductListing}>
           { Object.keys(productcategory).length > 0 &&
@@ -105,23 +99,29 @@ const ProductListing=()=>{
                   <h6>Action</h6>
                  </div>
                  {productcategory[category].map(product => (
-                  <div key={product.id} className={style.ProductDetails}>
-                    <h5>{product.name}</h5>
-                    <h5>$100</h5>
-                    <h5>5&nbsp;&nbsp;(UOM: kg)</h5>
+                  <div key={product._id} className={style.ProductDetails}>
+                    <h5>{product.product.name}</h5>
+                    <h5>{product.originalPrice}</h5>
+                    <h5>{product.stock}&nbsp;&nbsp;(UOM: kg)</h5>
                     <h5>
-                      <div className={style.avail_button}>
-                        <div className={style.avail_status_yes}>
-                        </div>
-                      </div>
+                      {product.stock!==0 ?
+                            <div className={style.avail_button}>
+                              <div className={style.avail_status_yes}>
+                              </div>
+                          </div>:  
+                          <div className={style.notavail_button}>
+                              <div className={style.notavail_status_yes}>
+                              </div>
+                          </div>
+                        }
                     </h5>
                     <h5>
-                    <select  value={selectedValues[product._id] || ""}  onChange={(e)=>handleChange(e,product)}>
-                            <option value="" disabled selected hidden>Action</option>
-                            <option value='1'class="custom-select-option">Edit price</option>
-                            <option value='2'class="custom-select-option">Add Stock</option>
-                            <option value='3'>Minus Stock </option>
-                            <option value='4'>Delete product</option>
+                    <select  defaultValue={selectedValue}  onChange={(e)=>handleChange(e,product)}>
+                            <option value="0" hidden className='custom-select-option'>Action</option>
+                            <option value='1' className="custom-select-option">Edit price</option>
+                            <option value='2' className="custom-select-option">Add Stock</option>
+                            <option value='3' className="custom-select-option">Minus Stock </option>
+                            <option value='4' className="custom-select-option">Delete product</option>
                       </select>
                     </h5>
                   </div>

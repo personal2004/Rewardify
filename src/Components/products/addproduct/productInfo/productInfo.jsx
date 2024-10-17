@@ -9,8 +9,8 @@ const ProductInfo=({proInfo={
     manufacturerName:''
 }})=>{
     const productInfo={
-        ProductDescrip:proInfo?.description  ,
-        CountryofOrigin:proInfo?.countryOfOrgin ,
+        ProductDescrip:proInfo?.description,
+        CountryofOrigin:proInfo?.countryOfOrgin,
         Manufacturername:proInfo?.manufacturerName ,
     }
     const productInfoSchema=Yup.object({

@@ -3,15 +3,15 @@ import style from './index.module.css'
 import { NavLink } from 'react-router-dom'
 import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
-// import api from '../../utils/apiinstance'
-// import { GET_LIST_ORDERS} from '../../utils/api'
-// import { useDispatch } from 'react-redux'
-// import {setorders} from '../../utils/orderSlice';
+import api from '../../utils/apiinstance'
+import { GET_LIST_ORDERS} from '../../utils/api'
+import { useDispatch } from 'react-redux'
+import {setorders} from '../../utils/orderSlice';
 import { useLocation } from 'react-router-dom'
 import { Outlet } from 'react-router-dom'
 
 const OrderLayout=({path='/home/orders'})=>{
-    // const dispatch=useDispatch()
+    const dispatch=useDispatch()
     const location=useLocation()
     const isorderpage=location.pathname==='/home/orders';
     const ishomepageconfirm=location.pathname==='/home';
@@ -19,17 +19,19 @@ const OrderLayout=({path='/home/orders'})=>{
     const ishomepagepack=location.pathname==='/home/pack'; 
     const ishomepagecomplete=location.pathname==='/home/complete';
     // orders not availavble from user now 
-    // const getorders=async()=>{
-    //     try {
-    //         const response = await api.post(GET_LIST_ORDERS,{
-    //           limit: 20, 
-    //           pageNo: 1 ,
-    //       });
-    //       dispatch(setorders(response?.data?.data));
-    //       }catch (error) {
-    //          console.error('Error generating OTP:', error);
-    //       }      
-    //     }
+    const getorders=async()=>{
+        try {
+            const response = await api.post(GET_LIST_ORDERS,{
+              limit: 20, 
+              pageNo: 1 ,
+          });
+          console.log('HI')
+          console.log(response?.data)
+        //   dispatch(setorders(response?.data?.data));
+          }catch (error) {
+             console.error('Error generating OTP:', error);
+          }      
+        }
     const confirmorders=useSelector(((state)=>state.userorder.orders))
     const prepareorders=useSelector((state)=>state.userorder.prepareorders)
     const packedorders=useSelector((state)=>state.userorder.pack)
@@ -38,7 +40,7 @@ const OrderLayout=({path='/home/orders'})=>{
     useEffect(()=>{
         if( localStorage.getItem('authToken')){
             // orders not availavble from user now 
-            // getorders()
+            getorders()
         }
        },[])
 
