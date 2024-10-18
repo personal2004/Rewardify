@@ -2,7 +2,7 @@ import style from './index.module.css';
 import FormikControl from '../../../formikComponent/formikControl';
 import { Formik,Form } from 'formik';
 import * as Yup from 'yup';
-import { forwardRef, useImperativeHandle } from 'react';
+import { forwardRef } from 'react';
 
 const ProductDetails=forwardRef(({productDetails},ref)=>{
    

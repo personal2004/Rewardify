@@ -1,28 +1,10 @@
 import style from './index.module.css';
-import api from '../../../utils/apiinstance';
-import { GET_LIST_PAYMENT } from '../../../utils/api';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Transaction from '../alltransaction/transaction';
 import Settlement from '../settlement/settlement';
 const Payment=()=>{
     const [isActive,setisActive]=useState(true);
-    const getpayment=async()=>{
-        try {
-            const response = await api.post(GET_LIST_PAYMENT,{
-              limit: 20, 
-              pageNo: 1 ,
-          });
-          console.log(response?.data)
-        //   dispatch(setorders(response?.data?.data));
-          }catch (error) {
-             console.error('Error generating OTP:', error);
-          }      
-        }
-    useEffect(()=>{
-        if( localStorage.getItem('authToken')){
-            getpayment()
-        }
-       },[])
+  
     return(
         <div className={style.Payment_container}>
             <div className={style.Payment_container_header}>

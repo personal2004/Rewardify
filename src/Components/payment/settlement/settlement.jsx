@@ -1,6 +1,23 @@
 import style from './index.module.css';
 import {LoginLogo} from '../../../img/images'
+import { useEffect } from 'react';
+import { List_ALL_SETTLEMENT } from '../../../utils/api';
+import api from '../../../utils/apiinstance';
+
 const Settlement=()=>{
+
+    useEffect(()=>{
+        const getallsettlement=async()=>{
+            try{
+                const response=await api.post(List_ALL_SETTLEMENT);
+                 console.log(response?.data)
+            }catch(error){
+                console.log("Error in getting settlement",error.message)
+            }
+        }
+        getallsettlement()
+    },[])
+
     return(
         <div className={style.Settlement}>
          

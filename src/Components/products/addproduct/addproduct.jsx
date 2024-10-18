@@ -26,6 +26,7 @@ const AddProduct=()=>{
         AvailableQuantity:data?.stock,
     }
     const handleSaveChanges=async()=>{
+        console.log(productDetailsRef.current.values)
         const updatedProductDetails = productDetailsRef.current.values;
         try{
          const response=await api.post(ADD_STORE_PRODUCT,{

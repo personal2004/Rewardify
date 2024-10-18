@@ -13,3 +13,4 @@ export const ADD_STOCK='/v1/store-user/store/products/add-stock/';
 export const Reduce_STock='v1/store-user/store/products/remove-stock/';
 export const GET_LIST_ORDERS='/v1/store-user/order/list';
 export const GET_LIST_PAYMENT='/v1/store-user/payment/list';
+export const List_ALL_SETTLEMENT='v1/store-user/settlements/list';

@@ -49,7 +49,6 @@
     font-size: 12px;
     font-weight: 400;
     line-height: 14.52px;
-    text-align: center;   
 }
 .payment_detail h6{
     width: fit-content;
@@ -66,14 +65,21 @@
     font-size: 12px;
     font-weight: 400;
     line-height: 14.52px;
-    text-align: center;
     color: #868C9A;
+    text-align: left;
+    align-self: flex-start;
 }
 .price{
 font-family: 'Inter';
 font-size: 14px;
 font-weight: 500;
 line-height: 16.94px;
-text-align: center;
+text-align: center;  
 color: #198754;
+}
+
+@media (max-width:1189px) {
+    .price{
+        white-space: nowrap;
+    }
 }
