@@ -3,9 +3,22 @@ import FormikControl from '../../../formikComponent/formikControl';
 import { Formik,Form } from 'formik';
 import * as Yup from 'yup';
 import { forwardRef } from 'react';
+import { useEffect } from 'react';
 
-const ProductDetails=forwardRef(({productDetails},ref)=>{
-   
+const ProductDetails=forwardRef(({editproductDetails,CategoryOptions,productoption,handleproductChange},ref)=>{
+
+    // const productDetail={
+    //     category:null,
+    //     ProductName:null,
+    //     ProductMRP:null,
+    //     Discounttype:null,
+    //     DiscountValue:null,
+    //     ProductPrice:null,
+    //     UOM:null,
+    //     ProductSize:null,
+    //     AvailableQuantity:null,
+    // }
+
     const productDetailsSchema=Yup.object({
         category:Yup.string().required('Required !'),
         ProductName:Yup.string().required('Required !'),
@@ -24,9 +37,8 @@ const ProductDetails=forwardRef(({productDetails},ref)=>{
     ];
     const options = [
         { key:  'Select related Category', value: '' },
-        { key: "Medicines", value: "Medicines" },
-        { key: 'Cosmetics', value: '1' }
     ];
+
     const unitOptions = [
         { key: 'UOM (unit of measurement)', value: '' },
         { key: 'One Unit', value: '1' },
@@ -38,17 +50,23 @@ const ProductDetails=forwardRef(({productDetails},ref)=>{
       ];
 
     return(
-    <Formik initialValues={productDetails} 
+    <Formik initialValues={ editproductDetails} 
     validationSchema={productDetailsSchema}
     innerRef={ref}
+    enableReinitialize
     >
-        {()=>{
+        {({ handleChange, setFieldValue, touched, errors })=>{
           return(
             < div className={style.ProductDetailsCard}>
             <h3 className={style.profile_header} >Product Details</h3>
             <Form className={style.ProductDetailsContent} >
-                    <FormikControl className={style.form_select} control='select' options={options} placeholder='Select related Category' name='category'/>
-                    <FormikControl className={style.form_control} control='input' placeholder='Product Name' name='ProductName'/>
+                    <FormikControl className={style.form_select} control='select' options={CategoryOptions ?? options} placeholder='Select related Category' name='category'/>
+                    <FormikControl className={style.form_select} onChange={(e)=>{
+                     handleChange(e);
+                     handleproductChange(e.target.value)               
+                     setFieldValue('ProductName', e.target.value);
+                    }} control='select'  options={productoption ?? [{key:'Product Name', value: '0'}]} placeholder='Product Name' name='ProductName'/>
+                    {/* disabled={!!editproductDetails}  */}
                     <FormikControl className={style.form_control} control='input' placeholder='Product MRP' name='ProductMRP' />
                     <div className={style.DiscountContainer}>
                         <FormikControl className={style.form_select} control='select'options={option} placeholder='Discount type' name='Discounttype'/>
@@ -56,9 +74,8 @@ const ProductDetails=forwardRef(({productDetails},ref)=>{
                     </div>
                     <FormikControl className={style.form_control} control='input' placeholder='Product Price' name='ProductPrice'/>
                     <FormikControl className={style.form_select}  control='select' options={unitOptions} placeholder='UOM (unit of measurement)' name='UOM'/>
-
-                    <FormikControl className={style.form_control} control='input' placeholder='Product Size( Enter the size of each Product)' name='ProductSize' />
-                    <FormikControl className={style.form_control} control='input' placeholder='Available Quantity' name='AvailableQuantity' />          
+                    <FormikControl className={style.form_control} control='input'placeholder='Product Size( Enter the size of each Product)' name='ProductSize' />
+                    <FormikControl className={style.form_control} control='input'  placeholder='Available Quantity' name='AvailableQuantity' />          
             </Form>
             </div>
             ) }} 

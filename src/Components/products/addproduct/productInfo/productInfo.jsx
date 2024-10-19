@@ -3,24 +3,20 @@ import FormikControl from '../../../formikComponent/formikControl';
 import { Formik,Form } from 'formik';
 import * as Yup from 'yup';
 
-const ProductInfo=({proInfo={
-    description:'',
-    countryOfOrgin:'',
-    manufacturerName:''
-}})=>{
+const ProductInfo=({proInfo})=>{
     const productInfo={
         ProductDescrip:proInfo?.description,
         CountryofOrigin:proInfo?.countryOfOrgin,
-        Manufacturername:proInfo?.manufacturerName ,
+        Manufacturername:proInfo?.manufacturerName,
     }
     const productInfoSchema=Yup.object({
         ProductDescrip:Yup.string().required('Required !'),
         CountryofOrigin:Yup.string().required('Required !'),
         Manufacturername:Yup.string().required('Required !'),
     });
-
+  
     return(
-    <Formik initialValues={productInfo} validationSchema={productInfoSchema} >
+    <Formik initialValues={productInfo} validationSchema={productInfoSchema} enableReinitialize >
         {(formik)=>{
           return(
             <div className={style.ProductInfoCard}>

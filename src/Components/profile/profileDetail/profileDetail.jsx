@@ -3,6 +3,7 @@ import styles from './index.module.css'
 import FormikControl from "../../formikComponent/formikControl";
 import * as Yup from 'yup';
 import { useSelector } from "react-redux";
+// import api from '../../../utils/api';
 
 const ProfileDetail=()=>{
     const profile=useSelector((state)=>state.user.user)
@@ -16,6 +17,24 @@ const ProfileDetail=()=>{
         ownerEmail:Yup.string().required('Required !'),
         ownerphonenu:Yup.string().required('Required !'),
     });
+
+// const handleSaveChanges = async (values) => {
+//   try {
+//     const response = await api.patch(`/v1/store-user/store/user/${profile?.id}`, {
+//       name: values.ownerName,
+//       email: values.ownerEmail,
+//       contactNo: values.ownerphonenu
+//     }, {
+//       headers: {
+//         'Content-Type': 'application/json',
+//         'Authorization': 'Bearer YOUR_ACCESS_TOKEN' // Replace with your actual token
+//       }
+//     });
+//     console.log('Profile updated successfully:', response.data);
+//   } catch (error) {
+//     console.error('Error updating profile:', error);
+//   }
+// }
     return(
         <Formik initialValues={profileDetailValues} validationSchema={storeInfovalidationSchema} >
         {(formik)=>{
@@ -38,4 +57,4 @@ const ProfileDetail=()=>{
     )
 }
 
-export default ProfileDetail
+export default ProfileDetail;

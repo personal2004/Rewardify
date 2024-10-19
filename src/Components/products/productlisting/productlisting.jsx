@@ -40,7 +40,7 @@ const ProductListing=()=>{
     }
 
   const productcategory=productlist.reduce((acc,product)=>{
-        const category=product.productCategoryName;
+        const category=product?.productCategory?.name;
         if(!acc[category]){
             acc[category]=[]
         }
