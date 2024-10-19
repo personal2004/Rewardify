@@ -17,8 +17,8 @@ const AddProduct=()=>{
     const [categoryOptions, setCategoryOptions] = useState([]);
     const [allproductoption,setallproductoption] = useState([]);
     const [listallproduct,setlistallproduct]=useState([]);
-    const [productName, setproductName] = useState('');
-    
+    const [productName, setproductName] = useState(data?.product?._id || '');
+
     const [product,setproduct]=useState();
     
     const productDetails={
@@ -39,14 +39,17 @@ const AddProduct=()=>{
         setproduct(produc[0])
         console.log(product)
       };
- 
-      useEffect(() => {
-        const produc = listallproduct.filter((pro) => pro?._id === productName);
-        setproduct(produc[0]);
-      }, [productName, listallproduct]);
+
+    useEffect(() => {
+        if (productName && listallproduct.length > 0) {
+          handleproductChange(productName);
+        }
+      }, [listallproduct]);
 
     const handleSaveChanges=async()=>{
         const updatedProductDetails = productDetailsRef.current.values;
+        setproductName(updatedProductDetails.ProductName);
+
         try{
          const response=await api.post(ADD_STORE_PRODUCT,{
             "discountType":  Number(updatedProductDetails.Discounttype),
