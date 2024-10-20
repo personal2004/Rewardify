@@ -3,8 +3,7 @@ import styles from './index.module.css'
 import FormikControl from "../../formikComponent/formikControl";
 import * as Yup from 'yup';
 import { useSelector } from "react-redux";
-// import api from '../../../utils/api';
-
+// import api from "../../../utils/apiinstance";
 const ProfileDetail=()=>{
     const profile=useSelector((state)=>state.user.user)
     const profileDetailValues={
@@ -20,15 +19,9 @@ const ProfileDetail=()=>{
 
 // const handleSaveChanges = async (values) => {
 //   try {
-//     const response = await api.patch(`/v1/store-user/store/user/${profile?.id}`, {
+//     const response = await api.patch(`/v1/store-user/store/user/${profile?._id}`, {
 //       name: values.ownerName,
 //       email: values.ownerEmail,
-//       contactNo: values.ownerphonenu
-//     }, {
-//       headers: {
-//         'Content-Type': 'application/json',
-//         'Authorization': 'Bearer YOUR_ACCESS_TOKEN' // Replace with your actual token
-//       }
 //     });
 //     console.log('Profile updated successfully:', response.data);
 //   } catch (error) {
@@ -48,7 +41,9 @@ const ProfileDetail=()=>{
                         <span className={styles.email_change_button}  >Change</span>
                     </div>
                     <FormikControl className={styles.form_control} control='input' placeholder='Mobile Number' name='ownerphonenu' />
-                    <button>Save Changes</button>
+                    <button 
+                    // onClick={()=>handleSaveChanges(formik.values)}
+                        >Save Changes</button>
                     <note className={styles.note}>*Note: After changing the details, the REWARDIFY admin team will need to verify and approve the change. 
                         Once approved, the updated Changes will be reflected here.</note>
             </Form>)

@@ -3,8 +3,9 @@ import { Formik,Form } from 'formik';
 import FormikControl from '../../formikComponent/formikControl';
 import {storeCreateValues,storeCreatevalidationSchema,storeCreateCheckoption} from '../../../utils/formcons';
 import StoreScanCard from '../storescancard/storeScancard';
+import { useNavigate } from 'react-router-dom';
 const StoreDoc=()=>{
-
+     const navigate=useNavigate()
     return(
         <>
            <div className={styles.docstoreform_header} >Store Documents</div>
@@ -25,6 +26,8 @@ const StoreDoc=()=>{
                           <FormikControl className={styles.form_control} control='input' placeholder='Bank IFSC Code' name='bankIFSCCode'/>
                     </Form>
                     <StoreScanCard/>
+                    <button className={styles.continue_button} onClick={()=>navigate('/storeCreation/storeAgeement')}>Continue</button>
+
                   </div>
                 )
               }}

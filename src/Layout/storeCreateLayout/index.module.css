@@ -70,6 +70,9 @@
     width: 50%;
 }
 
+.continue_button{
+    background-color: aqua;
+}
 @media (max-width:1287px) {
     .store_create_Layout_Form_Container{
         width: 95%;

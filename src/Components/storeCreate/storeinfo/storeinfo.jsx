@@ -6,9 +6,10 @@ import Ownerinfo from './ownerinfo/ownerinfo';
 import StoreInfoForm from './storeinfoform/storeinfoForm';
 import WorkdayForm from './workingdayform/workingdayForm';
 import StoreTime from './storetime/storeTime';
+import { useNavigate } from 'react-router-dom';
 
 const StoreInfo=()=>{
-
+    const navigate=useNavigate();
     return(
         <>
            <div className={styles.docinfoform_header} >Store Documents</div>
@@ -21,6 +22,7 @@ const StoreInfo=()=>{
                     <WorkdayForm/>
                     <StoreTime/>
                     <StoreScanCard/>
+                    <button className={styles.continue_button} onClick={()=>navigate('/storeCreation/storedocs')}>Continue</button>
                   </div>
                 )
               }}

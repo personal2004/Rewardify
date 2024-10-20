@@ -47,3 +47,23 @@
     left: 50%;
     transform: translateX(-50%);
   }
+  @media (max-width:470px) {
+    .imageContainer {
+        width: 100px;
+        padding:3px;
+        height: 100px;
+        border-radius: 100%;
+        background: #E0E9C2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        position: absolute;
+        top: -59px; 
+        left: 50%;
+    }
+    .imageContainer img{
+        font-size: 5px;
+    }
+        
+}

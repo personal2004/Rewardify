@@ -110,6 +110,7 @@ select option{
         width: 100%;
         gap: 15px;
         display: flex;
+        
     }
     .ProductDetails h5,.ProductListing_contents h6{
          flex-shrink:0;

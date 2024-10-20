@@ -63,3 +63,21 @@
     outline: none ;
     border: 2px solid #E0E0E0 ;
 }
+@media (max-width:470px) {
+    .product_update_content h6{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;  
+    }
+    .product_update_content h6 span{
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .product_update_content{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+}

@@ -1,8 +1,9 @@
 import styles from './index.module.css';
-import { useState } from 'react';
+import { useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 const StoreAgree=()=>{
     const [isChecked, setIsChecked] = useState(false);
-
+    const navigate=useNavigate();
     const handleCheckboxChange = () => {
         setIsChecked(!isChecked);
       };
@@ -29,6 +30,7 @@ const StoreAgree=()=>{
                     </p>
                 </div>
                 <div className={styles.store_num}><input type='checkbox' name='checkbox' onClick={handleCheckboxChange} /><label htmlFor='checkbox'>I have read all the terms & conditions and agree to them.</label></div>
+                <button className={styles.continue_button} onClick={()=>navigate('/login')}>Continue</button>
 
             </div>
         </>
