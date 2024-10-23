@@ -4,20 +4,27 @@ import { useDispatch, useSelector } from 'react-redux';
 import {packorders} from '../../../utils/orderSlice';
 import { useState } from 'react';
 import PreparedOrders from './addpreorder/preparedorder'
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 const PrepareOrders=()=>{
     
     const orders=useSelector((state)=>state.userorder.prepareorders);
     const dispatch=useDispatch();
     const [showModal,setShowModal]=useState(false);
-    const navigate=useNavigate()
+    const location=useLocation();
+    const navigate=useNavigate();
+
     const ConfirmPack=(order)=>{
     dispatch(packorders(order))
     }
+    const isdashboard=location.pathname==='/home/prepare';
   const onClose=(e,order)=>{
       ConfirmPack(order)
       setShowModal(null)
-      navigate('/home/orders/pack')
+      if(isdashboard){
+        navigate('/home/pack')
+      }else{
+        navigate('/home/orders/pack')
+      }
     } 
   const onCancel=(e)=>{
       setShowModal(null)
