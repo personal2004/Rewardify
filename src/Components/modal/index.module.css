@@ -4,13 +4,11 @@
     left: 0;
     right: 0;
     bottom: 0;
-    /* background-color: aliceblue; */
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 20000;
-    /* opacity: 0.4; */
   }
 
   .modal {
@@ -23,7 +21,16 @@
     text-align: center;
     position: relative;
   }
-  
+  .Modalprepare{
+    background: white;
+    padding: 35px;
+    padding-bottom: 10px;
+    border-radius: 8px;
+    width: 60%;
+    max-width: 838px;
+    text-align: center;
+    position: relative;
+  }
   .modalContent {
     margin-bottom: 20px;
   }

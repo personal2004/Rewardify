@@ -10,15 +10,14 @@
     font-size: 20px;
     font-weight: 600;
     line-height: 24.2px;
-    text-align: left;  
+    text-align: left; 
 }
 .ProductInfoContent{
     width: 95%;
     padding: 25px;
-    padding-top: 10px;
+    padding-top: 0px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 .form_control{
     width: 100% ;
@@ -29,7 +28,10 @@
    border: 1px solid #E0E0E0 ;
    outline: none;
    border-radius: 6px ;
-
+}
+.form_control_area:disabled{
+        background-color: #f0f0f0; 
+        color: #a0a0a0;
 }
 .form_control input{
     height: fit-content ;
@@ -39,6 +41,11 @@
     outline: none ;
     border: 1px solid #E0E0E0 ;
 }
+.form_control input:disabled{
+    background-color: #f0f0f0; 
+    color: #a0a0a0;
+}
+
 .productMan{
     display: flex;
     gap: 40px;

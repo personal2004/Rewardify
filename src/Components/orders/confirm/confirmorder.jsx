@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import style from './index.module.css';
 import { useDispatch } from 'react-redux';
 // import {setorders} from '../../../utils/orderSlice';
-import { confirmorders } from '../../../utils/orderSlice';
+import { confirmorders,rejectorders } from '../../../utils/orderSlice';
 import { useSelector } from 'react-redux';
 import icons from '../../../icons/icons';
 
@@ -13,7 +13,9 @@ const ConfirmOrders=()=>{
     const handleConfirmOrder=(order)=>{
           dispatch(confirmorders(order));
         }
-
+    const handleRejectOrder=(order)=>{
+        dispatch(rejectorders(order));
+    }
         useEffect(()=>{
         //  when we get Orders from api insted of dummy data we can dispatch it here
         //   dispatch(setorders(Orders));
@@ -58,7 +60,7 @@ const ConfirmOrders=()=>{
                     <h4>{order.total_price}</h4>
                 </div>
                 <div className={style.row_items}>
-                    <button className={style.order_reject}>Reject Order</button>
+                    <button className={style.order_reject} onClick={()=>handleRejectOrder(order)}>Reject Order</button>
                     <button className={style.order_confirm} onClick={()=>handleConfirmOrder(order)}>Confirm Order</button>
                 </div>
         </div>)})}

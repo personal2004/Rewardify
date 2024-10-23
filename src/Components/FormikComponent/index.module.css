@@ -1,0 +1,18 @@
+  .legend {
+    letter-spacing: 0.1px;
+    word-spacing: 1px;
+    font-family: 'Inter';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.52px;
+    text-align: left;
+    position: relative;
+    bottom: -16px;
+    left: 10px;
+  }
+  .legend span{
+     background-color: white;
+  }
+  
+
+  

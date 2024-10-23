@@ -3,7 +3,7 @@ import FormikControl from '../../../formikComponent/formikControl';
 import { Formik,Form } from 'formik';
 import * as Yup from 'yup';
 
-const ProductInfo=({proInfo})=>{
+const ProductInfo=({proInfo, locationdata})=>{
     const productInfo={
         ProductDescrip:proInfo?.description,
         CountryofOrigin:proInfo?.countryOfOrgin,
@@ -22,10 +22,10 @@ const ProductInfo=({proInfo})=>{
             <div className={style.ProductInfoCard}>
                 <h3 className={style.ProductInfo_header} >Product Information</h3>
                 <Form className={style.ProductInfoContent}> 
-                        <FormikControl  className={style.form_control_area} control='textarea' rows={10}  placeholder='Description of the Product' name='ProductDescrip'/>
+                        <FormikControl  className={style.form_control_area}  legend='Description' disabled={!!locationdata} control='textarea' rows={10}  placeholder='Description of the Product' name='ProductDescrip'/>
                         <div className={style.productMan}>
-                            <FormikControl className={style.form_control} control='input' placeholder='Country of Origin' name='CountryofOrigin'/>
-                            <FormikControl className={style.form_control} control='input' placeholder='Manufacturer name' name='Manufacturername' />  
+                            <FormikControl className={style.form_control}  legend='Country of Origin' disabled={!!locationdata} control='input' placeholder='Country of Origin' name='CountryofOrigin'/>
+                            <FormikControl className={style.form_control}  legend='Manufacturer' disabled={!!locationdata}  control='input' placeholder='Manufacturer name' name='Manufacturername' />  
                         </div>
                 </Form>
             </div>

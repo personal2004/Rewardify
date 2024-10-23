@@ -23,6 +23,9 @@ const orderSlice = createSlice({
             state.status = 'failed';
             state.error = action.payload;
         },
+        rejectorders:(state,action)=>{
+            state.orders=state.orders.filter((item)=>item?._id !== action.payload?._id)
+        },
         confirmorders:(state,action)=>{
             state.orders=state.orders.filter((item)=>item?._id !== action.payload?._id)
             state.prepareorders=[...state.prepareorders,action.payload]
@@ -36,5 +39,5 @@ const orderSlice = createSlice({
     }
 });
 
-export const { setorders,setError,confirmorders,packorders} = orderSlice.actions;
+export const { setorders,setError,confirmorders,packorders,rejectorders} = orderSlice.actions;
 export const orderReducer =orderSlice.reducer;

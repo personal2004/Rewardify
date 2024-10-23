@@ -7,7 +7,7 @@ const PackOrder=()=>{
 
 return(
     <>
-            {orders.map((order)=>{
+        {orders.map((order)=>{
             return(
             <div className={style.PackOrders} key={order._id}>
                 <h3>Ready for delivery:</h3>

@@ -80,7 +80,7 @@ const ProductListing=()=>{
        <>
         {showModal==='addStock' && <AddStock  show={showModal} onClose={onClose} onCancel={onCancel} product={selectedProduct} getproduct={getproducts} />}
         {showModal==='minusStock' && <MinusStock  show={showModal} onClose={onClose} onCancel={onCancel} product={selectedProduct} getproduct={getproducts}/>}
-        {showModal==='deleteProduct' && <DeleteStock  show={showModal} onClose={onClose} onCancel={onCancel}/>}
+        {showModal==='deleteProduct' && <DeleteStock  show={showModal} onClose={onClose} onCancel={onCancel} product={selectedProduct} getproduct={getproducts}/>}
         <div className={style.ProductListing}>
           { Object.keys(productcategory).length > 0 &&
               Object.keys(productcategory).map(category=>(

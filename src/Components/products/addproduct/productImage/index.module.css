@@ -5,6 +5,10 @@
     border-radius: 1px ;
     border: 1px solid #E0E0E0;
 }
+.ProductImgCard[aria-disabled="true"]{
+    background-color: #f0f0f0; 
+    color: #a0a0a0;
+}
 .ProductImg_header{
     font-family: 'Inter';
     font-size: 20px;

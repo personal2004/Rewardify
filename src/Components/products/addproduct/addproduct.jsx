@@ -3,8 +3,8 @@ import ProductDetails from './productDetails/productDetails'
 import ProductInfo from './productInfo/productInfo'
 import DeliveryDetail from './deliveryDetail/deliveryDetail'
 import ProductImg from './productImage/productImg'
-import { useLocation } from 'react-router-dom'
-import { ADD_STORE_PRODUCT,GET_LIST_PRODUCT } from '../../../utils/api'
+import { useLocation, useNavigate } from 'react-router-dom'
+import { ADD_STORE_PRODUCT,GET_LIST_PRODUCT,EDIT_PRODUCT } from '../../../utils/api'
 import api from '../../../utils/apiinstance';
 import { useEffect, useRef, useState} from 'react'
 
@@ -13,7 +13,7 @@ const AddProduct=()=>{
     const location=useLocation()
     const {data}=location.state || {};
     const productDetailsRef = useRef();
-
+    const navigate=useNavigate()
     const [categoryOptions, setCategoryOptions] = useState([]);
     const [allproductoption,setallproductoption] = useState([]);
     const [listallproduct,setlistallproduct]=useState([]);
@@ -49,20 +49,41 @@ const AddProduct=()=>{
     const handleSaveChanges=async()=>{
         const updatedProductDetails = productDetailsRef.current.values;
         setproductName(updatedProductDetails.ProductName);
+       if(!data){
+            try{
+            const response=await api.post(ADD_STORE_PRODUCT,{
+                "discountType":  Number(updatedProductDetails.Discounttype),
+                "discountValue":  Number(updatedProductDetails.DiscountValue),
+                "originalPrice": Number(updatedProductDetails.ProductMRP),
+                "price":  Number(updatedProductDetails.ProductPrice),
+                "product":updatedProductDetails.ProductName,
+                "stock":Number(updatedProductDetails.AvailableQuantity),  
+                "unit":   Number(updatedProductDetails.ProductSize),
+                "unitType":  Number(updatedProductDetails.UOM),
+              })
+               navigate(-1)
+            }catch(error){
+                console.log('Erro in Add Product',error)
+            }
 
-        try{
-         const response=await api.post(ADD_STORE_PRODUCT,{
-            "discountType":  Number(updatedProductDetails.Discounttype),
-            "discountValue":  Number(updatedProductDetails.DiscountValue),
-            "originalPrice": Number(updatedProductDetails.ProductMRP),
-            "price":  Number(updatedProductDetails.ProductPrice),
-            "product":updatedProductDetails.ProductName,
-            "stock":Number(updatedProductDetails.AvailableQuantity),  
-            "unit":   Number(updatedProductDetails.ProductSize),
-            "unitType":  Number(updatedProductDetails.UOM),
-          })
-        }catch(error){
-            console.log('Erro in Add Product',error)
+        }else{
+            
+          try{
+            const response=await api.patch(`${EDIT_PRODUCT}${data?._id}`,{
+                "discountType":  Number(updatedProductDetails.Discounttype),
+                "discountValue":  Number(updatedProductDetails.DiscountValue),
+                "originalPrice": Number(updatedProductDetails.ProductMRP),
+                "price":  Number(updatedProductDetails.ProductPrice),
+                "product":updatedProductDetails.ProductName,
+                "stock":Number(updatedProductDetails.AvailableQuantity),  
+                "unit":   Number(updatedProductDetails.ProductSize),
+                "unitType":  Number(updatedProductDetails.UOM),
+              })
+              navigate(-1)
+            }catch(error){
+                console.log('Erro in Add Product',error)
+            }
+            
         }
     }
 
@@ -104,11 +125,11 @@ const AddProduct=()=>{
 
     return(
         <div className={style.AddProduct}>
-            <ProductDetails ref={productDetailsRef} editproductDetails={productDetails}handleproductChange={handleproductChange} productoption={allproductoption} CategoryOptions={categoryOptions}/>
-            <ProductInfo proInfo={product?.productInformation}/>
+            <ProductDetails ref={productDetailsRef} locationdata={data} editproductDetails={productDetails} handleproductChange={handleproductChange} productoption={allproductoption} CategoryOptions={categoryOptions}/>
+            <ProductInfo proInfo={product?.productInformation}  locationdata={data}/>
             <div className={style.Product_purchase}>
              <DeliveryDetail/>
-             <ProductImg img={product?.images?.[0]}/>
+             <ProductImg img={product?.images?.[0]}  locationdata={data}/>
             </div>
             <button className={style.save_change_button} onClick={handleSaveChanges}>Save Changes</button>
         </div>

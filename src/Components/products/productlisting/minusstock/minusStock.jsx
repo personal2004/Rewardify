@@ -21,6 +21,7 @@ const MinusStock=({show,onClose,onCancel,product,getproduct})=>{
       handleRemoveStock();
       onClose(e);
     };
+    
 useEffect(()=>{
   getproduct();
 },[show])

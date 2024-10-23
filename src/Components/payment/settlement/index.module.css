@@ -20,7 +20,6 @@
 .payment_container{
     display: flex;
     gap: 11px;
-
 }
 .icons_profile img{
     width: 30px;
@@ -96,7 +95,6 @@
 @media (max-width:969px) {
     .price_in_green,.price_in_red{
         flex-wrap: wrap;
-        background-color: rgb(225, 255, 0);
         font-size: 10px;
         text-align: left;
        

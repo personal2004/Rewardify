@@ -2,15 +2,26 @@ import style from './index.module.css';
 import icons from '../../../icons/icons';
 import { useDispatch, useSelector } from 'react-redux';
 import {packorders} from '../../../utils/orderSlice';
+import { useState } from 'react';
+import PreparedOrders from './addpreorder/preparedorder'
+import { useNavigate } from 'react-router-dom';
 const PrepareOrders=()=>{
     
-   const orders=useSelector((state)=>state.userorder.prepareorders);
-   const dispatch=useDispatch();
-
-  const ConfirmPack=(order)=>{
+    const orders=useSelector((state)=>state.userorder.prepareorders);
+    const dispatch=useDispatch();
+    const [showModal,setShowModal]=useState(false);
+    const navigate=useNavigate()
+    const ConfirmPack=(order)=>{
     dispatch(packorders(order))
-  }
-
+    }
+  const onClose=(e,order)=>{
+      ConfirmPack(order)
+      setShowModal(null)
+      navigate('/home/orders/pack')
+    } 
+  const onCancel=(e)=>{
+      setShowModal(null)
+    } 
  return(
     <>
         {orders.map((order)=>{
@@ -49,7 +60,9 @@ const PrepareOrders=()=>{
                     <h3>Total Bill Amount</h3>
                     <h4>{order.total_price}</h4>
                 </div>
-                <button className={style.order_Verifyconfirm} onClick={()=>ConfirmPack(order)}>Verify & Pack Items</button>
+                <button className={style.order_Verifyconfirm} onClick={()=>setShowModal(true)}>Verify & Pack Items</button>
+                {showModal && <PreparedOrders show={showModal} onClose={onClose} onCancel={onCancel}  order={order} />}
+
         </div>)})}
     </>
  )
