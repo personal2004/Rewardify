@@ -12,7 +12,7 @@ padding-left: 20px;
 }
 .store_profile p{
 font-family: 'Inter';
-font-size: 14px;
+font-size: var(--font-subpara);
 font-weight: 400;
 line-height: 16.94px;
 color:#868C9A;
@@ -25,7 +25,7 @@ a{
     color:#868C9A !important;
     text-decoration: none !important;
     font-family:'Inter';
-    font-size: 16px;
+    font-size: var(--font-para);
     font-weight: 700;
     line-height: 19.36px;
     text-align: left;    

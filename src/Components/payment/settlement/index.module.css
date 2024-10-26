@@ -41,7 +41,7 @@
 }
 .payment_detail h4{
     font-family:'Inter';
-    font-size: 16px;
+    font-size: var(--font-para);
     font-weight: 600;
     line-height: 19.36px;
     text-align: left;
@@ -112,11 +112,11 @@
 @media (max-width:700px) {
     .price_in_green,.price_in_red{
         text-align: right;
-        font-size: 14px;
+        font-size: var(--font-subpara);
     }
     .payment_detail h4{
         padding: 0%;
-        font-size:16px;
+        font-size:var(--font-para);
         white-space: wrap;
     }
 }

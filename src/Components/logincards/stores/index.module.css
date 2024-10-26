@@ -12,7 +12,8 @@
 .stores_choose img{
     width: 215px;
     height: 167.27px;
-}   
+}  
+ 
 .stores_choose_content{
     margin: 10px;
     width: 100%;
@@ -25,7 +26,7 @@
 .stores_choose h6{
     width: 70%;
     font-family: 'Inter';
-    font-size: 32px;
+    font-size: var(--font-32pxsize);
     font-weight: 700;
     line-height: 38.73px;
     text-align: center;
@@ -34,7 +35,7 @@
     color: #868C9A;
     width: 75%;
     font-family: 'Inter';
-    font-size: 18px;
+    font-size: var(--font-18pxsize);
     font-weight: 400;
     line-height: 21.78px;
     text-align: center;
@@ -46,21 +47,20 @@
     outline: none;
     background: linear-gradient(90deg, #668D12 0%, #ACC43F 113.61%) !important;
     width: 100%;
-    font-size: 86px;
     font-family: 'Inter';
-    font-size: 18px;
+    font-size: var(--font-18pxsize);
     font-weight: 600;
     line-height: 41.78px;
     margin-bottom: 15px;
 }
+
 .login_start_contactbutton{
     border: none;
     outline: none;
     background: linear-gradient(90deg, #668D12 0%, #ACC43F 113.61%);
     width: 100%;
-    font-size: 86px;
     font-family: 'Inter';
-    font-size: 18px;
+    font-size: var(--font-18pxsize);
     font-weight: 600;
     line-height: 41.78px;
     margin-bottom: 15px;

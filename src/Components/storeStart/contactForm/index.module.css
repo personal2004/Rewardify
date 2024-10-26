@@ -17,7 +17,7 @@
 }
 .form_control label{
     font-family: 'Inter';
-    font-size: 17px;
+    font-size: var(--font-18pxsize);
     font-weight: 700;
     line-height: 16.94px;
     text-align: left;
@@ -38,9 +38,8 @@
     outline: none;
     background: linear-gradient(90deg, #668D12 0%, #ACC43F 113.61%) !important;
     width: 98%;
-    font-size: 86px;
     font-family: 'Inter';
-    font-size: 18px;
+    font-size: var(--font-18pxsize);
     font-weight: 600;
     line-height: 41.78px;
     margin-bottom: 15px;
@@ -54,28 +53,27 @@
     outline: none;
     background: linear-gradient(90deg, #668D12 0%, #ACC43F 113.61%) !important;
     width: 98%;
-    font-size: 86px;
     font-family: 'Inter';
-    font-size: 18px;
+    font-size: var(--font-18pxsize);
     font-weight: 600;
     line-height: 41.78px;
     border-radius: 8px;
 }
 .popup_header{
     font-family: 'Inter';
-    font-size: 32px;
+    font-size: var(--font-32pxsize);
     font-weight: 700;
     line-height: 38.73px;
     text-align: center;
 }
 .popup_para{
-padding: 9px;
-font-family:'Inter';
-font-size: 20px;
-font-weight: 500;
-line-height: 24.2px;
-text-align: center;
-color: #868C9A;
+    padding: 9px;
+    font-family:'Inter';
+    font-size:var(--font-subheader);
+    font-weight: 500;
+    line-height: 24.2px;
+    text-align: center;
+    color: #868C9A;
 }
 
 .imageContainer {

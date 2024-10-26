@@ -30,7 +30,7 @@
 .OrderLayout_header h4{
     white-space: nowrap;
     font-family: 'Inter';
-    font-size: 24px;
+    font-size: var(--font-header);
     font-weight: 600;
     line-height: 29.05px;
     text-align: left;
@@ -38,7 +38,7 @@
 .OrderLayout_header p{
     white-space: nowrap;
     font-family: 'Inter';
-    font-size: 14px;
+    font-size: var(--font-subpara);
     font-weight: 400;
     line-height: 16.94px;
     text-align: left;

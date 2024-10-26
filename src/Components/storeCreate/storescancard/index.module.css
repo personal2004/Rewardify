@@ -10,7 +10,7 @@
 }
 .docstorecard_header{
     font-family: 'Inter';
-    font-size: 20px;
+    font-size: var(--font-subheader);
     font-weight: 600;
     line-height: 29.05px;
     text-align: left;
@@ -33,12 +33,11 @@
 }
 .docscancard h3{
     font-family: 'Inter';
-    font-size: 20px;
+    font-size: var(--font-subheader);
     font-weight: 600;
     line-height: 29.05px;
     text-align: left;
     color: #868C9A;
-
 }
 .docscancard p{
     font-family: 'Inter';

@@ -37,7 +37,7 @@
 }
 .Contact_Form_header{
 font-family:'Inter';
-font-size: 32px;
+font-size: var(--font-32pxsize);
 font-weight: 700;
 line-height: 38.73px;
 text-align: center;
@@ -47,7 +47,7 @@ padding-bottom: 5px;
 text-align: center;
 width: 60%;
 font-family: 'Inter';
-font-size: 18px;
+font-size: var(--font-18pxsize);
 font-weight: 400;
 line-height: 21.78px;
 text-align: center;
@@ -68,7 +68,7 @@ margin-bottom: 50px;
 }
 .stores_details_header{
     font-family:'Inter';
-    font-size: 32px;
+    font-size:var(--font-32pxsize);
     font-weight: 700;
     line-height: 38.73px;
     text-align: center;
@@ -77,7 +77,7 @@ margin-bottom: 50px;
     text-align: center;
     width: 60%;
     font-family: 'Inter';
-    font-size: 18px;
+    font-size: var(--font-18pxsize);
     font-weight: 400;
     line-height: 21.78px;
     text-align: center;
@@ -93,9 +93,8 @@ margin-bottom: 50px;
     outline: none;
     background: linear-gradient(90deg, #668D12 0%, #ACC43F 113.61%) !important;
     width: 98%;
-    font-size: 86px;
     font-family: 'Inter';
-    font-size: 18px;
+    font-size: var(--font-18pxsize);
     font-weight: 600;
     line-height: 41.78px;
     border-radius: 8px;
@@ -108,7 +107,7 @@ margin-bottom: 50px;
     background-color: transparent;
     outline: none;
     font-family: 'Inter';
-    font-size: 18px;
+    font-size: var(--font-18pxsize);
     font-weight: 600;
 }
 .stores_details_button img{

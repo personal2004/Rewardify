@@ -10,16 +10,16 @@
     gap:12px;
 }
 .login_start h6{
-font-family: 'Inter';
-font-size: 32px;
-font-weight: 700;
-line-height: 33.73px;
-text-align: center;
+    font-family: 'Inter';
+    font-size: var( --font-32pxsize);
+    font-weight: 700;
+    line-height: 33.73px;
+    text-align: center;
 }
 .login_start p{
     width: 60%;
     font-family: 'Inter';
-    font-size: 17px;
+    font-size: var(--font-18pxsize);
     font-weight: 400;
     line-height: 18.78px;
     text-align: center;
@@ -37,9 +37,8 @@ text-align: center;
     outline: none;
     background: linear-gradient(90deg, #668D12 0%, #ACC43F 113.61%) !important;
     width: 100%;
-    font-size: 86px;
     font-family: 'Inter';
-    font-size: 18px;
+    font-size: var(--font-18pxsize);
     font-weight: 600;
     line-height: 41.78px;
     margin-bottom: 15px;
@@ -49,9 +48,8 @@ text-align: center;
     outline: none;
     background: linear-gradient(90deg, #668D12 0%, #ACC43F 113.61%);
     width: 100%;
-    font-size: 86px;
     font-family: 'Inter';
-    font-size: 18px;
+    font-size: var(--font-18pxsize);
     font-weight: 600;
     line-height: 41.78px;
     margin-bottom: 15px;
@@ -69,7 +67,7 @@ text-align: center;
 .login_start_content p{
     width: 100%;
     font-family: 'Inter';
-    font-size: 14px;
+    font-size: var(--font-subpara);
     font-weight: 500;
     line-height: 16.94px;
     letter-spacing: 1px;

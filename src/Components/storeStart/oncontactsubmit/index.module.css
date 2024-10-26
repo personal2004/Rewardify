@@ -18,7 +18,7 @@
 }
 .contact_card_header{
     font-family:'Inter';
-    font-size: 32px;
+    font-size: var(--font-32pxsize);
     font-weight: 700;
     line-height: 38.73px;
     text-align: center;
@@ -27,7 +27,7 @@
     text-align: center;
     width: 77%;
     font-family: 'Inter';
-    font-size: 18px;
+    font-size: var(--font-18pxsize);
     font-weight: 400;
     line-height: 21.78px;
     text-align: center;
@@ -41,9 +41,8 @@
     justify-content: center;
     margin-top: 20px;
     outline: none;
-    font-size: 86px;
     font-family: 'Inter';
-    font-size: 18px;
+    font-size: var(--font-18pxsize);
     font-weight: 600;
     line-height: 41.78px;
     border-radius: 8px;
@@ -58,7 +57,7 @@
     background-color: transparent;
     outline: none;
     font-family: 'Inter';
-    font-size: 18px;
+    font-size: var(--font-18pxsize);
     font-weight: 600;
 }
 .button_icon{

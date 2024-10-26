@@ -6,7 +6,7 @@
 }
 .order_id{
     font-family: 'Inter';
-    font-size: 14px;
+    font-size:var(--font-subpara);
     font-weight: 500;
     line-height: 16.94px;
     text-align: left;
@@ -37,11 +37,11 @@
     margin-bottom: 10px;
 }
 .ConfirmOrders h4{
-font-family: 'Inter';
-font-size: 14px;
-font-weight:500;
-line-height: 16.94px;
-text-align: left;
+    font-family: 'Inter';
+    font-size: var(--font-subpara);
+    font-weight:500;
+    line-height: 16.94px;
+    text-align: left;
 }
 .row_items{
     display: flex;
@@ -49,11 +49,11 @@ text-align: left;
     flex-shrink: 0;
 }
 .ConfirmOrders h3{
-font-family: 'Inter';
-font-size: 16px;
-font-weight:700;
-line-height: 19.36px;
-text-align: left;
+    font-family: 'Inter';
+    font-size: var(--font-para);
+    font-weight:700;
+    line-height: 19.36px;
+    text-align: left;
 }
 .order_confirm{
     display: flex;
@@ -65,9 +65,8 @@ text-align: left;
     margin-top: 10px;
     background: linear-gradient(90deg, #668D12 0%, #ACC43F 113.61%) !important;
     width: 48%;
-    font-size: 86px;
+    font-size: var(--font-18pxsize);
     font-family: 'Inter';
-    font-size: 18px;
     font-weight: 600;
     line-height: 41.78px;
     border-radius: 8px;
@@ -81,9 +80,8 @@ text-align: left;
     border-image-source: linear-gradient(90deg, #668D12 0%, #ACC43F 113.61%);
     border-image-slice: 1;    
     width: 48%;
-    font-size: 86px;
+    font-size: var(--font-18pxsize);
     font-family: 'Inter';
-    font-size: 18px;
     font-weight: 600;
     line-height: 41.78px;
     border:2px solid  #a3bb3a ;

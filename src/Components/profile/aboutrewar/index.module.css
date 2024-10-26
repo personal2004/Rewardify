@@ -9,14 +9,14 @@
 }
 .aboutRewar_header h4{
     font-family:'Inter';
-    font-size: 20px;
+    font-size: var(--font-subheader);
     font-weight: 700;
     line-height: 24.2px;
     text-align: left;   
 }
 .aboutRewar_header p{
     font-family: 'Inter';
-    font-size: 16px;
+    font-size: var(--font-para);
     font-weight: 400;
     line-height: 19.36px;
     text-align: left;
@@ -24,7 +24,7 @@
 }
 .aboutRewar_Block p{
     font-family: 'Inter';
-    font-size: 16px;
+    font-size: var(--font-para);
     font-weight: 400;
     line-height: 19.36px;
     text-align: justify;
@@ -45,7 +45,7 @@
 }
 .aboutRewar_Block h4{
     font-family:'Inter';
-    font-size: 17px;
+    font-size: var( --font-18pxsize);
     font-weight: 700;
     line-height: 24.2px;
     text-align: left;  

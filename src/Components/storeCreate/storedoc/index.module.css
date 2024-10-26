@@ -1,6 +1,6 @@
 .docstoreform_header{
     font-family: 'Inter';
-    font-size: 24px;
+    font-size:var(--font-header);
     font-weight: 600;
     line-height: 79.05px;
     text-align: left;
@@ -52,7 +52,7 @@
 }
 .docstorecard_header{
     font-family: 'Inter';
-    font-size: 20px;
+    font-size:var(--font-subheader);
     font-weight: 600;
     line-height: 29.05px;
     text-align: left;
@@ -67,9 +67,8 @@
     outline: none;
     background: linear-gradient(90deg, #668D12 0%, #ACC43F 113.61%) !important;
     width: 98%;
-    font-size: 86px;
     font-family: 'Inter';
-    font-size: 18px;
+    font-size: var(--font-18pxsize);
     font-weight: 600;
     line-height: 41.78px;
     border-radius: 8px;

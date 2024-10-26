@@ -11,23 +11,23 @@
 }
 .ProductImg_header{
     font-family: 'Inter';
-    font-size: 20px;
+    font-size: var(--font-subheader);
     font-weight: 600;
     line-height: 24.2px;
     text-align: left;  
 }
 .ProductImgCard h3{
-font-family: 'Inter';
-font-size: 20px;
-font-weight: 600;
-text-align: left;
+    font-family: 'Inter';
+    font-size: var(--font-subheader);
+    font-weight: 600;
+    text-align: left;
 }
 .ProductImgCard p{
-font-family: 'Inter';
-font-size: 16px;
-font-weight: 400;
-text-align: left;
-color: #868C9A;
+    font-family: 'Inter';
+    font-size: var(--font-subpara);
+    font-weight: 400;
+    text-align: left;
+    color: #868C9A;
 }
 
 .imgContainer{

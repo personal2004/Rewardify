@@ -1,5 +1,14 @@
 @import 'normalize.css';
 
+:root{
+  --font-header:24px;
+  --font-subheader: 20px;
+  --font-para: 16px;
+  --font-subpara:14px;
+  --font-18pxsize:18px;
+  --font-32pxsize:32px;
+}
+
 *::before, *::after {
   box-sizing: border-box;
 }

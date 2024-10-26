@@ -20,7 +20,7 @@
 }
 .Product_hea h4{
     font-family: 'Inter';
-    font-size: 24px;
+    font-size: var(--font-header);
     font-weight: 600;
     line-height: 29.05px;
     text-align: left;
@@ -37,7 +37,7 @@
     background: linear-gradient(90deg, #668D12 0%, #ACC43F 113.61%);
     color: white;
     font-family: 'Inter';
-    font-size: 18px;
+    font-size: var(--font-18pxsize);
     font-weight: 600;
     line-height: 21.78px;
     text-align: left;
@@ -49,7 +49,7 @@
     align-items: center;
     width: fit-content;
     font-family: 'Inter';
-    font-size: 18px;
+    font-size: var(--font-18pxsize);
     font-weight: 600;
     line-height: 21.78px;
     text-align: left;

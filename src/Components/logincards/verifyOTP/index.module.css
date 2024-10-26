@@ -15,7 +15,7 @@
 }
 .login_verify h6{
     font-family: 'Inter';
-    font-size: 32px;
+    font-size: var(--font-32pxsize);
     font-weight: 700;
     line-height: 38.73px;
     text-align: center;
@@ -24,7 +24,7 @@
     color: #868C9A;
     width: 65%;
     font-family: 'Inter';
-    font-size: 18px;
+    font-size: var(--font-18pxsize);
     font-weight: 400;
     line-height: 21.78px;
     text-align: center;
@@ -68,9 +68,8 @@
     outline: none;
     color: #868C9A;
     background-color: #E1E1E1;
-    font-size: 86px;
     font-family: 'Inter';
-    font-size: 18px;
+    font-size: var(--font-18pxsize);
     font-weight: 600;
     line-height: 41.78px;
     margin-bottom: 15px;
@@ -78,7 +77,7 @@
 .login_verify_resend{
     width: 60%;
     font-family: 'Inter';
-    font-size: 14px;
+    font-size: var(--font-subpara);
     font-weight: 500;
     line-height: 16.94px;
     color: #868C9A;

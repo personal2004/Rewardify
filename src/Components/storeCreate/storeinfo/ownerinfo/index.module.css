@@ -10,7 +10,7 @@
 }
 .docinfocard_header{
     font-family: 'Inter';
-    font-size: 20px;
+    font-size: var(--font-subheader);
     font-weight: 600;
     line-height: 29.05px;
     text-align: left;
@@ -119,7 +119,7 @@
 }
 .checkbox_control label{
     font-family: 'Inter';
-    font-size: 16px;
+    font-size: var(--font-para);
     font-weight: 400;
     text-align: left;
     color: #868C9A;
@@ -132,7 +132,7 @@
 }
 .checkbox_option label{
     font-family: 'Inter';
-    font-size: 14px;
+    font-size: var(--font-subpara);
     font-weight: 400;
     text-align: left;
     color: #868C9A;

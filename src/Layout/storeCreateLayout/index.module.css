@@ -37,7 +37,7 @@
     align-items: center;
     width: fit-content;
     font-family: 'Inter';
-    font-size: 18px;
+    font-size: var(--font-18pxsize);
     font-weight: 600;
     line-height: 21.78px;
     text-align: left;
@@ -46,7 +46,7 @@
 .store_create_Layout_Form_Container_header{
     width: 48%;
     font-family: 'Inter';
-    font-size: 32px;
+    font-size: var(--font-32pxsize);
     font-weight: 800;
     line-height: 38.73px;
     text-align: center;
@@ -54,7 +54,7 @@
 .store_create_Layout_Form_Container_para{
     width: 48%;
     font-family: 'Inter';
-    font-size: 18px;
+    font-size: var(--font-18pxsize);
     font-weight: 400;
     line-height: 21.78px; 
     color: #868C9A;
@@ -73,6 +73,7 @@
 .continue_button{
     background-color: aqua;
 }
+
 @media (max-width:1287px) {
     .store_create_Layout_Form_Container{
         width: 95%;
@@ -82,6 +83,7 @@
     margin-left: 20px;
     } 
 }
+
 @media (max-width:1098px) {
     .store_create_form{
         width: 100%;

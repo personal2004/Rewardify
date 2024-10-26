@@ -1,6 +1,6 @@
 .docinfoform_header{
     font-family: 'Inter';
-    font-size: 24px;
+    font-size: var(--font-header);
     font-weight: 600;
     line-height: 45.05px;
     text-align: left;
@@ -8,7 +8,7 @@
  h6{
     padding-left: 2px;
     font-family: 'Inter';
-    font-size: 18px;
+    font-size: var(--font-18pxsize);
     font-weight: 400;
     line-height: 21.78px;
     text-align: left;
@@ -41,7 +41,7 @@
     width: 100%;
     margin-left: 10px;
     font-family: 'Inter';
-    font-size: 17px;
+    font-size: var(--font-18pxsize);
     font-weight: 400;
     text-align: left;
     color: #868C9A;
@@ -56,9 +56,8 @@
     outline: none;
     background: linear-gradient(90deg, #668D12 0%, #ACC43F 113.61%) !important;
     width: 98%;
-    font-size: 86px;
     font-family: 'Inter';
-    font-size: 18px;
+    font-size: var(--font-18pxsize);
     font-weight: 600;
     line-height: 41.78px;
     border-radius: 8px;

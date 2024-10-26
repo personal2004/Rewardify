@@ -29,7 +29,7 @@
 }
 .nav_header_userNme{
 font-family: 'Inter';
-font-size: 24px;
+font-size: var(--font-header);
 font-weight: 700;
 line-height: 29.05px;
 text-align: left;
@@ -45,7 +45,7 @@ text-align: left;
     padding: 12px 24px;
     border-radius: 12px;
     font-family: 'Inter';
-    font-size: 20px;
+    font-size: var(--font-subheader);
     font-weight: 500;
     line-height: 24.2px;
     text-align: left;
@@ -69,7 +69,7 @@ text-align: left;
            padding: 12px 24px;
            border-radius: 12px;
            font-family: 'Inter';
-           font-size: 20px;
+           /* font-size: 20px; */
            font-weight: 500;
            line-height: 24.2px;
            text-align: left;

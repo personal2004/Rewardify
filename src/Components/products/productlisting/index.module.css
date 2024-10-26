@@ -17,7 +17,7 @@
 }
 .products h4{
     font-family: 'Inter';
-    font-size: 20px;
+    font-size: var(--font-subheader);
     font-weight: 600;
     line-height: 24.2px;
     text-align: left;
@@ -38,7 +38,7 @@
 .ProductListing_contents h6{
     flex-basis: 200px;
     font-family: 'Inter';
-    font-size: 14px;
+    font-size: var(--font-subpara);
     font-weight: 500;
     line-height: 16.94px;
     text-align: left;
@@ -50,7 +50,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     font-family: 'Inter';
-    font-size: 14px;
+    font-size: var(--font-subpara);
     font-weight: 700;
     line-height: 16.94px;
     text-align: left;

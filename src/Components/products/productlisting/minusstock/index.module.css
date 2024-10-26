@@ -5,16 +5,15 @@
     outline: none;
     background: #D9D9D9;
     width: 100%;
-    font-size: 86px;
     font-family: 'Inter';
-    font-size: 18px;
+    font-size: var(--font-18pxsize);
     font-weight: 600;
     line-height: 41.78px;
     border-radius: 8px;
 }
 .popup_header{
     font-family: 'Inter';
-    font-size: 24px;
+    font-size: var(--font-header);
     font-weight: 600;
     line-height: 29.05px;
     text-align: center;
@@ -23,7 +22,7 @@
 .popup_para{
     padding-top: 9px;
     font-family:'Inter';
-    font-size: 18px;
+    font-size: var(--font-18pxsize);
     font-weight: 400;
     line-height: 21.78px;
     text-align: center;
@@ -46,7 +45,7 @@
     padding: 0%;
     margin: 0%;
     font-family: 'Inter';
-    font-size: 18px;
+    font-size: var(--font-18pxsize);
     font-weight: 400;
     line-height: 21.78px;
     text-align: left;

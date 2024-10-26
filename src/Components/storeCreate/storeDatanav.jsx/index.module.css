@@ -10,7 +10,7 @@
 }
 .store_create_form_navigator h6,.store_create_form_navigator p{
     font-family: 'Inter';
-    font-size: 16px;
+    font-size: var(--font-para);
     font-weight: 400;
     line-height: 24.52px;
     text-align: left;
@@ -18,7 +18,7 @@
 }
 .store_create_form_navigator h4{
     font-family: 'Inter';
-    font-size: 18px;
+    font-size: var(--font-18pxsize);
     font-weight: 800;
     line-height: 29.36px;
     text-align: left;

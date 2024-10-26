@@ -15,7 +15,7 @@
 }
 .login_form h6{
     font-family: 'Inter';
-    font-size: 32px;
+    font-size: var( --font-32pxsize);
     font-weight: 700;
     line-height: 38.73px;
     text-align: center;
@@ -23,7 +23,7 @@
 .login_form p{
     width: 65%;
     font-family: 'Inter';
-    font-size: 18px;
+    font-size: var(--font-18pxsize);
     font-weight: 400;
     line-height: 21.78px;
     text-align: center;
@@ -52,9 +52,8 @@
     outline: none;
     background-color: #E1E1E1;
     width: 100%;
-    font-size: 86px;
     font-family: 'Inter';
-    font-size: 18px;
+    font-size: var(--font-18pxsize);
     font-weight: 600;
     line-height: 41.78px;
     margin-bottom: 15px;
@@ -62,7 +61,7 @@
 .login_submit_content p{
     width: 100%;
     font-family: 'Inter';
-    font-size: 14px;
+    font-size:var(--font-subpara);
     font-weight: 500;
     line-height: 16.94px;
 }

@@ -7,7 +7,7 @@
 }
 .DeliveryDetails_header{
     font-family: 'Inter';
-    font-size: 20px;
+    font-size: var(--font-subheader);
     font-weight: 600;
     line-height: 24.2px;
     text-align: left;  
@@ -23,24 +23,25 @@
     flex-direction: column;
 }
 .DeliveryDetailsInfoContent h3{
-font-family: 'Inter';
-font-size: 20px;
-font-weight: 600;
-text-align: left;
+    font-family: 'Inter';
+    font-size: var(--font-subheader);
+    font-weight: 600;
+    text-align: left;
 }
 .DeliveryDetailsInfoContent p{
-font-family: 'Inter';
-font-size: 16px;
-font-weight: 400;
-text-align: left;
-color: #868C9A;
+    font-family: 'Inter';
+    font-size: var(--font-para);
+    font-weight: 400;
+    text-align: left;
+    color: #868C9A;
 }
 .checkbox_control{
     display: flex;
     flex-direction: column;
     gap: 10px;
     font-family: 'Inter';   
-    font-size: 17px;
+    /* font-size: 17px; */
+    font-size: var(--font-18pxsize);
     font-weight: 400;
     line-height: 14.52px;
     text-align: left;

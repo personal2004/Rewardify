@@ -6,22 +6,22 @@
  overflow: scroll;
 }
 .ProfileLayout header{
-font-family: 'Inter';
-font-size: 24px;
-font-weight: 600;
-line-height: 39.05px;
-text-align: left;
+    font-family: 'Inter';
+    font-size: var(--font-header);
+    font-weight: 600;
+    line-height: 39.05px;
+    text-align: left;
 }
 .ProfileContain{
     display: flex;
 }
 .ProfileNavBar{
     white-space: nowrap;
-   display: flex;
-   padding-right: 20px;
-   flex-direction: column;
-   align-items: flex-start;
-   box-shadow: 1px 0px #868C9A;
+    display: flex;
+    padding-right: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 1px 0px #868C9A;
 }
 .ProfileNavBar span{
     border-radius: 100%;
@@ -30,24 +30,24 @@ text-align: left;
     font-size: 30px;
 }
 .ProfileNavBar a{
-color: black !important;    
-font-family: 'Inter';
-letter-spacing: 1px;
-font-size: 18px !important;
-font-weight: 600 !important;
-line-height: 21.78px !important;
-text-align: left;
-opacity: 0.3;
+    color: black !important;    
+    font-family: 'Inter';
+    letter-spacing: 1px;
+    font-size: var(--font-18pxsize) !important;
+    font-weight: 600 !important;
+    line-height: 21.78px !important;
+    text-align: left;
+    opacity: 0.3;
 }
 .ProfileNavBar a.active{
     opacity: 1;
 }
 
 .ProfileMain{
- padding-left: 60px;
- display: flex;
- flex-direction: column;
- width: 100%;
+    padding-left: 60px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 
 }
 .ProfileLayout::-webkit-scrollbar{
@@ -64,7 +64,6 @@ opacity: 0.3;
 
     }
     .ProfileNavBar{
-        /* background-color: aqua; */
         white-space: nowrap;
        display: flex;
        flex-direction: row;

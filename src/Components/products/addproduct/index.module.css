@@ -11,7 +11,7 @@
 }
 .save_change_button{
     font-family: 'Inter';
-    font-size: 16px;
+    font-size: var(--font-para);
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 1px;

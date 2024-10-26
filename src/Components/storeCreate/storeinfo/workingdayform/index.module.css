@@ -14,14 +14,14 @@
 }
 .workingdays_header h3{
 font-family: 'Inter';
-font-size: 18px;
+font-size: var(--font-18pxsize);
 font-weight: 700;
 line-height: 21.78px;
 text-align: left;
 }
 .workingdays_header h4{
 font-family: 'Inter';
-font-size: 18px;
+font-size: var(--font-18pxsize);
 font-weight: 400;
 line-height: 16.94px;
 text-align: left;
@@ -43,7 +43,7 @@ color:#868C9A;
 }
 .checkbox_option label{
     font-family: 'Inter';
-    font-size: 14px;
+    font-size: var(--font-subpara);
     font-weight: 400;
     text-align: left;
     color: #868C9A;

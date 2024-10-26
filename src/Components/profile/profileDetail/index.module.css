@@ -10,20 +10,20 @@
 }
 .profile_header{
     font-family: 'Inter';
-    font-size: 20px;
+    font-size: var(--font-subheader);
     font-weight: 700;
     text-align: left;   
     margin: 0;
     padding: 0; 
 }
 .profile_para {
-font-family: 'Inter';
-font-size: 16px;
-font-weight: 400;
-text-align: left;
-color: #868C9A;
-margin: 0;
-padding: 0;
+    font-family: 'Inter';
+    font-size: var(--font-para);
+    font-weight: 400;
+    text-align: left;
+    color: #868C9A;
+    margin: 0;
+    padding: 0;
 }
 
 .form_control{
@@ -64,9 +64,8 @@ padding: 0;
     outline: none;
     color: #868C9A;
     background-color: #E1E1E1;
-    font-size: 86px;
     font-family: 'Inter';
-    font-size: 18px;
+    font-size: var(--font-18pxsize);
     font-weight: 600;
     line-height: 41.78px;
     margin-bottom: 15px;
@@ -76,7 +75,7 @@ padding: 0;
     color: red;
     text-align: center;
     font-family: 'Inter';
-    font-size: 13px;
+    font-size: var(--font-subpara);
     font-weight: 400;
     line-height: 14.52px;
     text-align: center;
