@@ -5,16 +5,15 @@
     outline: none;
     background: #D9D9D9;
     width: 60%;
-    font-size: 86px;
     font-family: 'Inter';
-    font-size: 18px;
+    font-size: var(--font-18pxsize);
     font-weight: 600;
     line-height: 41.78px;
     border-radius: 8px;
 }
 .popup_header{
         font-family: 'Inter';
-        font-size: 20px;
+        font-size: var(--font-subheader);
         font-weight:600;
         line-height: 24.36px;
         text-align: left;  
@@ -33,7 +32,7 @@
 }
 .order_id{
 font-family: 'Inter';
-font-size: 14px;
+font-size: var(--font-subpara);
 font-weight: 500;
 line-height: 16.94px;
 text-align: left;
@@ -158,6 +157,11 @@ text-align: left;
         border: 1px solid #E0E0E0;
         padding:15px;
         white-space: nowrap;
+    }
+}
+@media (max-width:800px){
+    .modalbutton_style{
+        width: 100%;
     }
 }
 @media (max-width:717px) {

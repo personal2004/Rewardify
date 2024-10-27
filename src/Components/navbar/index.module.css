@@ -45,7 +45,7 @@ text-align: left;
     padding: 12px 24px;
     border-radius: 12px;
     font-family: 'Inter';
-    font-size: var(--font-subheader);
+    font-size: var(--font-para);
     font-weight: 500;
     line-height: 24.2px;
     text-align: left;
@@ -69,7 +69,6 @@ text-align: left;
            padding: 12px 24px;
            border-radius: 12px;
            font-family: 'Inter';
-           /* font-size: 20px; */
            font-weight: 500;
            line-height: 24.2px;
            text-align: left;

@@ -5,13 +5,23 @@ import { useDispatch } from 'react-redux';
 import { confirmorders,rejectorders } from '../../../utils/orderSlice';
 import { useSelector } from 'react-redux';
 import icons from '../../../icons/icons';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const ConfirmOrders=()=>{
     const dispatch=useDispatch();
     const orders=useSelector((state)=>state.userorder.orders);
-
+    const navigate=useNavigate();
+    const location=useLocation()
+    const isorderpage=location.pathname==='/home/orders';
     const handleConfirmOrder=(order)=>{
           dispatch(confirmorders(order));
+          if(isorderpage){
+            navigate('/home/orders/prepare')
+          }else{
+            navigate('/home/prepare')
+
+          }
+
         }
     const handleRejectOrder=(order)=>{
         dispatch(rejectorders(order));

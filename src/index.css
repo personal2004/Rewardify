@@ -43,3 +43,28 @@ p, h1, h2, h3, h4, h5, h6 {
 #root, #__next {
   isolation: isolate;
 }
+
+/* Tablet screen resolution max is 800px and 768px */
+
+@media (max-width:800px) {
+  :root{
+    --font-header:20px;
+    --font-subheader: 18px;
+    --font-para: 14px;
+    --font-subpara:12px;
+    --font-18pxsize:16px;
+    --font-32pxsize:25px;
+  }
+  
+}
+@media (max-width:400px) {
+  :root{
+    --font-header:18px;
+    --font-subheader: 16px;
+    --font-para: 12px;
+    --font-subpara:10px;
+    --font-18pxsize:14px;
+    --font-32pxsize:23px;
+  }
+  
+}
