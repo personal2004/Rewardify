@@ -47,4 +47,14 @@
     line-height: 24.2px;
     cursor: pointer;
   }
+  @media (max-width: 768px) {
+    .modal {
+      width: 80%; 
+    }
+  }
   
+  @media (max-width: 480px) {
+    .modal {
+      width: 95%;
+    }
+  }
