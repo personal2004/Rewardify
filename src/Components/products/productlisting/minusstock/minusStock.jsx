@@ -7,6 +7,8 @@ import { useEffect, useState } from 'react';
 const MinusStock=({show,onClose,onCancel,product,getproduct})=>{
 
     const [stock, setStock] = useState(product?.stock);
+    const [errorshow,seterrorshow]=useState(false);
+
     const handleRemoveStock = async () => {
       try {
         const response = await api.post(`${Reduce_STock}${product._id}`, {
@@ -26,6 +28,13 @@ useEffect(()=>{
   getproduct();
 },[show])
 
+useEffect(()=>{
+  if (!isNaN(stock) && stock !== null && stock !== '') {
+    seterrorshow(true)
+  }else{
+    seterrorshow(false)
+  }
+},[stock])
 
     return(
         <Modal show={show} onClose={handleClose} onCancel={onCancel} buttonStyle={styles.modalbutton_style} button_text='Update Stock'>
@@ -35,6 +44,8 @@ useEffect(()=>{
                     <h6>Current Stock:&nbsp;&nbsp;<span>{product?.stock}</span></h6>
             </div>
             <input className={styles.input} placeholder='Reduce stock' value={stock} onChange={(e)=>setStock(e.target.value)}></input>
+            {!errorshow && <div className={styles.errorstock}>Enter a Number</div>}
+
         </Modal>
     )
 }

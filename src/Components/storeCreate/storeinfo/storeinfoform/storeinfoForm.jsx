@@ -1,14 +1,10 @@
 import { Form,Formik } from "formik";
 import styles from './index.module.css';
-import { storeCreateValues,storeCreatevalidationSchema } from "../../../../utils/formcons";
 import FormikControl from "../../../formikComponent/formikControl";
 import { useState } from "react";
 const StoreInfoForm=()=>{
   const [verifystorenum,setStorenum]=useState(false);
     return(
-        <Formik initialValues={storeCreateValues} validationSchema={storeCreatevalidationSchema} >
-        {(formik)=>{
-          return(
         <Form className={styles.storeinfo_Form} >
         <h3 className={styles.docinfocard_header} >Store Information</h3>
         <FormikControl className={styles.form_control} control='input' placeholder='Store Name' name='storename'/>
@@ -32,8 +28,7 @@ const StoreInfoForm=()=>{
         </div>
         <h3>Add Store Location </h3>
          </Form>                
-         )}}
-            </Formik>
+       
     )
 }
 export default StoreInfoForm

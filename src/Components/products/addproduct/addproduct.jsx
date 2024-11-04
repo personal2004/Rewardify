@@ -37,7 +37,6 @@ const AddProduct=()=>{
         setproductName(fieldNamevalue);
         const produc=listallproduct.filter((pro)=>pro?._id===fieldNamevalue);
         setproduct(produc[0])
-        console.log(product)
       };
 
     useEffect(() => {

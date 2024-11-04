@@ -3,13 +3,14 @@ import { Formik,Form } from 'formik';
 import FormikControl from '../../formikComponent/formikControl';
 import { storeCreateValues,storeCreatevalidationSchema } from '../../../utils/formcons';
 import  {upilink}  from '../../../constant/constant';
-import { useState } from 'react';
+import { useState} from 'react';
 import { useSelector } from 'react-redux';
 const Wallet=()=>{
 
     const wallet=useSelector((state)=>state.user.user);
     const [activeIndex, setActiveIndex] = useState(null);
     const [inputValues, setInputValues] = useState({});
+    const [errorshow,seterrorshow]=useState(false);
 
     const ids=['','',wallet?.store?.upi[0]]
     const [items, setItems] = useState([
@@ -20,6 +21,11 @@ const Wallet=()=>{
 
     const handleChange = (id, newValue) => {
         setInputValues(prevValues => ({ ...prevValues, [id]: newValue }));
+        if (items[id] !== null && items[id] !== '') {
+            seterrorshow(true)
+          }else{
+            seterrorshow(false)
+          }
     };
 
     const handleSubmit = () => {
@@ -79,7 +85,8 @@ const Wallet=()=>{
                                             />}
                                         </div>
                                     ))}
-                                    <div className={style.form_button}>
+                                 {!errorshow && <div className={style.errorstock}>Enter a UPI ID</div>}
+                                   <div className={style.form_button}>
                                         <button onClick={()=>setActiveIndex(-1)}>Cancel</button>
                                         <button onClick={handleSubmit}>Link UPI</button>
                                     </div>

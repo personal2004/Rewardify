@@ -5,7 +5,6 @@ const Modal = ({ show, onClose, children,button_text,buttonStyle,onCancel,modals
 
   const location=useLocation();
   const showCancel=location.pathname==='/home/profile/logout' || location.pathname==='/home/products';
-  console.log(modalstyle)
   if (!show) return null;
 
   return (

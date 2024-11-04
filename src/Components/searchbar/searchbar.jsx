@@ -14,7 +14,6 @@ const SearchBar=()=>{
     useEffect(()=>{
      if (searchvalue) {
         const categoryproduct = product.filter((pro) => {
-            console.log( pro?.productCategory?.name.toUpperCase()=== searchvalue.toUpperCase())
             return pro?.productCategory?.name.toUpperCase() === searchvalue.toUpperCase();
         });
       {categoryproduct.length>0 && dispatch(setProduct(categoryproduct));}

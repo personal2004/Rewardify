@@ -8,9 +8,7 @@ const DeleteStock=({show,onClose,onCancel,product={},getproduct})=>{
 
   const handledelete = async (product) => {
     try {
-      console.log(product?._id)
       const response = await api.delete(`${DELETE_PRODUCT}${product?._id}`)
-      console.log(response); 
       getproduct()
     } catch (error) {
       console.error(error); 

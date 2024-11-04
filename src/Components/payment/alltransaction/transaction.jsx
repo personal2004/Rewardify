@@ -11,7 +11,6 @@ const Transaction=()=>{
         const getpayment=async()=>{
             try {
               const response = await api.post(GET_LIST_PAYMENT);
-              console.log(response?.data)
               }catch (error) {
                  console.error('Error generating OTP:', error);
               }      

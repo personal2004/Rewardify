@@ -10,7 +10,6 @@ const Settlement=()=>{
         const getallsettlement=async()=>{
             try{
                 const response=await api.post(List_ALL_SETTLEMENT);
-                 console.log(response?.data)
             }catch(error){
                 console.log("Error in getting settlement",error.message)
             }

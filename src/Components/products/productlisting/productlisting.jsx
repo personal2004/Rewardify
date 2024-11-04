@@ -55,7 +55,6 @@ const ProductListing=()=>{
     switch (value) {
         case '1':
             navigate('/home/products/addproduct', { state: { data: product } }); 
-            console.log(product)
             break;
         case '2':
             setShowModal('addStock')

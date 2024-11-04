@@ -1,12 +1,15 @@
 import { Formik,Form } from "formik";
 import styles from './index.module.css' 
 import FormikControl from "../../../formikComponent/formikControl";
-import { storeinfoValues,storeInfovalidationSchema,WhatsappCheckOption } from "../../../../utils/formcons";
-import { useEffect, useState } from "react";
+import {WhatsappCheckOption } from "../../../../utils/formcons";
+import { useState } from "react";
 import api from "../../../../utils/apiinstance";
 import {NUMBER_OTP_GENERATE } from "../../../../utils/api";
+import { useFormikContext } from 'formik';
+
 const Ownerinfo=()=>{
      const [verifyOtp,setverifyOtp]=useState(false);
+     const { setFieldValue, values } = useFormikContext();
 
      const sendOtpToMoblile=async(number)=>{
       try{
@@ -14,25 +17,21 @@ const Ownerinfo=()=>{
            dialCode:91,
            contactNo:number,
         });
-        console.log(response?.data.message)
       }catch(error){
         console.log(`Error Sending OTP To Mobile ${error}`)
       }
     }
     return(
-        <Formik initialValues={storeinfoValues} validationSchema={storeInfovalidationSchema} >
-        {(formik)=>{
-          return(
             <Form className={styles.OwnerInfo_Form} >
                     <h3 className={styles.docinfocard_header} >Owner Information</h3>
-                    <FormikControl className={styles.form_control} control='input' placeholder='Owner’s Name' name='ownerName'/>
+                    <FormikControl className={styles.form_control} control='input' placeholder='Owner’s Name' name='ownerName' onChange={(e) => setFieldValue('ownerName', e.target.value)}/>
                     <FormikControl className={styles.form_control} control='input' placeholder='Email Address' name='ownerEmail'/>
                     <div className={styles.input_with_button}>
                     <FormikControl className={styles.phonenu_control} control='input' placeholder='Mobile Number' name='ownerphonenu' />
                     <span className={styles.phone_verify_button} 
                     onClick={()=>{
                       setverifyOtp(!verifyOtp)
-                      sendOtpToMoblile(formik.values.ownerphonenu)
+                      // sendOtpToMoblile(formik.values.ownerphonenu)
                     }
                     } >Verify</span>
                     {verifyOtp &&  
@@ -53,9 +52,6 @@ const Ownerinfo=()=>{
                     name='whatsappnumber' options={WhatsappCheckOption}
                     label={<span>By providing your <strong>Whatsapp Number</strong> to get updates on payments, order confirmation etc</span>}  />
             </Form>)
-              }}
-            </Formik>
-    )
 }
 
 export default Ownerinfo

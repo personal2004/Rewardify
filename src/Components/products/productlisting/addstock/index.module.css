@@ -61,6 +61,14 @@
     outline: none ;
     border: 2px solid #E0E0E0 ;
 }
+.errorstock{
+    color: red;
+    font-weight: 400;
+    line-height: 21.78px;
+    word-spacing: 1px;
+    text-align: left;
+    font-size: 13px
+}
 @media (max-width:470px) {
     .product_update_content h6{
         display: flex;

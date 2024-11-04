@@ -25,8 +25,6 @@ const OrderLayout=({path='/home/orders'})=>{
               limit: 20, 
               pageNo: 1 ,
           });
-          console.log('HI')
-          console.log(response?.data)
         //   dispatch(setorders(response?.data?.data));
           }catch (error) {
              console.error('Error generating OTP:', error);

@@ -1,14 +1,15 @@
 import styles from './index.module.css'
 import Modal from '../../../modal/modal';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import api from '../../../../utils/apiinstance';
 import { ADD_STOCK } from '../../../../utils/api';
 
 const AddStock=({show,onClose,onCancel,product={},getproduct})=>{
 
     const [stock, setStock] = useState(product?.stock);
-
+    const [errorshow,seterrorshow]=useState(false);
     const handleAddStock = async () => {
+
       try {
         const response = await api.post(`${ADD_STOCK}${product._id}`, {
           stock: Number(stock),
@@ -17,12 +18,21 @@ const AddStock=({show,onClose,onCancel,product={},getproduct})=>{
       }catch (error) {
         console.error('Error updating stock:', error);
       }
+     
     };
 
     const handleClose = (e) => {
       handleAddStock();
       onClose(e);
     };
+    
+    useEffect(()=>{
+      if (!isNaN(stock) && stock !== null && stock !== '') {
+        seterrorshow(true)
+      }else{
+        seterrorshow(false)
+      }
+    },[stock])
 
     return(
         <Modal show={show} onClose={handleClose} onCancel={onCancel} buttonStyle={styles.modalbutton_style} button_text='Update Stock'>
@@ -32,6 +42,7 @@ const AddStock=({show,onClose,onCancel,product={},getproduct})=>{
                     <h6>Current Stock:&nbsp;<span>{product?.stock}</span></h6>
             </div>
             <input className={styles.input} placeholder='Add stock' value={stock} onChange={(e)=>setStock(e.target.value)}></input>
+            {!errorshow && <div className={styles.errorstock}>Enter a Number</div>}
         </Modal>
     )
 }
