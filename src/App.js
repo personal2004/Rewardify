@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router,Routes,Route} from 'react-router-dom';
-import LoginLayout from './Layout/loginlayout/loginLayout';
+import LoginLayout from './Layout/loginPagelayout/loginLayout';
 import StoresStartLayout from './Layout/storeStartLayout/storeStartLayout';
 import LoginForm from './Components/logincards/loginform/loginform';
 import VerifyOtp from './Components/logincards/verifyOTP/verifyOtp';
