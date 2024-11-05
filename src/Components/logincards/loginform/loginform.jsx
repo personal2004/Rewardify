@@ -1,7 +1,7 @@
 import {LoginLogo} from '../../../img/images';
 import styles from './index.module.css';
 import {Formik,Form} from 'formik';
-import FormikControl from '../../../Components/formikComponent/formikControl.jsx';
+import FormikControl from '../../formikComponent/formikControl.jsx';
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
 import {GENERATE_OTP_LOGIN} from '../../../utils/api';
