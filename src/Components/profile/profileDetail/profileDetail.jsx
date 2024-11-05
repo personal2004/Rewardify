@@ -1,6 +1,6 @@
 import { Formik,Form } from "formik";
 import styles from './index.module.css' 
-import FormikControl from "../../../formikComponent/formikControl.jsx";
+import FormikControl from "../../formikComponent/formikControl";
 import * as Yup from 'yup';
 import { useSelector } from "react-redux";
 // import api from "../../../utils/apiinstance";
