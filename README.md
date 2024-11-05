@@ -33,6 +33,8 @@
 9. npm install react-bootstrap bootstrap
 10. npm install @reduxjs/toolkit react-redux
 11. npm install --save react-qr-scanner
+12. npm install @babel/plugin-proposal-private-property-in-object --save-dev
+
 
 
 
