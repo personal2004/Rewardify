@@ -41,3 +41,7 @@
 # Usage
 
 npm start
+
+# MANUALLY DEPLOYMENT IN NETLIFY
+
+[REWARDIFY](https://famous-profiterole-8a5be8.netlify.app/)
