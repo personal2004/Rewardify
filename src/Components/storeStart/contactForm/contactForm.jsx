@@ -1,4 +1,4 @@
-import FormikControl from '../../formikComponent/formikControl';
+import FormikControl from '../../formikComponent/formikControl.jsx';
 import styles from './index.module.css';
 import { Form,Formik } from 'formik';
 import { useState } from 'react';

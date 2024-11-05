@@ -1,6 +1,6 @@
 import style from './index.module.css';
 import { Formik,Form } from 'formik';
-import FormikControl from '../../formikComponent/formikControl';
+import FormikControl from '../../formikComponent/formikControl.jsx';
 import { storeCreateValues,storeCreatevalidationSchema } from '../../../utils/formcons';
 import  {upilink}  from '../../../constant/constant';
 import { useState} from 'react';

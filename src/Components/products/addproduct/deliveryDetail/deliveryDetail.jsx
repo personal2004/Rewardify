@@ -1,5 +1,5 @@
 import style from './index.module.css';
-import FormikControl from '../../../formikComponent/formikControl';
+import FormikControl from '../../../formikComponent/formikControl.jsx';
 import { Formik,Form } from 'formik';
 import * as Yup from 'yup';
 

@@ -1,6 +1,6 @@
 import styles from './index.module.css';
 import { Formik,Form } from 'formik';
-import FormikControl from '../../formikComponent/formikControl';
+import FormikControl from '../../formikComponent/formikControl.jsx';
 import {storeCreateValues,storeCreatevalidationSchema,storeCreateCheckoption} from '../../../utils/formcons';
 import StoreScanCard from '../storescancard/storeScancard';
 import { useNavigate } from 'react-router-dom';

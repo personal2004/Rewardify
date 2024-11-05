@@ -1,7 +1,7 @@
 import styles from './index.module.css'
 import Modal from '../../../modal/modal';
 import icons from '../../../../icons/icons';
-import FormikControl from '../../../formikComponent/formikControl';
+import FormikControl from '../../../formikComponent/formikControl.jsx';
 import { Formik,Form } from 'formik';
 
 const PreparedOrders=({show,onClose,onCancel,order})=>{

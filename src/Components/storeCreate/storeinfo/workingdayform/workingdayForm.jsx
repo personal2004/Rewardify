@@ -1,6 +1,6 @@
 import { Form,Formik } from "formik"
 import styles from './index.module.css';
-import FormikControl from "../../../formikComponent/formikControl";
+import FormikControl from "../../../formikComponent/formikControl.jsx";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";

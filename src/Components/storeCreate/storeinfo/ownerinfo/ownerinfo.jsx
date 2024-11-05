@@ -1,6 +1,6 @@
 import { Formik,Form } from "formik";
 import styles from './index.module.css' 
-import FormikControl from "../../../formikComponent/formikControl";
+import FormikControl from "../../../formikComponent/formikControl.jsx";
 import {WhatsappCheckOption } from "../../../../utils/formcons";
 import { useState } from "react";
 import api from "../../../../utils/apiinstance";

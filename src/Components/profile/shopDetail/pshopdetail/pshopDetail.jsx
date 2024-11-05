@@ -1,6 +1,6 @@
 import styles from './index.module.css';
 import { Form,Formik } from 'formik';
-import FormikControl from '../../../formikComponent/formikControl';
+import FormikControl from '../../../formikComponent/formikControl.jsx';
 import { storeCreateValues,storeCreatevalidationSchema } from '../../../../utils/formcons';
 import icons from '../../../../icons/icons'
 import { useEffect } from 'react';

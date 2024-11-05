@@ -1,6 +1,6 @@
 import { Form,Formik } from "formik";
 import styles from './index.module.css';
-import FormikControl from "../../../formikComponent/formikControl";
+import FormikControl from "../../../formikComponent/formikControl.jsx";
 import { useState } from "react";
 const StoreInfoForm=()=>{
   const [verifystorenum,setStorenum]=useState(false);
